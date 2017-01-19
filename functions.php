@@ -1,13 +1,18 @@
 <?php
+	add_action( 'after_setup_theme', 'ljngdahl_wpaj_setup' );
 
-function wpaj_theme_styles() {
+	function ljngdahl_wpaj_setup() {
 
-    wp_enqueue_style('normalize_css', get_template_directory_uri() . '/css/normalize.css');
+		// Project main CSS
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
 
-    wp_enqueue_style('fonts', 'url.goes.here');
+		// Project fonts
+		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400' );
 
-    wp_enqueue_style('main.css', get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'wpaj_theme_styles');
+		// Website main navigation
+		register_nav_menu( 'mainmenu', 'Website main navigation' );
+	}
 
+	// Preps theme for localization
+	load_theme_textdomain( 'wpaj', templatepath.'/languages' );
 ?>
