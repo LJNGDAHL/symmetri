@@ -11,6 +11,8 @@
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
+
+		add_theme_support( 'post-thumbnails', array( 'post', 'wpaj_cpt_gallery' ) );
 	}
 
 	// Preps theme for localization

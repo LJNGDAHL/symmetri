@@ -1,6 +1,24 @@
 // TODO: Replace with accurate styling.
 * {
   box-sizing: border-box;
+  color: $primaryColor;
   font-family: $brandfont;
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  text-align: center;
+
+  .photographer-name {
+    font-weight: 400;
+  }
+}
+
+.wp-post-image {
+  height: auto;
+  width: 100vw;
 }

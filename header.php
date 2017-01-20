@@ -13,3 +13,13 @@
 			<a href="#menu-link" class="exit-menu">Exit</p>
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
 		</nav>
+
+		<main id="main" class="site-main" role="main">
+			<div class="logo">
+				<h1>
+					<a href="<?php bloginfo( 'wpurl' );?>">
+						<span class="photographer-name">Johan Alfredsson</span><br>
+						<span class="photographer-title">Photographer</span>
+					</a>
+				</h1>
+			</div>
