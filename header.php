@@ -14,11 +14,15 @@
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
 			</a>
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
+
+			<div class="logotype-container">
+				<?php get_template_part( 'img/logo' ); ?>
+			</div>
 		</nav>
 		<main id="main" class="site-main" role="main">
 			<div class="logo">
 				<a href="<?php bloginfo( 'wpurl' );?>">
-					<?php get_template_part( 'img/logo' ); ?>
+					<?php get_template_part( 'img/lens' ); ?>
 					<h1>
 						<span class="photographer-name">Johan Alfredsson</span><br>
 						<span class="photographer-title">Photography</span>
