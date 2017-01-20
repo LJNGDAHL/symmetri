@@ -5,11 +5,7 @@
 * @package Johan_Alfredsson_Photography
 */
 
-echo 'This is: index.php'; // TODO: Remove once finished with structure.
 get_header(); ?>
-
-
-
 	<!-- TODO: Remove once finished with structure -->
 	<?php
 		if ( have_posts() ) {

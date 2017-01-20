@@ -1,12 +1,19 @@
+.menu-link {
+  font-size: 1.3rem;
+    position: absolute;
+    top: 73px;
+    right: 40px;
+}
+
 .main-navigation {
-  background-color: $primaryColor;
+  @include background-gradient();
   color: $secondaryColor;
   font-size: 3rem;
   line-height: 1.4;
   height: 100vh;
   width: 100vw;
   left: 0;
-  padding: 10vh 20vh 0;
+  padding: 15vh 5vh;
   position: fixed;
   top: 0;
   transform: translateY(-100vh);
@@ -37,5 +44,29 @@
 
   .current-menu-item a {
     opacity: 1;
+  }
+
+  // This styles the Exit Icon.
+  .exit-menu {
+    width: 2rem;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    &:hover {
+      opacity: 1;
+      animation: roll 1s 1;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes roll {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }

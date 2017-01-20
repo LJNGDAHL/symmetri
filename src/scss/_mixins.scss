@@ -1,0 +1,4 @@
+@mixin background-gradient() {
+  background: -webkit-linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
+  background: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
+}
