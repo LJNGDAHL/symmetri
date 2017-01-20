@@ -8,8 +8,8 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<!-- TODO: Move the menu to a box that covers the whole page. -->
-		<a href="#">Menu</a>
-		<nav>
+		<a href="#navigation" id="menu-link">Menu</a>
+		<nav class="main-navigation" id="navigation">
+			<a href="#menu-link" class="exit-menu">Exit</p>
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
 		</nav>
