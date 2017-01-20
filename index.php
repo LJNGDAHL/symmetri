@@ -1,8 +1,14 @@
 <?php
-	echo 'This is: index.php'; // TODO: Remove once finished with structure.
-	get_header();
-?>
-<main>
+/**
+* The main template file
+*
+* @package Johan_Alfredsson_Photography
+*/
+
+echo 'This is: index.php'; // TODO: Remove once finished with structure.
+get_header(); ?>
+
+<main id="main" class="site-main" role="main">
 	<h1>
 		<a href="<?php bloginfo( 'wpurl' );?>">
 			<?php echo get_bloginfo( 'name' ); ?>
