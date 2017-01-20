@@ -1,13 +1,13 @@
 <?php
 /**
-* Template Name: Page
 * The template for displaying all pages
+*
+* @package Johan_Alfredsson_Photography
 */
 
-	echo 'page.php'; // TODO: Remove once finished with structure.
+echo 'page.php'; // TODO: Remove once finished with structure.
+get_header(); ?>
 
-	get_header();
-?>
 <main>
 	<?php if ( have_posts() ) :
 		while ( have_posts() ) :

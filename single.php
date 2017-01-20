@@ -1,4 +1,9 @@
 <?php
+/**
+* The template for displaying all single posts
+* @package Johan_Alfredsson_Photography
+*/
+
 	echo 'This is: single.php'; // TODO: Remove once finished with structure.
 	get_header();
 ?>
