@@ -19,7 +19,7 @@
 				<?php get_template_part( 'img/logo' ); ?>
 			</div>
 		</nav>
-		<main id="main" class="site-main" role="main">
+		<main>
 			<div class="logo">
 				<a href="<?php bloginfo( 'wpurl' );?>">
 					<?php get_template_part( 'img/lens' ); ?>
