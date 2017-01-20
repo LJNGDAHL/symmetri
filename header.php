@@ -8,8 +8,24 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<a href="#navigation" id="menu-link">Menu</a>
+		<a class="menu-link" href="#navigation">Menu</a>
 		<nav class="main-navigation" id="navigation">
-			<a href="#menu-link" class="exit-menu">Exit</p>
+			<a href="#" class="exit-menu">
+				<?php get_template_part( 'img/exit', 'icon' ); ?>
+			</a>
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
+
+			<div class="logotype-container">
+				<?php get_template_part( 'img/logo' ); ?>
+			</div>
 		</nav>
+		<main>
+			<div class="logo">
+				<a href="<?php bloginfo( 'wpurl' );?>">
+					<?php get_template_part( 'img/lens' ); ?>
+					<h1>
+						<span class="photographer-name">Johan Alfredsson</span><br>
+						<span class="photographer-title">Photography</span>
+					</h1>
+				</a>
+			</div>
