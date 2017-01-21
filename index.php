@@ -17,6 +17,7 @@ get_header(); ?>
 					the_post_thumbnail('large');
 					echo '</a>';
 				}
+
 			}
 		}
 	?>

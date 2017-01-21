@@ -80,10 +80,11 @@
 
   // Styling of bottom logotype starts here ------------------------------------
   .logotype-container {
-    position: relative;
-    top: 8rem;
-    height: 6rem;
-    width: 6rem;
-    margin: 0 auto;
+    bottom: 0;
+    height: 6.5rem;
+    left: 50%;
+    width: 6.5rem;
+    position: absolute;
+    transform: translateX(-50%);
   }
 }

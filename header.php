@@ -7,10 +7,10 @@
 		<title><?php echo get_bloginfo( 'name' ); ?></title>
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body id="body" <?php body_class(); ?>>
 		<a class="menu-link" href="#navigation">Menu</a>
 		<nav class="main-navigation" id="navigation">
-			<a href="#" class="exit-menu">
+			<a href="#body" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
 			</a>
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>

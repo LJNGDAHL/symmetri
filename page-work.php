@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Portfolio
- * Shows all posts of the type Portfolio.
+ * Template Name: Works
+ * Shows all posts of the type Works
  */
 get_header();
 	echo 'page-work.php';
