@@ -1,5 +1,6 @@
 
-// The link "Menu" that leads to main navigation
+// The link "Menu" that leads to main navigation -------------------------------
+
 .menu-link {
   font-size: 1.3rem;
   position: absolute;
@@ -12,7 +13,8 @@
   }
 }
 
-/* START OF STYLING FOR MAIN NAVIGATION (DROPS DOWN) ------------------------ */
+// Start of styling for main navigation (drops down on target) -----------------
+
 .main-navigation {
   @include background-gradient();
   color: $secondaryColor;
@@ -55,6 +57,7 @@
   }
 
   // Styling of exit icon starts here ------------------------------------------
+
   .exit-menu {
     line-height: 0;
     width: 1.8rem;
