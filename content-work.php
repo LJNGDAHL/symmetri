@@ -18,7 +18,6 @@ if ( $work -> have_posts() ) {
 
 		$work -> the_post(); ?>
 
-
 		<?php if ( has_post_thumbnail() ) {
 		?>
 		<article class="flex-item">

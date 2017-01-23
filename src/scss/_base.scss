@@ -15,7 +15,7 @@
   height: auto;
   width: 100%;
 
-  @include screenMedium {
+  @media #{$screenMedium} {
     width: 33%;
   }
 }
@@ -28,7 +28,7 @@
   width: 70vw;
   margin: 0 auto;
 
-  @include screenMedium {
+  @media #{$screenMedium} {
     max-width: 600px;
   }
 }

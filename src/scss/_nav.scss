@@ -6,7 +6,7 @@
   top: 50px;
   right: 20px;
 
-  @include screenMedium {
+  @media #{$screenMedium}, #{$screenLarge} {
     top: 73px;
     right: 40px;
   }
@@ -54,7 +54,7 @@
     opacity: 1;
   }
 
-  // Styling of Exit Icon starts here ------------------------------------------
+  // Styling of exit icon starts here ------------------------------------------
   .exit-menu {
     line-height: 0;
     width: 1.8rem;
@@ -64,14 +64,14 @@
     right: 1.5rem;
     opacity: 0.8;
 
-    // On hover, the exit icon rotate 360deg.
+    // On hover, the exit icon rotates 360deg
     &:hover {
       opacity: 1;
       animation: roll 1s 1;
       animation-timing-function: ease-in-out;
     }
 
-    // Animation for spinning the exit icon.
+    // Animation for spinning the exit icon
     @keyframes roll {
       0% {
         transform: rotate(0);

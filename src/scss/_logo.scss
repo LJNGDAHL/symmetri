@@ -10,7 +10,7 @@
     // hides photographer-name and photographer-title on small screens
     display: none;
 
-    @include screenMedium {
+    @media #{$screenMedium}, #{$screenLarge} {
 
       display: block;
       font-size: 1.7rem;

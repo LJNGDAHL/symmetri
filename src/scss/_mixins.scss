@@ -12,26 +12,3 @@
     position: absolute;
     width: 1px;
 }
-
-/*------------------------------------------------------------------------------
-    MEDIA QUERIES FOR RESPONSIVENESS
-    (variables are found in "_variables.scss")
-------------------------------------------------------------------------------*/
-
-@mixin screenSmall {
-    @media (max-width: #{$widthSmall - 1px}) {
-        @content;
-    }
-}
-
-@mixin screenMedium {
-    @media (min-width: #{$widthMedium}) {
-        @content;
-    }
-}
-
-@mixin screenLarge {
-    @media (min-width: #{$widthLarge}) {
-        @content;
-    }
-}
