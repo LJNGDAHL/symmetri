@@ -15,7 +15,7 @@
 		add_theme_support( 'post-thumbnails', array( 'post', 'wpaj_cpt_gallery' ) );
 
 		// Since value 'true' is not added, this is set to soft crop mode
-		add_image_size( 'album-cover', 500, 500 );
+		add_image_size( 'album-cover', 300, 9999 );
 	}
 
 	// Preps theme for localization

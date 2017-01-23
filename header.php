@@ -19,13 +19,13 @@
 				<?php get_template_part( 'img/logo' ); ?>
 			</div>
 		</nav>
-		<main>
-			<div class="logo">
-				<a href="<?php bloginfo( 'wpurl' );?>">
-					<?php get_template_part( 'img/lens' ); ?>
-					<h1>
-						<span class="photographer-name">Johan Alfredsson</span><br>
-						<span class="photographer-title">Photography</span>
-					</h1>
-				</a>
-			</div>
+		<div class="logo">
+			<a href="<?php bloginfo( 'wpurl' );?>">
+				<?php get_template_part( 'img/lens' ); ?>
+				<h1 class="main-title">
+					<span class="photographer-name">Johan Alfredsson</span><br>
+					<span class="photographer-title">Photography</span>
+				</h1>
+			</a>
+		</div>
+		<main class="site-main" role="main">

@@ -6,14 +6,18 @@
 */
 
 get_header(); ?>
-<?php if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-		echo '<h1>'; the_title(); echo '</h1>';
-		the_content();
-	endwhile;
 
-else: ?>
-<p>Sorry, no posts matched your criteria.</p>
-<?php endif; ?>
+<?php
+	// Start of the loop.
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post(); ?>
+			<article class="main-article">
+				<h2 class="center"><?php the_title(); ?></h2>
+				<?php the_content(); ?>
+			</article>
+			<?php
+		}
+	}
+?>
 <?php get_footer(); ?>

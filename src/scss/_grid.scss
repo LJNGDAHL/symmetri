@@ -1,0 +1,21 @@
+.flex-container {
+  @include screenMedium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-item {
+    &:hover {
+      // TODO: Make something beautiful.
+    }
+
+    @include screenMedium {
+      padding: 2rem;
+      flex-grow: 0;
+      width: 50%;
+
+    }
+  }
+}
