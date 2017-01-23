@@ -2,3 +2,13 @@
   background: -webkit-linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
   background: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
 }
+
+@mixin hidden-visually {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

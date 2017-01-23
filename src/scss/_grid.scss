@@ -1,0 +1,20 @@
+.flex-container {
+  @media #{$screenMedium}, #{$screenLarge} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-item {
+    &:hover {
+      // TODO: Make something beautiful.
+    }
+
+    @media #{$screenMedium}, #{$screenLarge} {
+        flex-grow: 0;
+        padding: 2rem;
+        width: 50%;
+    }
+  }
+}

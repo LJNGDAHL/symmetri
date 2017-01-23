@@ -1,13 +1,20 @@
 
-// The link "Menu" that leads to main navigation
+// The link "Menu" that leads to main navigation -------------------------------
+
 .menu-link {
   font-size: 1.3rem;
-    position: absolute;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+
+  @media #{$screenMedium}, #{$screenLarge} {
     top: 73px;
     right: 40px;
+  }
 }
 
-/* START OF STYLING FOR MAIN NAVIGATION (DROPS DOWN) ------------------------ */
+// Start of styling for main navigation (drops down on target) -----------------
+
 .main-navigation {
   @include background-gradient();
   color: $secondaryColor;
@@ -49,7 +56,8 @@
     opacity: 1;
   }
 
-  // Styling of Exit Icon starts here ------------------------------------------
+  // Styling of exit icon starts here ------------------------------------------
+
   .exit-menu {
     line-height: 0;
     width: 1.8rem;
@@ -59,14 +67,14 @@
     right: 1.5rem;
     opacity: 0.8;
 
-    // On hover, the exit icon rotate 360deg.
+    // On hover, the exit icon rotates 360deg
     &:hover {
       opacity: 1;
       animation: roll 1s 1;
       animation-timing-function: ease-in-out;
     }
 
-    // Animation for spinning the exit icon.
+    // Animation for spinning the exit icon
     @keyframes roll {
       0% {
         transform: rotate(0);
@@ -80,10 +88,11 @@
 
   // Styling of bottom logotype starts here ------------------------------------
   .logotype-container {
-    position: relative;
-    top: 8rem;
-    height: 6rem;
-    width: 6rem;
-    margin: 0 auto;
+    bottom: 0;
+    height: 6.5rem;
+    left: 50%;
+    width: 6.5rem;
+    position: absolute;
+    transform: translateX(-50%);
   }
 }

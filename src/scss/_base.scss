@@ -1,17 +1,33 @@
 // TODO: Replace with accurate styling.
 * {
   box-sizing: border-box;
-  font-family: $brandfont;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-  color: $primaryColor;
 }
 
 .wp-post-image {
   display: block;
   height: auto;
-  width: 100vw;
+  width: 100%;
+}
+
+.album-cover {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  @media #{$screenMedium} {
+    width: 33%;
+  }
+}
+
+.site-main {
+  margin: 0 auto;
+}
+
+.main-article {
+  width: 70vw;
+  margin: 0 auto;
+
+  @media #{$screenMedium} {
+    max-width: 600px;
+  }
 }
