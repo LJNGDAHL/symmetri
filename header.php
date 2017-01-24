@@ -14,11 +14,11 @@
 		<?php wp_head(); ?>
 	</head>
 	<body id="body" <?php body_class(); ?>>
-		<!-- <a class="menu-link" href="#navigation">Menu</a> -->
+		<a class="menu-link" href="#navigation">Menu</a>
 		<!-- TODO: Decide which menu link to use.  -->
-		<a href="#navigation" aria-label="Menu icon">
-			<?php get_template_part( 'img/menu', 'icon' ); ?>
-		</a>
+		<!-- <a href="#navigation" aria-label="Menu icon">
+			Insert get template part here
+		</a> -->
 		<nav class="main-navigation" id="navigation">
 			<a href="#body" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>

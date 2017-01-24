@@ -19,5 +19,11 @@ get_header(); ?>
 			<?php
 		}
 	}
+
+	// On Contact Page, include sidebar with contact form.
+	if ( is_page( 'contact' ) ) {
+		dynamic_sidebar( 'socialmedialinks');
+	}
 ?>
+
 <?php get_footer(); ?>

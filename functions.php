@@ -18,6 +18,16 @@
 		add_image_size( 'album-cover', 300, 9999 );
 	}
 
+	// Register sidebar
+	register_sidebar( array(
+		'name' 			=> __('Social Media Links', 'sociallinks'),
+		'id'	 		=> 'socialmedialinks',
+		'description' 	=> __('First column in footer', 'socialmedialinks'),
+		'before_widget' => '<div class="footer footer-col-1">',
+		'after_widget' 	=> '</div>'
+	));
+
 	// Preps theme for localization
 	load_theme_textdomain( 'wpaj', templatepath.'/languages' );
+
 ?>
