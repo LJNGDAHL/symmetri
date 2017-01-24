@@ -1,0 +1,29 @@
+{
+  "name": "alfredssonjohan-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass ./src/scss/style.scss | postcss -u postcss-custom-media -u autoprefixer -o css/style.css",
+    "watch": "nodemon -e .scss -x 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio.git"
+  },
+  "author": "Katarina Ljungdahl <jag@katarinaljungdahl.se>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio/issues"
+  },
+  "homepage": "https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "node-sass": "^4.3.0",
+    "nodemon": "^1.11.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-media": "^5.0.1"
+  }
+}
