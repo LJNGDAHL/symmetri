@@ -14,12 +14,9 @@
 }
 
 .page-main {
-  margin-bottom: 5rem;
-}
-
-.article {
   width: 70vw;
   margin: 0 auto;
+  margin-bottom: 5rem;
 
   @media #{$screenMedium} {
     max-width: 600px;

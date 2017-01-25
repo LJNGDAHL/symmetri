@@ -28,3 +28,14 @@ a {
 .intro-text p {
   font-size: 1.1rem;
 }
+
+.address-information,
+.social-link {
+  font-style: normal;
+  margin: 0;
+  line-height: 1.35;
+
+  &.photographer-name {
+    font-weight: 400;
+  }
+}
