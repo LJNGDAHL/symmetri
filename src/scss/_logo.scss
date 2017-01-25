@@ -6,13 +6,13 @@
     width: 3.8rem;
   }
 
-  .main-title {
+  .photographer-container {
     // hides photographer-name and photographer-title on small screens
     display: none;
 
     @media #{$screenMedium}, #{$screenLarge} {
 
-      display: block;
+      display: inline;
       font-weight: 300;
       font-size: 1.7rem;
       margin-top: 0.2em;
@@ -22,5 +22,4 @@
       }
     }
   }
-
 }

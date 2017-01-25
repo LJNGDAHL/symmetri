@@ -6,8 +6,9 @@
 */
 
 	get_header();
-
-	echo 'page-blog.php';
+?>
+<main class="page-main">
+<?php
 
 	// This gets the title and content of the page.
 	if ( have_posts() ) :
@@ -40,7 +41,7 @@
 			$the_query -> the_post(); ?>
 
 			<article class="article">
-				<h3 class="center"><?php the_title(); ?></h3>
+				<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
 
 				<?php if ( has_post_thumbnail() ) : ?>
 
@@ -52,7 +53,7 @@
 					the_excerpt();
 					// TODO: Prep for translation.
 				?>
-					<a href="<?php the_permalink(); ?>">Read more</a>
+					<a class="page-link" href="<?php the_permalink(); ?>">Read more</a>
 			</article>
 
 			<?php
@@ -62,3 +63,4 @@
 
 	get_footer();
 ?>
+</main>

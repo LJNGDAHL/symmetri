@@ -22,10 +22,11 @@
 	<?php endif;
 
 	// On Contact Page, include sidebar with contact form.
-	if ( is_page( 'contact' ) ) {
-		// TODO: change name!
+	if ( is_page( 'contact' ) ) :
+
 		dynamic_sidebar( 'contact-footer');
-	}
+
+	endif;
 
 	get_footer();
 ?>

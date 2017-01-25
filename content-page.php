@@ -6,6 +6,17 @@
  */
 ?>
 <article class="article">
-	<h2 class="center"><?php the_title(); ?></h2>
-	<?php the_content(); ?>
+	<h2 class="center page-title uppercase"><?php the_title(); ?></h2>
+	<?php if ( is_page( 'work-in-progress' ) ) : ?>
+		<div class="intro-text">
+			<?php the_content(); ?>
+		</div>
+		<?php
+
+	else:
+
+		the_content();
+
+	endif; ?>
+
 </article>
