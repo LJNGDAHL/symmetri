@@ -3,12 +3,6 @@
   box-sizing: border-box;
 }
 
-.full-width-img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
 .site-main {
   margin: 0 auto;
 }
@@ -21,4 +15,15 @@
   @media #{$screenMedium} {
     max-width: 600px;
   }
+}
+
+.blog-post {
+  padding-bottom: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid $primaryColor;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
 }

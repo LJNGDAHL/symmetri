@@ -33,11 +33,11 @@
 			<h1 class="main-title">
 				<a href="<?php bloginfo( 'wpurl' );?>">
 					<?php get_template_part( 'img/lens' ); ?><br>
-					<div class="photographer-container">
+					<span class="photographer-container">
 						<!-- TODO: Check if this is okay, or if this needs to be put away. -->
 						<span class="photographer-name">Johan Alfredsson</span><br>
 						<span class="photographer-title">Photography</span>
-					</div>
+					</span>
 				</a>
 			</h1>
 		</div>

@@ -30,6 +30,7 @@
 	$the_query = new WP_Query( array(
 		'post_status'		=> 'publish',
 		'category_name'		=> 'Work in progress'
+
 		)
 	);
 
@@ -40,7 +41,7 @@
 
 			$the_query -> the_post(); ?>
 
-			<article class="article">
+			<article class="blog-post">
 				<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
 
 				<?php if ( has_post_thumbnail() ) : ?>
@@ -49,18 +50,17 @@
 					<?php the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) ); ?>
 				</a>
 
-				<?php endif;
-					the_excerpt();
-					// TODO: Prep for translation.
-				?>
-					<a class="page-link" href="<?php the_permalink(); ?>">Read more</a>
+				<?php endif; ?>
+
+				<p class="blog-post-date">Published: <?php the_date(); ?></p>
+				<?php the_content(); ?>
 			</article>
 
 			<?php
 
 		endwhile;
-	endif;
+	endif; ?>
 
-	get_footer();
-?>
 </main>
+
+<?php get_footer(); ?>

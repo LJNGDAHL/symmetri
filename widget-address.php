@@ -96,7 +96,7 @@
 			if ( ! empty ( $instance['phone'] ) ) : ?>
 
 				<p class="address-information photographer-phone">Phone:
-					<a href="tel:<?php echo $instance['phone']; ?>"><?php echo $instance['phone']; ?>
+					<a href="tel:<?php echo str_replace(' ', '', $instance['phone']); ?>"><?php echo $instance['phone']; ?>
 					</a>
 				</p>
 
