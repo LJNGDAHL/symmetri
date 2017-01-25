@@ -22,13 +22,14 @@
 
 	// Register sidebar
 	register_sidebar( array(
-		// TODO: Change name!
-		'name' 			=> __('Social Media Links', 'sociallinks'),
-		'id'	 		=> 'socialmedialinks',
-		'description' 	=> __('First column in footer', 'socialmedialinks'),
-		'before_widget' => '<div class="footer footer-col-1">',
-		'after_widget' 	=> '</div>'
-	));
+
+		'name' 			=> __( 'Footer', 'contact-footer' ),
+		'id'	 		=> 'contact-footer',
+		'description' 	=> __( 'Footer on Contact Page', 'contact-footer' ),
+		'before_widget' => '<footer class="footer contact-footer">',
+		'after_widget' 	=> '</footer>'
+
+	) ) ;
 
 	// Preps theme for localization
 	load_theme_textdomain( 'wpaj', templatepath.'/languages' );

@@ -22,7 +22,7 @@
 	// On Contact Page, include sidebar with contact form.
 	if ( is_page( 'contact' ) ) {
 		// TODO: change name!
-		dynamic_sidebar( 'socialmedialinks');
+		dynamic_sidebar( 'contact-footer');
 	}
 
 	get_footer();

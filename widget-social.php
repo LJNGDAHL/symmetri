@@ -87,6 +87,8 @@
 
 			echo $args['before_widget'];
 
+			// TODO: Replace text with svg icons.
+
 			if ( ! empty ( $instance['instagram'] ) ) : ?>
 				<a class="social-link" href="<?php echo $instance['instagram']; ?>">Instagram</a>
 			<?php endif;

@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
 		<link rel="manifest" href="img/favicons/manifest.json">
-		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#15141b">
+		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg">
 		<meta name="theme-color" content="#f8f8f8">
 		<?php wp_head(); ?>
 	</head>
@@ -38,4 +38,3 @@
 				</h1>
 			</a>
 		</div>
-		<main class="site-main" role="main">
