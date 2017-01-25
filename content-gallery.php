@@ -7,7 +7,7 @@
 	// This loops all the images in the gallery.
 	foreach ( $gallery_images as $image ) {
 
-			echo '<img class="wp-post-image" src="'.$image["image"].'"/>';
+			echo '<img class="full-width-img" src="'.$image["image"].'"/>';
 
 		}
 	}

@@ -3,27 +3,17 @@
   box-sizing: border-box;
 }
 
-.wp-post-image {
+.full-width-img {
   display: block;
   height: auto;
   width: 100%;
-}
-
-.album-cover {
-  display: block;
-  height: auto;
-  width: 100%;
-
-  @media #{$screenMedium} {
-    width: 33%;
-  }
 }
 
 .site-main {
   margin: 0 auto;
 }
 
-.main-article {
+.article {
   width: 70vw;
   margin: 0 auto;
 
