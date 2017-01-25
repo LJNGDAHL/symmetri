@@ -1,5 +1,6 @@
 <?php
 	require "widget-social.php";
+	require "widget-address.php";
 
 	add_action( 'after_setup_theme', 'ljngdahl_wpaj_setup' );
 
@@ -23,11 +24,11 @@
 	// Register sidebar
 	register_sidebar( array(
 
-		'name' 			=> __( 'Footer', 'contact-footer' ),
-		'id'	 		=> 'contact-footer',
-		'description' 	=> __( 'Footer on Contact Page', 'contact-footer' ),
-		'before_widget' => '<footer class="footer contact-footer">',
-		'after_widget' 	=> '</footer>'
+		'name' 			=> __( 'Contact Information', 'contact-container' ),
+		'id'	 		=> 'contact-container',
+		'description' 	=> __( 'A container for contact information', 'contact-container' ),
+		'before_widget' => '<address class="contact-information">',
+		'after_widget' 	=> '</address>'
 
 	) ) ;
 

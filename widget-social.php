@@ -45,7 +45,7 @@
 					Facebook:
 				</label><br>
 				<input type="text"
-				id="<?php echo $facbookId; ?>"
+				id="<?php echo $facebookId; ?>"
 				name="<?php echo $facebookName; ?>"
 				value="<?php echo $facebookTitle; ?>">
 				<br>
@@ -85,8 +85,6 @@
 		// Setup to show widget in frontend.
 		public function widget($args, $instance) {
 
-			echo $args['before_widget'];
-
 			// TODO: Replace text with svg icons.
 
 			if ( ! empty ( $instance['instagram'] ) ) : ?>
@@ -101,7 +99,6 @@
 				<a class="social-link" href="<?php echo $instance['twitter']; ?>">Twitter</a>
 			<?php endif;
 
-			echo $args['after_widget'];
 		}
 	}
 

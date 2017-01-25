@@ -6,8 +6,11 @@
 */
 
 	get_header();
+?>
 
-	if ( have_posts() ) :
+<main class="page-main">
+
+<?php if ( have_posts() ) :
 
 		while ( have_posts() ) : the_post();
 
@@ -22,11 +25,14 @@
 	<?php endif;
 
 	// On Contact Page, include sidebar with contact form.
-	if ( is_page( 'contact' ) ) :
+	if ( is_page( 'contact' ) ) : ?>
 
-		dynamic_sidebar( 'contact-footer');
+		<div class="contact-container">
+			<?php dynamic_sidebar( 'contact-container'); ?>
+		</div>
 
-	endif;
-
-	get_footer();
+	<?php endif;
 ?>
+</main>
+
+<?php get_footer(); ?>
