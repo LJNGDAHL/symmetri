@@ -1,4 +1,6 @@
 <?php
+	require "widget-social.php";
+
 	add_action( 'after_setup_theme', 'ljngdahl_wpaj_setup' );
 
 	function ljngdahl_wpaj_setup() {
@@ -20,6 +22,7 @@
 
 	// Register sidebar
 	register_sidebar( array(
+		// TODO: Change name!
 		'name' 			=> __('Social Media Links', 'sociallinks'),
 		'id'	 		=> 'socialmedialinks',
 		'description' 	=> __('First column in footer', 'socialmedialinks'),

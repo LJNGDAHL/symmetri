@@ -5,9 +5,8 @@
 * @package Johan_Alfredsson_Photography
 */
 
-get_header(); ?>
+	get_header();
 
-<?php
 	// Start of the loop.
 	if ( have_posts() ) {
 		while ( have_posts() ) {
@@ -22,8 +21,9 @@ get_header(); ?>
 
 	// On Contact Page, include sidebar with contact form.
 	if ( is_page( 'contact' ) ) {
+		// TODO: change name!
 		dynamic_sidebar( 'socialmedialinks');
 	}
-?>
 
-<?php get_footer(); ?>
+	get_footer();
+?>
