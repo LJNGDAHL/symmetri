@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title><?php echo get_bloginfo( 'name' ); ?></title>
+		<title><?php echo get_bloginfo( 'name' ); echo ' '; echo get_bloginfo( 'description'); ?></title>
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
@@ -34,9 +34,12 @@
 				<a href="<?php bloginfo( 'wpurl' );?>">
 					<?php get_template_part( 'img/lens' ); ?><br>
 					<span class="photographer-container">
-						<!-- TODO: Check if this is okay, or if this needs to be put away. -->
-						<span class="photographer-name">Johan Alfredsson</span><br>
-						<span class="photographer-title">Photography</span>
+						<span class="photographer-name">
+							<?php echo get_bloginfo( 'name' ); ?>
+						</span><br>
+						<span class="photographer-title">
+							<?php echo get_bloginfo( 'description' ); ?>
+						</span>
 					</span>
 				</a>
 			</h1>
