@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio.git"
+    "url": "git+https://github.com/LJNGDAHL/symmetri.git"
   },
   "author": "Katarina Ljungdahl <jag@katarinaljungdahl.se>",
   "license": "MIT",
   "private": true,
   "bugs": {
-    "url": "https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio/issues"
+    "url": "https://github.com/LJNGDAHL/symmetri/issues"
   },
-  "homepage": "https://github.com/LJNGDAHL/wp-theme-alfredssonjohan-portfolio#readme",
+  "homepage": "https://github.com/LJNGDAHL/symmetri#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.0",
     "node-sass": "^4.3.0",

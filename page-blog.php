@@ -2,7 +2,7 @@
 /**
 * Template Name: Blog
 * Shows all posts of the type Blog.
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 
 	get_header();

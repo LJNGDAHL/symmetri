@@ -2,9 +2,9 @@
 	require "widget-social.php";
 	require "widget-address.php";
 
-	add_action( 'after_setup_theme', 'ljngdahl_wpaj_setup' );
+	add_action( 'after_setup_theme', 'symmetri_setup' );
 
-	function ljngdahl_wpaj_setup() {
+	function symmetri_setup() {
 
 		// Project main CSS
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
@@ -15,9 +15,6 @@
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
 
-
-		// TODO: Remove once finished with renaming.
-		// add_theme_support( 'post-thumbnails', array( 'post', 'wpaj_cpt_gallery' ) );
 
 		// Adds Featured Image Option
 		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
@@ -38,6 +35,6 @@
 	) ) ;
 
 	// Preps theme for localization
-	load_theme_textdomain( 'wpaj', templatepath.'/languages' );
+	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
 
 ?>

@@ -2,7 +2,7 @@
 /**
 * The main template file
 *
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 
 	// FIXME: What code is needed in this file now that we have 'front-page.php'?

@@ -1,9 +1,9 @@
 <?php
 /**
- * The template used for displaying page content in page.php
- *
- * @package Johan_Alfredsson_Photography
- */
+* The template used for displaying page content in page.php
+*
+* @package Symmetri
+*/
 ?>
 <article class="article">
 	<h2 class="center page-title uppercase"><?php the_title(); ?></h2>

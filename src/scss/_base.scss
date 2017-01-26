@@ -12,7 +12,7 @@
   margin: 0 auto;
   margin-bottom: 5rem;
 
-  @media #{$screenMedium} {
+  @media #{$screenMedium}, #{$screenLarge} {
     max-width: 600px;
   }
 }

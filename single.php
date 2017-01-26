@@ -1,7 +1,7 @@
 <?php
 /**
 * The template for displaying all single posts
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 	get_header();
 ?>

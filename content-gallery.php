@@ -1,4 +1,9 @@
 <?php
+/**
+* The template used for displaying gallery images. Used on single.php.
+*
+* @package Symmetri
+*/
 
 	$gallery_images = CFS() -> get ( 'gallery_images' );
 

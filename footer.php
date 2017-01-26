@@ -2,7 +2,7 @@
 /**
 * The template for displaying the footer
 *
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 
 wp_footer(); ?>

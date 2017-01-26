@@ -1,7 +1,7 @@
 <?php
 /**
-* Plugin Name: Social Media Widget for Johan Alfredsson Photography Theme
-* Theme URI: http://www.alfredssonjohan.com/
+* Plugin Name: Social Media Widget for the Wordpress Theme Symmetri.
+* Theme URI: https://github.com/LJNGDAHL/symmetri
 * Author: Katarina Ljungdahl
 * Author URI: https://github.com/LJNGDAHL
 **/
@@ -9,7 +9,7 @@
 	class SocialMediaLinks extends WP_Widget {
 
 		public function __construct() {
-			$id = "socialmedialinks_wpaj";
+			$id = "social_symmetri";
 			$name = "Social Media Links";
 			$desc = "Used for linking social media.";
 

@@ -2,7 +2,7 @@
 /**
 * The template for displaying all pages
 *
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 
 	get_header();

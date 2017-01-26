@@ -5,7 +5,7 @@
 * If the user has selected a static page for their homepage, this is what will
 * appear.
 *
-* @package Johan_Alfredsson_Photography
+* @package Symmetri
 */
 	get_header();
 

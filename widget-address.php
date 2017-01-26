@@ -1,7 +1,7 @@
 <?php
 /**
-* Plugin Name: Contact Information Widget for the Johan Alfredsson Photography Theme
-* Theme URI: http://www.alfredssonjohan.com/
+* Plugin Name: Contact Information Widget for the Wordpress Theme Symmetri.
+* Theme URI: https://github.com/LJNGDAHL/symmetri
 * Author: Katarina Ljungdahl
 * Author URI: https://github.com/LJNGDAHL
 **/
@@ -9,7 +9,7 @@
 	class ContactInformation extends WP_Widget {
 
 		public function __construct() {
-			$id = "contactinformation_wpaj";
+			$id = "contact_symmetri";
 			$name = "Contact Information";
 			$desc = "Used for adding information about name, email address and phone number";
 
