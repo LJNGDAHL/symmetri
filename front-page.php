@@ -12,7 +12,7 @@
 	// This is used for being able to loop out gallery images.
 	$work = new WP_Query( array(
 
-		'post_type' 		=> 'wpaj_cpt_gallery',
+		'post_type' 		=> 'symmetri_cpt_gallery',
 		'post_status'		=> 'publish',
 		'order_by'			=> 'title',
 		'order'				=> ASC

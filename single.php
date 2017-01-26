@@ -21,7 +21,7 @@ if ( have_posts() ) :
 		endif;
 
 		// Check if custom page type for the gallery is used.
-		if ( is_singular( 'wpaj_cpt_gallery' ) ) :
+		if ( is_singular( 'symmetri_cpt_gallery' ) ) :
 
 			get_template_part( 'content', 'gallery' );
 
