@@ -15,7 +15,7 @@
 		'post_type' 		=> 'symmetri_cpt_gallery',
 		'post_status'		=> 'publish',
 		'order_by'			=> 'title',
-		'order'				=> ASC
+		'order'				=> DESC
 
 		)
 	);

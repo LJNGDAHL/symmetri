@@ -8,6 +8,8 @@
 <main class="flex-container">
 <?php
 
+echo 'single';
+
 if ( have_posts() ) :
 
 	while ( have_posts() ) :
