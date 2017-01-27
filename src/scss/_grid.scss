@@ -2,11 +2,18 @@
   max-width: 1200px;
   margin: 0 auto;
 
+  .grid-sizer,
   .grid-item {
 
     @media #{$screenMedium}, #{$screenLarge} {
       float: left;
       width: 50%;
     }
+  }
+
+  .grid-item-content {
+    @include background-gradient();
+    color: $secondaryColor;
+    padding: 4rem 7rem;
   }
 }

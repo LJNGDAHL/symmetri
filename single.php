@@ -6,43 +6,45 @@
 	get_header();
 ?>
 <main class="grid">
-<?php
+	<div class="grid-sizer"></div>
 
-if ( have_posts() ) :
+	<?php
 
-	while ( have_posts() ) :
+		if ( have_posts() ) :
 
-		the_post();
+			while ( have_posts() ) :
 
-		if( '' !== get_post()->post_content ) :
+				the_post();
 
-			echo '<div class="grid-item grid-item-content">';
-			the_title();
-			the_content();
-			echo '</div>';
+				if( '' !== get_post()->post_content ) : ?>
+
+					<div class="grid-item grid-item-content">
+						<h2 class="grid-item-title uppercase"><?php the_title(); ?></h2>
+						<?php the_content(); ?>
+					</div>
+
+				<?php endif;
+
+				if ( has_post_thumbnail() ) : ?>
+
+				<div class="grid-item">
+
+					<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) ); ?>
+				</div>
+
+				<?php endif;
+
+				// Check if custom page type for the gallery is used.
+				if ( is_singular( 'symmetri_cpt_gallery' ) ) :
+
+					get_template_part( 'content', 'gallery' );
+
+				endif;
+
+			endwhile;
 
 		endif;
-
-
-		if ( has_post_thumbnail() ) : ?>
-
-		<div class="grid-item">
-
-			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) ); ?>
-		</div>
-
-		<?php endif;
-
-		// Check if custom page type for the gallery is used.
-		if ( is_singular( 'symmetri_cpt_gallery' ) ) :
-
-			get_template_part( 'content', 'gallery' );
-
-		endif;
-
-	endwhile;
-
-endif; ?>
+	?>
 
 </main>
 
