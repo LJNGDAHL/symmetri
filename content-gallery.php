@@ -10,7 +10,6 @@
 	if ( $gallery_images ) :
 
 	// Loop through the images in the gallery.
-	// TODO: Replace with foreach if your plan fails.
 	for ( $i = 0; $i < $gallery_images[$i]; $i++ ) :
 
 		$id = $gallery_images[$i]['image'];
@@ -18,9 +17,10 @@
 		$srcset = wp_get_attachment_image_srcset( $id, 'full' );
 		$sizes = wp_get_attachment_image_sizes( $id, 'full' );
 		$alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
+
 		?>
 
-		<div class="grid-item">
+		<div class="grid-item grid-item--3-col">
 			<img class="full-width-img" src="<?php echo esc_attr( $src[0] );?>"
 				srcset="<?php echo esc_attr( $srcset ); ?>"
 				sizes="<?php echo esc_attr( $sizes );?>"
@@ -31,6 +31,5 @@
 
 	endfor; ?>
 
-<?php endif;
-
+<?php endif; ?>
 ?>

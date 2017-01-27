@@ -18,7 +18,7 @@
 
 				if( '' !== get_post()->post_content ) : ?>
 
-					<div class="grid-item grid-item-content">
+					<div class="grid-item grid-item--3-col grid-item-content">
 						<h2 class="grid-item-title uppercase"><?php the_title(); ?></h2>
 						<?php the_content(); ?>
 					</div>
@@ -27,7 +27,7 @@
 
 				if ( has_post_thumbnail() ) : ?>
 
-				<div class="grid-item">
+				<div class="grid-item grid-item--3-col">
 
 					<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) ); ?>
 				</div>

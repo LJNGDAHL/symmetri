@@ -1,33 +1,8 @@
 .contact-container {
-  border-top: 1px solid $primaryColor;
-  border-bottom: 1px solid $primaryColor;
-  height: 0;
-  margin: 2rem 0;
-  overflow: hidden;
-
-  animation: open 1.2s;
-  animation-delay: 0.2s;
-  animation-timing-function: cubic-bezier(.47,.01,.41,1.19);
-  animation-fill-mode: forwards;
-
-  // Animation for opening contact-container
-  @keyframes open {
-    0% {
-      border-top: 2px solid $primaryColor;
-      border-bottom: 2px solid $primaryColor;
-      height: 0;
-      overflow: hidden;
-      padding: 0;
-    }
-
-    // TODO: Make this look good on all screen sizes.
-    100% {
-      border-top: 2px solid $primaryColor;
-      border-bottom: 2px solid $primaryColor;
-      height: 10rem;
-      padding: 1.5rem 0 2rem;
-    }
-  }
+  border-top: 2px solid $primaryColor;
+  border-bottom: 2px solid $primaryColor;
+  margin-top: 2rem;
+  padding: 1.5rem 0 2rem;
 
   .address-information {
     text-align: center;
