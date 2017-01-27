@@ -15,6 +15,12 @@
 		// Project fonts
 		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
 
+		// Script used for layout
+		// TODO: Replace with CDN link.
+		wp_enqueue_script( 'isotope-layout', get_stylesheet_directory_uri() . '/js/isotope.js', array('jquery'), '3.0.2', true );
+
+		// Script used for initializing isotope-layout.
+		wp_enqueue_script('isotope_init', get_stylesheet_directory_uri() . '/js/isotope_init.js', array('isotope'), '', true);
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );

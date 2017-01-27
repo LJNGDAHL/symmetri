@@ -14,16 +14,16 @@ a {
   color: $primaryColor;
 }
 
-.page-title {
+.page-main-title {
     font-family: $altFont;
     font-weight: 700;
     font-size: 3.5rem;
     margin-bottom: 0.5em;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
 }
 
 .page-sub-title {
-  @extend .page-title;
+  @extend .page-main-title;
   font-size: 1.5rem;
   margin: 1.8em 0 1.2em;
 }

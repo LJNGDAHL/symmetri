@@ -20,15 +20,17 @@
 		$alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
 		?>
 
-		<img class="full-width-img" src="<?php echo esc_attr( $src[0] );?>"
-			srcset="<?php echo esc_attr( $srcset ); ?>"
-			sizes="<?php echo esc_attr( $sizes );?>"
-			alt="<?php echo esc_attr( $alt );?>" />
+		<div class="grid-item">
+			<img class="full-width-img" src="<?php echo esc_attr( $src[0] );?>"
+				srcset="<?php echo esc_attr( $srcset ); ?>"
+				sizes="<?php echo esc_attr( $sizes );?>"
+				alt="<?php echo esc_attr( $alt );?>" />
+		</div>
 
 		<?php
 
-	endfor;
+	endfor; ?>
 
-endif;
+<?php endif;
 
 ?>

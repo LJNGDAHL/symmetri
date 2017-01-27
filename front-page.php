@@ -21,7 +21,7 @@
 	);
 ?>
 
-<main class="flex-container">
+<main class="grid">
 <?php
 	// Start of loop
 	if ( $work -> have_posts() ) :
@@ -34,9 +34,9 @@
 
 				?>
 
-				<article class="flex-item">
+				<article class="grid-item">
 					<a class="img-link" href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) ); ?>
+						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
 					</a>
 				</article>
 
