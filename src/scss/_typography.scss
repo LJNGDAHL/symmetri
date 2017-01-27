@@ -15,13 +15,16 @@ a {
 }
 
 .page-title {
-    font-size: 3rem;
-    margin-bottom: 0.4em;
+    font-family: $altFont;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
 }
 
 .page-sub-title {
+  @extend .page-title;
   font-size: 1.5rem;
-  font-weight: 700;
   margin: 1.8em 0 1.2em;
 }
 

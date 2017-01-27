@@ -1,20 +1,23 @@
 .flex-container {
   @media #{$screenMedium}, #{$screenLarge} {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
   }
 
   .flex-item {
-    &:hover {
-      // TODO: Make something beautiful.
-    }
+
+
 
     @media #{$screenMedium}, #{$screenLarge} {
-        flex-grow: 0;
-        padding: 2rem;
-        width: 50%;
+        // flex-grow: 0;
+        // flex-shrink: 1;
+        height: 50%;
+        padding-bottom: 2em;
     }
   }
 }

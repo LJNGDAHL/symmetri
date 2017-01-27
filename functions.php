@@ -12,6 +12,10 @@
 		// Project fonts
 		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 
+		// Project fonts
+		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
+
+
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
 
