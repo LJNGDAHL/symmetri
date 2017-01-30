@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title><?php echo get_bloginfo( 'name' ); echo ' '; echo get_bloginfo( 'description'); ?></title>
@@ -11,6 +11,7 @@
 		<link rel="manifest" href="img/favicons/manifest.json">
 		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg">
 		<meta name="theme-color" content="#f8f8f8">
+
 		<?php wp_head(); ?>
 
 		<?php if ( ! empty ( get_option( 'symmetri-gaid' ) ) ) : ?>
@@ -32,8 +33,7 @@
 			<a href="#body" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
 			</a>
-			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
-
+			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
 			<div class="logotype-container">
 				<?php get_template_part( 'img/logo' ); ?>
 			</div>

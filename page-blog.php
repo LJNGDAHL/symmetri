@@ -21,7 +21,7 @@
 
 	else: ?>
 
-		<p><?php 'Sorry, no posts matched your criteria.'; ?></p>
+		<p><?php _e( 'Sorry, no posts matched your criteria.', 'symmetri' ); ?></p>
 
 	<?php endif;
 

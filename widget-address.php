@@ -9,9 +9,9 @@
 	class ContactInformation extends WP_Widget {
 
 		public function __construct() {
-			$id = "contact_symmetri";
-			$name = "Contact Information";
-			$desc = "Used for adding information about name, email address and phone number";
+			$id = 'contact_symmetri';
+			$name = _x( 'Contact Information', 'symmetri' );
+			$desc = _x( 'Used for adding information about name, email address and phone number', 'symmetri', 'symmetri' );
 
 			parent::__construct($id, $name, $desc);
 		}
@@ -33,7 +33,7 @@
 			?>
 			<p>
 				<label for="<?php echo $photographerId; ?>">
-					Name:
+					<?php _e( 'Name', 'symmetri' )?>:
 				</label><br>
 				<input type="text"
 				id="<?php echo $photographerId; ?>"
@@ -42,7 +42,7 @@
 				<br>
 
 				<label for="<?php echo $phoneId; ?>">
-					Phone Number:
+					<?php _e( 'Phone Number', 'symmetri' )?>:
 				</label><br>
 				<input type="tel"
 				id="<?php echo $phoneId; ?>"
@@ -51,7 +51,7 @@
 				<br>
 
 				<label for="<?php echo $emailId; ?>">
-					Email address:
+					<?php _e( 'Email address', 'symmetri' )?>:
 				</label><br>
 				<input type="email"
 				id="<?php echo $emailId; ?>"
@@ -95,7 +95,8 @@
 
 			if ( ! empty ( $instance['phone'] ) ) : ?>
 
-				<p class="address-information photographer-phone">Phone:
+				<p class="address-information photographer-phone">
+					<?php _e( 'Phone Number', 'symmetri' )?>:
 					<a href="tel:<?php echo str_replace(' ', '', $instance['phone']); ?>"><?php echo $instance['phone']; ?>
 					</a>
 				</p>
@@ -104,7 +105,8 @@
 
 			if ( ! empty ( $instance['email'] ) ): ?>
 
-				<p class="address-information photographer-email">Email:
+				<p class="address-information photographer-email">
+					<?php _e( 'Email', 'symmetri' )?>:
 					<a href="mailto:<?php echo $instance['email']; ?>">
 						<?php echo $instance['email']; ?>
 					</a>

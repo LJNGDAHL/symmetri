@@ -10,8 +10,8 @@
 
 		public function __construct() {
 			$id = "social_symmetri";
-			$name = "Social Media Links";
-			$desc = "Used for linking social media.";
+			$name = _x( 'Social Media Links', 'symmetri' );;
+			$desc = _x('Used for linking social media.', 'symmetri');
 
 			parent::__construct($id, $name, $desc);
 		}
@@ -33,7 +33,7 @@
 			?>
 			<p>
 				<label for="<?php echo $instagramId; ?>">
-					Instagram:
+					<?php _e( 'Instagram', 'symmetri') ?>:
 				</label><br>
 				<input type="text"
 				id="<?php echo $instagramId; ?>"
@@ -42,7 +42,7 @@
 				<br>
 
 				<label for="<?php echo $facebookId; ?>">
-					Facebook:
+					<?php _e( 'Facebook', 'symmetri') ?>:
 				</label><br>
 				<input type="text"
 				id="<?php echo $facebookId; ?>"
@@ -51,7 +51,7 @@
 				<br>
 
 				<label for="<?php echo $twitterId; ?>">
-					Twitter:
+					<?php _e( 'Twitter', 'symmetri') ?>:
 				</label><br>
 				<input type="text"
 				id="<?php echo $twitterId; ?>"
