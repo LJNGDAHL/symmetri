@@ -1,9 +1,38 @@
 <?php
+
 	require "widget-social.php";
 	require "widget-address.php";
+	require "theme-settings.php";
 
+	add_action( 'wp_dashboard_setup', 'symmetri_remove_dashboard_boxes' );
+	function symmetri_remove_dashboard_boxes() {
+		global $wp_meta_boxes;
+
+		// Removes 'Quick Draft' from dashboard
+		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );
+
+		// Removes 'At a Glance' from Dashboard
+		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+
+		// Removes 'Wordpress News' from Dashboard
+		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+
+		// Adds the custom made dashboard widget 'Quick Links'
+		wp_add_dashboard_widget('symmetri_dashboard', 'Quick Links', 'symmetri_dashwidget', null, null);
+	}
+
+	function symmetri_dashwidget() { ?>
+		<!-- TODO: Add Quick Links -->
+		<?php
+	}
+
+	// Removes unnecessary code
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'feed_links', 2 );
+
+	// Setup for the theme 'Symmetri'
 	add_action( 'after_setup_theme', 'symmetri_setup' );
-
 	function symmetri_setup() {
 
 		// Project main CSS
@@ -45,5 +74,4 @@
 
 	// Preps theme for localization
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
-
 ?>

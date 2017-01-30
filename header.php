@@ -12,13 +12,22 @@
 		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg">
 		<meta name="theme-color" content="#f8f8f8">
 		<?php wp_head(); ?>
+
+		<?php if ( ! empty ( get_option( 'symmetri-gaid' ) ) ) : ?>
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', '<?php echo get_option('symmetri-gaid', true); ?>', 'auto');
+				ga('send', 'pageview');
+			</script>
+		<?php endif; ?>
 	</head>
+
 	<body id="body" <?php body_class(); ?>>
 		<a class="menu-link" href="#navigation">Menu</a>
-		<!-- TODO: Decide which menu link to use.  -->
-		<!-- <a href="#navigation" aria-label="Menu icon">
-			Insert get template part here
-		</a> -->
 		<nav class="main-navigation" id="navigation">
 			<a href="#body" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
@@ -32,11 +41,11 @@
 		<div class="logo">
 			<h1 class="main-title">
 				<a href="<?php bloginfo( 'wpurl' );?>">
-					<?php get_template_part( 'img/lens' ); ?><br>
+					<?php get_template_part( 'img/lens' ); ?>
 					<span class="photographer-container">
 						<span class="photographer-name">
 							<?php echo get_bloginfo( 'name' ); ?>
-						</span><br>
+						</span>
 						<span class="photographer-title">
 							<?php echo get_bloginfo( 'description' ); ?>
 						</span>

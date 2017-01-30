@@ -7,17 +7,16 @@
     }
 
   .photographer-container {
-    // hides photographer-name and photographer-title on small screens
     display: none;
 
     @media #{$screenMedium}, #{$screenLarge} {
-
-      display: inline;
+      display: block;
       font-weight: 300;
       font-size: 1.7rem;
       margin-top: 0.2em;
 
       .photographer-name {
+        display: block;
         font-weight: 400;
       }
     }
