@@ -1,20 +1,29 @@
-.flex-container {
-  @media #{$screenMedium}, #{$screenLarge} {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
 
-  .flex-item {
-    &:hover {
-      // TODO: Make something beautiful.
-    }
+  .grid-item,
+  .grid-sizer {
 
     @media #{$screenMedium}, #{$screenLarge} {
-        flex-grow: 0;
-        padding: 2rem;
-        width: 50%;
+      float: left;
+      margin-bottom: 5px;
+      width: calc(50% - 5px);
+    }
+  }
+
+  .grid-item--3-col {
+    @media #{$screenMedium}, #{$screenLarge} {
+      width: calc(33% - 5px);
+    }
+  }
+
+  .grid-item-content {
+    @include background-gradient();
+    color: $secondaryColor;
+    padding: 4rem 3rem;
+    @media #{$screenMedium}, #{$screenLarge} {
+      padding: 2rem 3rem;
     }
   }
 }

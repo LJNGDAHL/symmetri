@@ -6,7 +6,7 @@
 */
 ?>
 <article class="article">
-	<h2 class="center page-title uppercase"><?php the_title(); ?></h2>
+	<h2 class="center page-main-title uppercase"><?php the_title(); ?></h2>
 	<?php if ( is_page( 'work-in-progress' ) ) : ?>
 		<div class="intro-text">
 			<?php the_content(); ?>

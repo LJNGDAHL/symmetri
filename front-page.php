@@ -14,14 +14,14 @@
 
 		'post_type' 		=> 'symmetri_cpt_gallery',
 		'post_status'		=> 'publish',
-		'order_by'			=> 'title',
-		'order'				=> DESC
+		'order_by'			=> 'menu_order',
+		'order'				=> ASC
 
 		)
 	);
 ?>
 
-<main class="flex-container">
+<main class="grid">
 <?php
 	// Start of loop
 	if ( $work -> have_posts() ) :
@@ -32,8 +32,15 @@
 
 			if ( has_post_thumbnail() ) :
 
-				get_template_part( 'content', 'work' );
+				?>
 
+				<article class="grid-item">
+					<a class="img-link" href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
+					</a>
+				</article>
+
+				<?php
 			endif;
 
 		endwhile;

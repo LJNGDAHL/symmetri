@@ -1,3 +1,7 @@
+/*------------------------------------------------------------------------------
+  MAIN RULES FOR TYPOGRAPHY
+------------------------------------------------------------------------------*/
+
 body,
 html {
   font-family: $brandfont;
@@ -9,25 +13,45 @@ p {
   line-height: 1.35;
 }
 
+.intro-text p {
+  font-size: 1.1rem;
+}
+
 a {
   text-decoration: none;
   color: $primaryColor;
 }
 
-.page-title {
-    font-size: 3rem;
-    margin-bottom: 0.4em;
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR TITLES
+------------------------------------------------------------------------------*/
+
+.page-main-title {
+    font-family: $altFont;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      font-size: 3.5rem;
+    }
 }
 
 .page-sub-title {
   font-size: 1.5rem;
-  font-weight: 700;
   margin: 1.8em 0 1.2em;
 }
 
-.intro-text p {
-  font-size: 1.1rem;
+.grid-item-title {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-bottom: 0.2em;
 }
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR CONTACT INFORMATION, FOUND ON CONTACT PAGE
+------------------------------------------------------------------------------*/
 
 .address-information,
 .social-link {
@@ -36,10 +60,9 @@ a {
   line-height: 1.35;
 
   &.photographer-name {
-    font-weight: 400;
+    font-weight: 700;
+    font-family: $altFont;
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
   }
-}
-
-.blog-post-date {
-  font-style: italic;
 }

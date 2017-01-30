@@ -46,13 +46,13 @@
 
 				<?php if ( has_post_thumbnail() ) : ?>
 
-				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) ); ?>
-				</a>
-
+					<?php
+					// TODO: Make this look good on all screens.
+					the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) );
+					?>
 				<?php endif; ?>
 
-				<p class="blog-post-date">Published: <?php the_date(); ?></p>
+				<p class="blog-post-date"><?php the_date(); ?></p>
 				<?php the_content(); ?>
 			</article>
 
