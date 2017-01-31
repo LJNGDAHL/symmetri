@@ -1,43 +1,14 @@
 
 // The menu icon that leads to main navigation -------------------------------
-.menu-icon {
-  height: 2.5rem;
-  position: absolute;
-  right: 22px;
-  top: 39px;
-  width: 2.5rem;
-
-  // On hover, the menu icon grows slightly
-  &:hover {
-    animation: grow 0.1s 1;
-    animation-timing-function: ease-in-out;
-  }
-
-    // Animation for slimming the menu icon.
-    @keyframes grow {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.04);
-      }
-      100% {
-        transform: scale(1);
-      }
-  }
-
-  @media #{$screenMedium}, #{$screenLarge} {
-    right: 40px;
-    top: 60px;
-  }
-}
-
-// TODO: This is currently not used. Decide on which menu to use.
 .menu-link {
   font-size: 1.3rem;
   position: absolute;
   top: 50px;
   right: 20px;
+
+  &:hover {
+    // TODO: Make this beautiful!
+  }
 
   @media #{$screenMedium}, #{$screenLarge} {
     top: 73px;
@@ -120,7 +91,7 @@
 
   // Styling of bottom logotype starts here ------------------------------------
   .logotype-container {
-    bottom: 0;
+    bottom: 2rem;
     height: 6.5rem;
     left: 50%;
     width: 6.5rem;

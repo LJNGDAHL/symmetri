@@ -35,7 +35,9 @@
 			</a>
 			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
 			<div class="logotype-container">
-				<?php get_template_part( 'img/logo' ); ?>
+				<a href="#body">
+					<?php get_template_part( 'img/logo' ); ?>
+				</a>
 			</div>
 		</nav>
 		<div class="logo">
