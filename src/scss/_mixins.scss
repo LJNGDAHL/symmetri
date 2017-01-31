@@ -1,7 +1,9 @@
+// TODO: Replace with variable.
 @mixin background-gradient() {
   background: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
 }
 
+// Visually hides element, but keeps it readable for screen readers.
 @mixin hidden-visually {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -10,4 +12,16 @@
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+// TODO: Remove if not used.
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }

@@ -8,58 +8,57 @@
 	get_header();
 ?>
 <main class="page-main">
-<?php
+	<?php
+		// This gets the title and content of the page.
+		if ( have_posts() ) :
 
-	// This gets the title and content of the page.
-	if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
 
-		while ( have_posts() ) : the_post();
+				get_template_part( 'content', 'page' );
 
-			get_template_part( 'content', 'page' );
+			endwhile;
 
-		endwhile;
+		else: ?>
 
-	else: ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.', 'symmetri' ); ?></p>
 
-		<p><?php _e( 'Sorry, no posts matched your criteria.', 'symmetri' ); ?></p>
+		<?php endif;
 
-	<?php endif;
+		// This is used for being able to loop out all the posts in the category
+		// 'Work in progress'
+		$the_query = new WP_Query( array(
+			'post_status'		=> 'publish',
+			'category_name'		=> 'Work in progress'
 
-	// This is used for being able to loop out all the posts in the category
-	// 'Work in progress'
-	$the_query = new WP_Query( array(
-		'post_status'		=> 'publish',
-		'category_name'		=> 'Work in progress'
+			)
+		);
 
-		)
-	);
+		// Start of loop
+		if ( $the_query -> have_posts() ) :
 
-	// Start of loop
-	if ( $the_query -> have_posts() ) :
+			while ( $the_query -> have_posts() ) :
 
-		while ( $the_query -> have_posts() ) :
+				$the_query -> the_post(); ?>
 
-			$the_query -> the_post(); ?>
+				<article class="blog-post">
+					<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
 
-			<article class="blog-post">
-				<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
+					<?php if ( has_post_thumbnail() ) : ?>
 
-				<?php if ( has_post_thumbnail() ) : ?>
+						<?php
+						// TODO: Make this look good on all screens.
+						the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) );
+						?>
+					<?php endif; ?>
 
-					<?php
-					// TODO: Make this look good on all screens.
-					the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) );
-					?>
-				<?php endif; ?>
-
-				<p class="blog-post-date"><?php the_date(); ?></p>
-				<?php the_content(); ?>
-			</article>
+					<p class="blog-post-date"><?php the_date(); ?></p>
+					<?php the_content(); ?>
+				</article>
 
 			<?php
-
-		endwhile;
-	endif; ?>
+			endwhile;
+		endif;
+	?>
 
 </main>
 

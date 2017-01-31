@@ -1,10 +1,12 @@
 <?php
+	// TODO: Comment your functions properly!
 
 	require "widget-social.php";
 	require "widget-address.php";
 	require "theme-settings.php";
 
 	add_action( 'wp_dashboard_setup', 'symmetri_remove_dashboard_boxes' );
+
 	function symmetri_remove_dashboard_boxes() {
 		global $wp_meta_boxes;
 
@@ -26,13 +28,16 @@
 		<?php
 	}
 
-	// Removes unnecessary code
+	/**
+	 * Removes unneccessary code.
+	 */
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 	remove_action( 'wp_head', 'feed_links', 2 );
 
-	// Setup for the theme 'Symmetri'
+
 	add_action( 'after_setup_theme', 'symmetri_setup' );
+
 	function symmetri_setup() {
 
 		// Project main CSS
@@ -44,7 +49,6 @@
 		// Project fonts
 		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
 
-		// FIXME: Make sure this is loaded only on pages that uses it.
 		// Script used for layout
 		wp_enqueue_script( 'isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js' );
 
@@ -53,7 +57,6 @@
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
 
-
 		// Adds Featured Image Option
 		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
 
@@ -61,7 +64,10 @@
 		add_image_size( 'album-cover', 300, 9999 );
 	}
 
-	// Register sidebar
+	/**
+	 * This builds the sidebar used for contact information.
+	 * @var string
+	 */
 	register_sidebar( array(
 
 		'name' 			=> __( 'Contact Information', 'contact-container' ),
@@ -72,6 +78,19 @@
 
 	) ) ;
 
-	// Preps theme for localization
+
+	/**
+	 * Returns a breadcrumb by combining home link and page title.
+	 * @return string The breadcrumb.
+	 */
+	function breadcrumb() {
+
+		$homeLink = '<a href="'.home_url().'" rel="nofollow">Work</a>';
+		$pageTitle = get_the_title();
+		$breadcrumb = "{$homeLink} &#187 {$pageTitle}";
+		return $breadcrumb;
+	}
+
+	// Prepares theme for localization
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
 ?>

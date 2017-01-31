@@ -5,9 +5,9 @@
 */
 	get_header();
 ?>
+<div class="breadcrumb"><?php echo breadcrumb(); ?></div>
 <main class="grid">
 	<div class="grid-sizer"></div>
-
 	<?php
 
 		if ( have_posts() ) :
@@ -45,7 +45,5 @@
 
 		endif;
 	?>
-
 </main>
-
 <?php get_footer(); ?>
