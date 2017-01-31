@@ -13,7 +13,7 @@
     iso = new Isotope(elem, {
       itemSelector: '.grid-item',
       masonry: {
-        gutter: 5
+        gutter: 40
       }
     });
 

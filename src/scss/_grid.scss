@@ -7,14 +7,14 @@
 
     @media #{$screenMedium}, #{$screenLarge} {
       float: left;
-      margin-bottom: 5px;
-      width: calc(50% - 5px);
+      margin-bottom: 40px;
+      width: calc(50% - 20px);
     }
   }
 
   .grid-item--3-col {
     @media #{$screenMedium}, #{$screenLarge} {
-      width: calc(33% - 5px);
+      width: calc(33% - 40px);
     }
   }
 
