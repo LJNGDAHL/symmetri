@@ -1,4 +1,3 @@
-// TODO: Replace with variable.
 @mixin background-gradient() {
   background: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
 }
@@ -14,6 +13,7 @@
     width: 1px;
 }
 
+// Transition used on images and buttons
 @mixin smooth-transition() {
   transition-duration: 0.8s;
   transition-delay: 0.05s;

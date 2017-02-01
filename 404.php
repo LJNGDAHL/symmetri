@@ -4,9 +4,12 @@
 *
 * @package Symmetri
 */
-
-echo 'This is: 404.php'; // TODO: Remove once finished with structure
 get_header(); ?>
-<h1><?php _e( 'Oops! Something went wrong.', 'symmetri' ); ?></h1>
-<p><?php _e('The page you are looking for is not found.', 'symmetri'); ?></p>
+<main class="page-main">
+	<h1 class="center page-main-title uppercase"><?php _e( 'Oops!', 'symmetri' ); ?></h1>
+	<p class="intro-text center"><?php _e( 'The page you are looking for is not found. Would you like to search for something else instead?', 'symmetri' ); ?></p>
+	<div class="search-container">
+		<?php get_search_form();  ?>
+	</div>
+</main>
 <?php get_footer(); ?>

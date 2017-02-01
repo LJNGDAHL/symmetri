@@ -1,5 +1,4 @@
 <?php
-	// TODO: Comment your functions properly!
 
 	require "widget-social.php";
 	require "widget-address.php";
@@ -7,6 +6,12 @@
 
 	add_action( 'wp_dashboard_setup', 'symmetri_remove_dashboard_boxes' );
 
+	/**
+	 * Removes the widgets 'Quick Draft', 'At a Glance',
+	 * and 'Wordpress News' from Dashboard. Adds a custom made widget
+	 * with useful quick links.
+	 *
+	 */
 	function symmetri_remove_dashboard_boxes() {
 		global $wp_meta_boxes;
 
@@ -23,8 +28,23 @@
 		wp_add_dashboard_widget('symmetri_dashboard', 'Quick Links', 'symmetri_dashwidget', null, null);
 	}
 
+	/**
+	 * Custom Dashboard widget with useful quick links
+	 */
 	function symmetri_dashwidget() { ?>
-		<!-- TODO: Add Quick Links -->
+		<ul>
+
+			<li><a href="post-new.php?post_type=symmetri_cpt_gallery"><?php _e( 'Add new work item (image gallery)', 'symmetri' ); ?></a></li>
+
+			<li><a href="edit.php?post_type=symmetri_cpt_gallery"><?php _e( 'See all work items (shown on front page)', 'symmetri' ); ?></a></li>
+
+			<li><a href="post-new.php"><?php _e( 'Add new blog post (for category "Work in progress")', 'symmetri' ); ?></a></li>
+
+			<li><a href="edit.php?post_type=page"><?php _e( 'Edit pages (i.e. About, Contact)', 'symmetri' ); ?></a></li>
+
+
+		</ul>
+
 		<?php
 	}
 
@@ -38,6 +58,10 @@
 
 	add_action( 'after_setup_theme', 'symmetri_setup' );
 
+	/**
+	 * Setup of theme 'Symmetri' with fonts, css, scripts,
+	 * custom menus and custom image sizes.
+	 */
 	function symmetri_setup() {
 
 		// Project main CSS
@@ -65,9 +89,8 @@
 	}
 
 	/**
-	 * This builds the sidebar used for contact information.
-	 * @var string
-	 */
+	* This builds the sidebar used for contact information.
+	*/
 	register_sidebar( array(
 
 		'name' 			=> __( 'Contact Information', 'contact-container' ),
@@ -77,7 +100,6 @@
 		'after_widget' 	=> '</address>'
 
 	) ) ;
-
 
 	/**
 	 * Returns a breadcrumb by combining home link and page title.
@@ -91,6 +113,8 @@
 		return $breadcrumb;
 	}
 
-	// Prepares theme for localization
+	/**
+	 * Prepares theme for localization
+	 */
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
 ?>

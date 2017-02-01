@@ -1,6 +1,10 @@
-// TODO: Replace with accurate styling.
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $backgroundColor;
 }
 
 .page-main {

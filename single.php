@@ -6,9 +6,10 @@
 	// Redirect to post anchor link if category is 'Work in progress'
 	if ( in_category( 'Work in progress' )) :
 
+		// FIXME: Figure out a way to solve this so that URL can be changed.
+		$progressURL = "work-in-progress/#post-";
 		$postid = get_the_ID();
-		$url = "http://localhost/fed16/dynweb/assignments/wordpress/work-in-progress/#post-" . $postid;
-
+		$url = $progressURL . $postid;
 		wp_redirect( $url );
 		exit;
 
@@ -17,15 +18,13 @@
 	get_header();
 ?>
 
-<div class="breadcrumb"><?php echo breadcrumb(); ?>
+<div class="breadcrumb">
+	<?php echo breadcrumb(); ?>
 </div>
 <main class="grid">
 	<div class="grid-sizer"></div>
 
 	<?php
-
-
-
 
 		if ( have_posts() ) :
 
@@ -34,9 +33,6 @@
 				the_post();
 
 				if( '' !== get_post()->post_content ) : ?>
-
-				<?php echo $url; ?>
-
 
 					<div class="grid-item grid-item--3-col grid-item-content">
 						<h2 class="grid-item-title uppercase"><?php the_title(); ?></h2>

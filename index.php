@@ -1,11 +1,9 @@
 <?php
 /**
-* The main template file
+* The main template file, only used as a fallback.
 *
 * @package Symmetri
 */
-
-	// FIXME: What code is needed in this file now that we have 'front-page.php'?
 	get_header();
 
 	get_template_part( 'content', 'work' );
