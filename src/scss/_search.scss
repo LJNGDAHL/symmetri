@@ -1,0 +1,61 @@
+.search-container {
+  border-top: 1px solid $primaryShade;
+  border-bottom: 1px solid $primaryShade;
+  padding-bottom: 1.5rem;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .search-field {
+    box-shadow: 0 0 0px 1000px white inset;
+    border-bottom: 2px solid $primaryColor;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    max-width: 250px;
+    width: 100%;
+    padding-top: 1.5rem;
+  }
+
+  .button {
+    background-color: $primaryColor;
+    border: 2px solid $primaryColor;
+    color: $secondaryColor;
+    cursor: pointer;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    max-width: 250px;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    width: 100%;
+    @include smooth-transition();
+
+    &:hover {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+    }
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      width: auto;
+    }
+  }
+
+  // Displays 'search-field' and 'search-button' in flex mode
+  .flex-container {
+      @media #{$screenMedium}, #{$screenLarge} {
+        display: flex;
+        justify-content: center;
+      }
+
+        .flex-item {
+          display: block;
+          margin: 1em auto;
+
+          @media #{$screenMedium}, #{$screenLarge} {
+            display: flex;
+            margin: 0.5em;
+          }
+        }
+    }
+}

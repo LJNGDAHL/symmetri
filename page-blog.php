@@ -40,7 +40,7 @@
 
 				$the_query -> the_post(); ?>
 
-				<article class="blog-post">
+				<article class="border-separator">
 					<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
 
 					<?php if ( has_post_thumbnail() ) : ?>

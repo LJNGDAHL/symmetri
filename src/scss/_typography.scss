@@ -33,6 +33,10 @@ a {
     margin-bottom: 0.5em;
     letter-spacing: 0.1em;
 
+    .pre-page-main-title {
+      font-size: 1rem;
+    }
+
     @media #{$screenMedium}, #{$screenLarge} {
       font-size: 3.5rem;
     }

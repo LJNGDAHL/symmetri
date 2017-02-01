@@ -41,7 +41,7 @@
 			</div>
 		</nav>
 		<div class="logo">
-			<h1 class="main-title">
+			<div class="main-title">
 				<a href="<?php bloginfo( 'wpurl' );?>">
 					<?php get_template_part( 'img/lens' ); ?>
 					<span class="photographer-container">
@@ -53,5 +53,5 @@
 						</span>
 					</span>
 				</a>
-			</h1>
+			</div>
 		</div>

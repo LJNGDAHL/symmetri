@@ -14,14 +14,8 @@
     width: 1px;
 }
 
-// TODO: Remove if not used.
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+@mixin smooth-transition() {
+  transition-duration: 0.8s;
+  transition-delay: 0.05s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.14, 0.99);
 }

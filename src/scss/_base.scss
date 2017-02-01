@@ -13,7 +13,7 @@
   }
 }
 
-.blog-post {
+.border-separator {
   padding-bottom: 1.5em;
   margin-bottom: 0.5em;
   border-bottom: 1px solid $primaryShade;
@@ -22,4 +22,16 @@
     border-bottom: none;
   }
 
+}
+
+input,
+button {
+  border:none;
+  font-family: $brandfont;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
 }
