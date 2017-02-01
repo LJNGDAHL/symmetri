@@ -41,13 +41,12 @@
 				$the_query -> the_post(); ?>
 
 				<article class="border-separator">
-					<h3 class="center page-sub-title uppercase"><?php the_title(); ?></h3>
+					<h3 class="center page-sub-title uppercase" id="post-<?php the_ID(); ?>"><?php the_title(); ?></h3>
 
 					<?php if ( has_post_thumbnail() ) : ?>
 
 						<?php
-						// TODO: Make this look good on all screens.
-						the_post_thumbnail( 'album-cover', array( 'class' => 'align-left' ) );
+						the_post_thumbnail( 'album-cover', array( 'class' => 'blog-img' ) );
 						?>
 					<?php endif; ?>
 

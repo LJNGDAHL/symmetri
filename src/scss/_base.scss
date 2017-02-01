@@ -4,9 +4,9 @@
 }
 
 .page-main {
-  width: 70vw;
   margin: 0 auto;
   margin-bottom: 5rem;
+  width: 70vw;
 
   @media #{$screenMedium}, #{$screenLarge} {
     max-width: 600px;
@@ -14,9 +14,9 @@
 }
 
 .border-separator {
-  padding-bottom: 1.5em;
-  margin-bottom: 0.5em;
   border-bottom: 1px solid $primaryShade;
+  margin-bottom: 0.5em;
+  padding-bottom: 1.5em;
 
   &:last-of-type {
     border-bottom: none;

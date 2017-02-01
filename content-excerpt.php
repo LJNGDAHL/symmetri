@@ -12,7 +12,7 @@
 
 	<?php the_title( sprintf( '<h2 class="center page-sub-title uppercase"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	<?php if( '' !== get_post()->post_content ) : ?>
+	<?php if ( '' !== get_post()->post_content ) : ?>
 
 			<?php the_excerpt(); ?>
 
