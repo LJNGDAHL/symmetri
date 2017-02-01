@@ -1,6 +1,6 @@
 <?php
 /**
-* The template for displaying 404 pages (not found)
+* The template for displaying a 404 page
 *
 * @package Symmetri
 */
