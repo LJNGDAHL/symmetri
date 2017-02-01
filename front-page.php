@@ -34,11 +34,11 @@
 
 				?>
 
-				<article class="grid-item">
+				<div class="grid-item">
 					<a class="img-link" href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
 					</a>
-				</article>
+				</div>
 
 				<?php
 			endif;

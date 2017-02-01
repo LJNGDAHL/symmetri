@@ -1,6 +1,6 @@
 .logo {
-  text-align: center;
   margin: 1.7em 0 3em;
+  text-align: center;
 
   .lens-logo {
     width: 3.8rem;
@@ -10,14 +10,19 @@
     display: none;
 
     @media #{$screenMedium}, #{$screenLarge} {
-      display: block;
+      display: inline;
       font-weight: 300;
       font-size: 1.7rem;
       margin-top: 0.2em;
 
       .photographer-name {
-        display: block;
         font-weight: 400;
+
+        &::before,
+        &::after {
+          content:"\a";
+          white-space: pre;
+        }
       }
     }
   }

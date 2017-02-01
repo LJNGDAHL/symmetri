@@ -9,8 +9,8 @@ html {
 }
 
 p {
-  text-align: justify;
   line-height: 1.35;
+  text-align: justify;
 }
 
 .intro-text {
@@ -18,8 +18,8 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: $primaryColor;
+  text-decoration: none;
 }
 
 /*------------------------------------------------------------------------------
@@ -30,8 +30,8 @@ a {
     font-family: $altFont;
     font-weight: 700;
     font-size: 2.8rem;
-    margin-bottom: 0.5em;
     letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
 
     .pre-page-main-title {
       font-size: 1rem;

@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------------------
+  GENERAL STYLING RULES
+------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -5,27 +8,6 @@
 html,
 body {
   background-color: $backgroundColor;
-}
-
-.page-main {
-  margin: 0 auto;
-  margin-bottom: 5rem;
-  width: 70vw;
-
-  @media #{$screenMedium}, #{$screenLarge} {
-    max-width: 600px;
-  }
-}
-
-.border-separator {
-  border-bottom: 1px solid $primaryShade;
-  margin-bottom: 0.5em;
-  padding-bottom: 1.5em;
-
-  &:last-of-type {
-    border-bottom: none;
-  }
-
 }
 
 input,
@@ -38,4 +20,26 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
+}
+
+// Start of styling of class 'page-main' ---------------------------------------
+.page-main {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  width: 70vw;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    max-width: 600px;
+  }
+}
+
+// Styling of the class 'border-separator' -------------------------------------
+.border-separator {
+  border-bottom: 1px solid $primaryShade;
+  margin-bottom: 0.5em;
+  padding-bottom: 1.5em;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
