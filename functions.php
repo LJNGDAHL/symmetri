@@ -102,19 +102,6 @@
 	) ) ;
 
 	/**
-	 * Returns a breadcrumb by combining home link and page title.
-	 * @return string The breadcrumb.
-	 * FIXME: This needs some attention.
-	 */
-	function breadcrumb() {
-
-		$homeLink = '<a href="'.home_url().'" rel="nofollow">Work</a>';
-		$pageTitle = get_the_title();
-		$breadcrumb = "{$homeLink} &#187 {$pageTitle}";
-		return $breadcrumb;
-	}
-
-	/**
 	 * Prepares theme for localization
 	 */
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
