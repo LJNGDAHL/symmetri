@@ -8,10 +8,6 @@
 	$gallery_images = CFS() -> get ( 'gallery_images' );
 ?>
 
-<div class="breadcrumb">
-	<?php echo breadcrumb(); ?>
-</div>
-
 <main class="grid">
 	<div class="grid-sizer"></div>
 

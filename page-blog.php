@@ -60,14 +60,6 @@
 	?>
 	<div class="search-container">
 		<?php get_search_form();  ?>
-
-		<?php if ( have_posts() ) : ?>
-			<p class="center">
-				<?php
-					_e( 'Total number of search results: ', 'symmetri' ); ?>
-					<?php echo $total_results; ?>
-			</p>
-		<?php endif; ?>
 	</div>
 </main>
 
