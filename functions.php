@@ -104,6 +104,7 @@
 	/**
 	 * Returns a breadcrumb by combining home link and page title.
 	 * @return string The breadcrumb.
+	 * FIXME: This needs some attention.
 	 */
 	function breadcrumb() {
 

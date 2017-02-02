@@ -31,15 +31,21 @@ a {
     font-weight: 700;
     font-size: 2.8rem;
     letter-spacing: 0.1em;
-    margin-bottom: 0.5em;
-
-    .pre-page-main-title {
-      font-size: 1rem;
-    }
+    margin: 0 0 0.5em;
 
     @media #{$screenMedium}, #{$screenLarge} {
       font-size: 3.5rem;
     }
+}
+
+.pre-page-main-title {
+  @extend .page-main-title;
+  font-size: 1rem;
+}
+
+.comment-title {
+  @extend .page-main-title;
+  font-size: 1.6rem;
 }
 
 .page-sub-title {

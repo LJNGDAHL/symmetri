@@ -1,6 +1,5 @@
 .breadcrumb {
-  border-top: 1px solid $primaryShade;
-  border-bottom: 1px solid $primaryShade;
+  @include border-top-bottom();
   color: $primaryShade;
   margin: 0 auto 2.5rem;
   max-width: 1200px;

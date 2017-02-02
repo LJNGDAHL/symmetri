@@ -4,10 +4,20 @@
 *
 * @package Symmetri
 */
-	get_header();
+	// If Index.php is not front page, redirect to $home.
+	if ( ! is_front_page() ) :
 
-	get_template_part( 'content', 'work' );
+		$home = get_home_url();
+		wp_redirect( $home );
+		exit;
 
-	get_footer();
+	else:
 
+		get_header();
+
+		get_template_part( 'content', 'work' );
+
+		get_footer();
+
+	endif;
 ?>
