@@ -54,13 +54,13 @@
 
   a {
     color: inherit;
-    font-weight: 100;
-    opacity: 0.3;
+    opacity: 0.1;
     text-transform: uppercase;
     text-decoration: none;
+    -webkit-font-smoothing: antialiased;
 
     &:hover {
-        opacity: 0.4;
+        opacity: 0.2;
       }
   }
 
@@ -75,6 +75,7 @@
   .exit-menu {
     line-height: 0;
     width: 1.8rem;
+    height: 1.8rem;
     opacity: 1;
     position: absolute;
     top: 1.5rem;
