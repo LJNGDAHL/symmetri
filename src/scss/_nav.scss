@@ -62,6 +62,8 @@
 
   .current-menu-item a {
     opacity: 1;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
   }
 
   // Styling of exit icon starts here ------------------------------------------
@@ -95,12 +97,21 @@
 
   // Styling of bottom logotype starts here ------------------------------------
   .logotype-container {
-    bottom: 2rem;
+    bottom: 3rem; // Only for screens smaller than 600px.
     height: 6.5rem;
     left: 50%;
     width: 6.5rem;
     position: absolute;
     transform: translateX(-50%);
+
+    @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+      bottom: 2rem;
+    }
+
+    a {
+      opacity: 1;
+    }
+
   }
 }
 

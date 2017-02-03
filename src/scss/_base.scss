@@ -29,7 +29,7 @@ textarea:focus {
   width: 70vw;
 
   @media #{$screenMedium}, #{$screenLarge} {
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 
