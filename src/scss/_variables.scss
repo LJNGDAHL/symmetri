@@ -1,11 +1,22 @@
 
 // Typography and color --------------------------------------------------------
 
-$brandfont: 'Lato', sans-serif;
+$brandFont: 'Lato', sans-serif;
 $altFont:'Playfair Display', serif;
+
+$fontSizeNormal: 1.1rem;
+$fontSizeIntro: 1.5rem;
+$mainTitleSize: 2.8rem;
+$mainTitleSizeLarge: 3.5rem;
+
+$normalWeight: 300; // TODO: Test this one properly
+$semiWeight: 400;
+$boldWeight: 700;
+
 $primaryColor: #15141b;
 $primaryShade: #D4D4D5;
 $primaryDarkerShade: #A9A9AC;
+
 $secondaryColor: #f8f8f8;
 $backgroundColor: #FCFDFF;
 

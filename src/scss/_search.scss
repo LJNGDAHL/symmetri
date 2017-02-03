@@ -11,7 +11,7 @@
     box-shadow: 0 0 0px 1000px $backgroundColor inset;
     border-bottom: 2px solid $primaryColor;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: $normalWeight;
     margin-bottom: 1rem;
     max-width: 250px;
     width: 100%;

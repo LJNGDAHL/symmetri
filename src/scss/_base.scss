@@ -12,8 +12,8 @@ body {
 
 input,
 button {
-  border:none;
-  font-family: $brandfont;
+  border: none;
+  font-family: $brandFont;
 }
 
 input:focus,
@@ -29,7 +29,7 @@ textarea:focus {
   width: 70vw;
 
   @media #{$screenMedium}, #{$screenLarge} {
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 

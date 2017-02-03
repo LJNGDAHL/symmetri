@@ -4,17 +4,18 @@
 
 body,
 html {
-  font-family: $brandfont;
-  font-weight: 300;
+  font-family: $brandFont;
+  font-weight: $normalWeight;
 }
 
 p {
-  line-height: 1.35;
+  font-size: $fontSizeNormal;
+  line-height: 1.45;
   text-align: justify;
 }
 
 .intro-text {
-  font-size: 1.5rem;
+  font-size: $fontSizeIntro;
 }
 
 a {
@@ -28,13 +29,13 @@ a {
 
 .page-main-title {
     font-family: $altFont;
-    font-weight: 700;
-    font-size: 2.8rem;
+    font-size: $mainTitleSize;
+    font-weight: $boldWeight;
+    margin-bottom: 0.5em;
     letter-spacing: 0.1em;
-    margin: 0 0 0.5em;
 
     @media #{$screenMedium}, #{$screenLarge} {
-      font-size: 3.5rem;
+      font-size: $mainTitleSizeLarge;
     }
 }
 
@@ -44,13 +45,13 @@ a {
 }
 
 .page-sub-title {
-  font-size: 1.5rem;
+  font-size: $fontSizeIntro;
   margin: 1.8em 0 1.2em;
 }
 
 .grid-item-title {
-  font-weight: 300;
-  font-size: 1.8rem;
+  font-size: $fontSizeIntro;
+  font-weight: $normalWeight;
   margin-bottom: 0.2em;
 }
 
@@ -61,13 +62,13 @@ a {
 .address-information,
 .social-link {
   font-style: normal;
-  margin: 0;
   line-height: 1.35;
+  margin: 0;
 
   &.photographer-name {
-    font-weight: 700;
     font-family: $altFont;
-    font-size: 1.5rem;
+    font-size: $fontSizeIntro;
+    font-weight: $boldWeight;
     margin-bottom: 0.2em;
   }
 }
@@ -78,24 +79,19 @@ a {
 // Styles main title on comment section
 .comment-title {
   font-family: $altFont;
-  font-size: 1.6rem;
+  font-size: $fontSizeIntro;
 }
 
 .comment-reply-title {
   @extend .comment-title;
-  font-size: 1.4rem;
-
-  a {
-    letter-spacing: 0;
-    font-weight: 400;
-  }
+  font-size: $fontSizeIntro;
 }
 
 // Styles the comment author name
 .comment-body .fn {
     font-style: normal;
     font-family: $altFont;
-    font-weight: 700;
+    font-weight: $boldWeight;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
@@ -103,20 +99,27 @@ a {
 // Styles the link with date and time
 .comment-meta a {
     color: $primaryDarkerShade;
-    font-weight: 400;
+    font-weight: $semiWeight;
     font-size: 0.7rem;
 }
 
 .comment-reply-link {
   font-family: $altFont;
-  font-weight: 700;
+  font-weight: $boldWeight;
 }
 
-// Comment form starts here ----------------------------------------------------
-.comment-form {
-  font-weight: 400;
+.logged-in-as a {
+  font-style: italic;
 }
 
 .comment-form textarea {
-  font-family: $brandfont;
+  font-family: $brandFont;
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR NAVIGATION LINKS
+------------------------------------------------------------------------------*/
+
+.nav-links {
+  font-weight: $semiWeight;
 }

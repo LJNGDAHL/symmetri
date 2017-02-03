@@ -2,12 +2,11 @@
   THE GRID IS USING THE JAVASCRIPT PLUGIN 'ISOTOPE'
 ------------------------------------------------------------------------------*/
 .grid {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 
   .grid-item,
   .grid-sizer {
-
     @media #{$screenMedium}, #{$screenLarge} {
       float: left;
       margin-bottom: 40px;
@@ -26,6 +25,7 @@
     @include background-gradient();
     color: $secondaryColor;
     padding: 4rem 3rem;
+
     @media #{$screenMedium}, #{$screenLarge} {
       padding: 2rem 3rem;
     }

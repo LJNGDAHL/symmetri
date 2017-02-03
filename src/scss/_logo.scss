@@ -11,12 +11,12 @@
 
     @media #{$screenMedium}, #{$screenLarge} {
       display: inline;
-      font-weight: 300;
+      font-weight: $normalWeight;
       font-size: 1.7rem;
       margin-top: 0.2em;
 
       .photographer-name {
-        font-weight: 400;
+        font-weight: $semiWeight;
 
         &::before,
         &::after {
