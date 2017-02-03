@@ -1,20 +1,18 @@
 (function () {
   'use strict';
 
-  var iso;
+  var msnry;
   var elem = document.querySelector('.grid');
   var images = document.querySelectorAll('.full-width-img');
 
   if (elem) {
     /**
-     * Create a grid using Isotope
-     * @type {Isotope}
+     * Create a grid using Masonry
+     * @type {Masonry}
      */
-    iso = new Isotope(elem, {
+  msnry = new Masonry(elem, {
       itemSelector: '.grid-item',
-      masonry: {
-        gutter: 40
-      }
+      gutter: 40
     });
 
     /**
@@ -22,10 +20,8 @@
      */
     Array.prototype.forEach.call(images, function (img) {
       img.addEventListener('load', function onLoad() {
-        img.removeEventListener('load', onLoad);
-
-        // Let Isotope recalculate layout.
-        iso.layout();
+        // Let Masonry recalculate layout.
+        msnry.layout();
       });
     });
   }
