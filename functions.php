@@ -48,9 +48,9 @@
 		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
 
 		// Script used for layout
-		wp_enqueue_script( 'isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js' );
+		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
 
-		wp_enqueue_script( 'isotope_init', get_template_directory_uri() . '/js/isotope_init.js', array('isotope'), '', true );
+		wp_enqueue_script( 'masonry_init', get_template_directory_uri() . '/js/masonry_init.js', array('masonry'), '', true );
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
