@@ -26,10 +26,11 @@ textarea:focus {
 .page-main {
   margin: 0 auto;
   margin-bottom: 5rem;
-  width: 70vw;
+  max-width: 500px;
+  width: 85vw;
 
   @media #{$screenMedium}, #{$screenLarge} {
-    max-width: 500px;
+    width: 70vw;
   }
 }
 
