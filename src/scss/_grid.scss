@@ -4,10 +4,13 @@
 .grid {
   margin: 0 auto;
   max-width: 1200px;
+  @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
+    margin: 2rem;
+  }
 
   .grid-item,
   .grid-sizer {
-    @media #{$screenMedium}, #{$screenLarge} {
+    @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
       float: left;
       margin-bottom: 40px;
       width: calc(50% - 20px);

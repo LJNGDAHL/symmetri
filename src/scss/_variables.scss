@@ -25,7 +25,9 @@ $backgroundColor: #FCFDFF;
 $widthSmall: 600px;
 $widthMedium: 900px;
 $widthLarge: 1200px;
+$heightSmall: 500px;
 
 $screenSmall: "(min-width: #{$widthSmall}) and (max-width: #{$widthMedium})";
 $screenMedium: "(min-width: #{$widthMedium}) and (max-width: #{$widthLarge})";
 $screenLarge: "(min-width: #{$widthLarge})";
+$screenLandscape: "(max-height: #{$heightSmall}) and (orientation: landscape)";

@@ -37,6 +37,10 @@
   width: 100vw;
   z-index: 1;
 
+  @media #{$screenLandscape} {
+    padding: 5vh;
+  }
+
   &:target {
     transform: translateY(0);
   }
@@ -106,6 +110,10 @@
 
     @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
       bottom: 2rem;
+    }
+
+    @media #{$screenLandscape} {
+      display: none;
     }
 
     a {

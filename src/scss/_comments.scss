@@ -25,12 +25,17 @@
 
   // Styling of comment form starts here ---------------------------------------
   .comment-form textarea {
+    border: 1px solid $primaryDarkerShade;
+    border-radius: 0;
     margin-top: 0.5rem;
     width: 100%;
+    -webkit-appearence: none;
+    appearence: none;
   }
 
   .comment-form input {
     border-bottom: 1px solid $primaryDarkerShade;
+    border-radius: 0;
     margin: 0.5rem 0;
     width: 100%;
   }
@@ -38,6 +43,8 @@
   .comment-form-author input,
   .comment-form-email input {
     box-shadow: 0 0 0px 1000px $backgroundColor inset;
+    -webkit-appearence: none;
+    appearence: none;
   }
 
   .comment-form .submit {
