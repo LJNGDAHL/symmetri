@@ -8,7 +8,8 @@
     padding: 2rem;
   }
 
-  .comment-list {
+  .comment-list,
+  .comment {
     padding: 0;
     list-style-type: none;
   }
@@ -20,6 +21,28 @@
     p {
       margin-top: 0.5em;
     }
+  }
+
+  // Styling of comment form starts here ---------------------------------------
+  .comment-form textarea {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .comment-form input {
+    border-bottom: 1px solid $primaryDarkerShade;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .comment-form-author input,
+  .comment-form-email input {
+    box-shadow: 0 0 0px 1000px $backgroundColor inset;
+  }
+
+  .comment-form .submit {
+    // Styling comes from _button.scss
+    @extend .button;
   }
 
 }

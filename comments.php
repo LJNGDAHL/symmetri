@@ -43,6 +43,7 @@ endif;
 			<div class="nav-next"><?php next_comments_link(); ?></div>
 		</div>
 	</nav>
-	<?php endif; ?>
+	<?php endif;
+	comment_form();?>
 
 </section>

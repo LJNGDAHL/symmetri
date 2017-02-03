@@ -43,11 +43,6 @@ a {
   font-size: 1rem;
 }
 
-.comment-title {
-  @extend .page-main-title;
-  font-size: 1.6rem;
-}
-
 .page-sub-title {
   font-size: 1.5rem;
   margin: 1.8em 0 1.2em;
@@ -80,6 +75,22 @@ a {
 /*------------------------------------------------------------------------------
   TYPOGRAPHY FOR COMMENTS
 ------------------------------------------------------------------------------*/
+// Styles main title on comment section
+.comment-title {
+  font-family: $altFont;
+  font-size: 1.6rem;
+}
+
+.comment-reply-title {
+  @extend .comment-title;
+  font-size: 1.4rem;
+
+  a {
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
 // Styles the comment author name
 .comment-body .fn {
     font-style: normal;
@@ -99,4 +110,13 @@ a {
 .comment-reply-link {
   font-family: $altFont;
   font-weight: 700;
+}
+
+// Comment form starts here ----------------------------------------------------
+.comment-form {
+  font-weight: 400;
+}
+
+.comment-form textarea {
+  font-family: $brandfont;
 }

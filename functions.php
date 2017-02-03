@@ -4,7 +4,69 @@
 	require "widget-address.php";
 	require "theme-settings.php";
 
-	add_action( 'wp_dashboard_setup', 'symmetri_remove_dashboard_boxes' );
+/*------------------------------------------------------------------------------
+  START WITH REMOVING UNNECCESSARY CODE
+------------------------------------------------------------------------------*/
+
+	/**
+	 * Removes unneccessary code.
+	 */
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'feed_links', 2 );
+
+
+	add_filter('comment_form_default_fields','remove_comment_url');
+
+	/**
+	 * Removes URL from comment field.
+	 */
+	function remove_comment_url($fields) {
+		unset($fields['url']);
+		return $fields;
+	}
+
+/*------------------------------------------------------------------------------
+  GENERAL SETUP FOR THEME 'SYMMETRI'
+------------------------------------------------------------------------------*/
+
+	add_action( 'after_setup_theme', 'symmetri_setup' );
+
+	/**
+	 * Setup of theme 'Symmetri' with fonts, css, scripts,
+	 * custom menus and custom image sizes.
+	 */
+	function symmetri_setup() {
+
+		// Project main CSS
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
+
+		// Project fonts
+		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
+
+		// Project fonts
+		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
+
+		// Script used for layout
+		wp_enqueue_script( 'isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js' );
+
+		wp_enqueue_script( 'isotope_init', get_template_directory_uri() . '/js/isotope_init.js', array('isotope'), '', true );
+
+		// Website main navigation
+		register_nav_menu( 'mainmenu', 'Website main navigation' );
+
+		// Adds Featured Image Option
+		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
+
+		// Since value 'true' is not added, this is set to soft crop mode
+		add_image_size( 'album-cover', 300, 9999 );
+	}
+
+/*------------------------------------------------------------------------------
+  CUSTOMIZE DASHBOARD IN EDITOR MODE
+------------------------------------------------------------------------------*/
+
+	add_action( 'wp_dashboard_setup', 'symmetri_customize_dashboard_boxes' );
 
 	/**
 	 * Removes the widgets 'Quick Draft', 'At a Glance',
@@ -12,7 +74,7 @@
 	 * with useful quick links.
 	 *
 	 */
-	function symmetri_remove_dashboard_boxes() {
+	function symmetri_customize_dashboard_boxes() {
 		global $wp_meta_boxes;
 
 		// Removes 'Quick Draft' from dashboard
@@ -48,49 +110,10 @@
 		<?php
 	}
 
-	/**
-	 * Removes unneccessary code.
-	 */
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
-	remove_action( 'wp_head', 'feed_links', 2 );
+/*------------------------------------------------------------------------------
+  REGISTER SIDEBAR USED FOR CONTACT INFORMATION
+------------------------------------------------------------------------------*/
 
-
-	add_action( 'after_setup_theme', 'symmetri_setup' );
-
-	/**
-	 * Setup of theme 'Symmetri' with fonts, css, scripts,
-	 * custom menus and custom image sizes.
-	 */
-	function symmetri_setup() {
-
-		// Project main CSS
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
-
-		// Project fonts
-		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
-
-		// Project fonts
-		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
-
-		// Script used for layout
-		wp_enqueue_script( 'isotope', '//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js' );
-
-		wp_enqueue_script( 'isotope_init', get_template_directory_uri() . '/js/isotope_init.js', array('isotope'), '', true );
-
-		// Website main navigation
-		register_nav_menu( 'mainmenu', 'Website main navigation' );
-
-		// Adds Featured Image Option
-		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
-
-		// Since value 'true' is not added, this is set to soft crop mode
-		add_image_size( 'album-cover', 300, 9999 );
-	}
-
-	/**
-	* This builds the sidebar used for contact information.
-	*/
 	register_sidebar( array(
 
 		'name' 			=> __( 'Contact Information', 'contact-container' ),
@@ -101,8 +124,9 @@
 
 	) ) ;
 
-	/**
-	 * Prepares theme for localization
-	 */
+/*------------------------------------------------------------------------------
+  PREPARE FOR LOCALIZATION
+------------------------------------------------------------------------------*/
+
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
 ?>
