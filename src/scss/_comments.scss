@@ -1,40 +1,25 @@
+// Styling of comment section starts here --------------------------------------
 .comments-container {
   @include border-top-bottom();
   margin: 2rem 0;
-  padding: 2rem;
+  padding: 2rem 0;
+
+  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+    padding: 2rem;
+  }
 
   .comment-list {
     padding: 0;
     list-style-type: none;
-
-    .comment {
-      padding: 1rem 0;
-    }
   }
 
+  // Styling of comment starts here --------------------------------------------
   .comment-body {
-    // TODO: This should maybe move to typography.
-    .fn {
-      font-style: normal;
-      font-family: $altFont;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .comment-meta a {
-        color: $primaryDarkerShade;
-        font-family: $altFont;
-    }
+    padding: 1rem 0;
 
     p {
       margin-top: 0.5em;
     }
-
-    .comment-reply-link {
-      font-family: $altFont;
-      font-weight: 700;
-    }
-
   }
+
 }

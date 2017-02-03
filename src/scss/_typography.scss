@@ -76,3 +76,27 @@ a {
     margin-bottom: 0.2em;
   }
 }
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR COMMENTS
+------------------------------------------------------------------------------*/
+// Styles the comment author name
+.comment-body .fn {
+    font-style: normal;
+    font-family: $altFont;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+// Styles the link with date and time
+.comment-meta a {
+    color: $primaryDarkerShade;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.comment-reply-link {
+  font-family: $altFont;
+  font-weight: 700;
+}
