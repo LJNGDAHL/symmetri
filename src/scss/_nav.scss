@@ -1,5 +1,7 @@
+/*------------------------------------------------------------------------------
+  MENU ICON THAT LEADS TO MAIN NAVIGATION
+------------------------------------------------------------------------------*/
 
-// The menu icon that leads to main navigation -------------------------------
 .menu-link {
   font-size: 1.3rem;
   position: absolute;
@@ -16,7 +18,10 @@
   }
 }
 
-// Start of styling for main navigation (drops down on target) -----------------
+/*------------------------------------------------------------------------------
+  MAIN SITE NAVIGATION STYLING (DROPS DOWN ON TARGET)
+------------------------------------------------------------------------------*/
+
 .main-navigation {
   @include background-gradient();
   color: $secondaryColor;
@@ -71,9 +76,9 @@
 
     // On hover, the exit icon rotates 360deg
     &:hover {
-      opacity: 1;
       animation: roll 1s 1;
       animation-timing-function: ease-in-out;
+      opacity: 1;
     }
 
     // Animation for spinning the exit icon
@@ -96,5 +101,24 @@
     width: 6.5rem;
     position: absolute;
     transform: translateX(-50%);
+  }
+}
+
+
+/*------------------------------------------------------------------------------
+  NAVIGATION LINKS (USED IN NAVIGATING AMONG COMMENTS)
+------------------------------------------------------------------------------*/
+
+.nav-links {
+  @include border-top-bottom();
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+
+  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
