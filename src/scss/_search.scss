@@ -10,6 +10,7 @@
   .search-field {
     box-shadow: 0 0 0px 1000px $backgroundColor inset;
     border-bottom: 2px solid $primaryColor;
+    border-radius: 0;
     font-size: 1.2rem;
     font-weight: $normalWeight;
     margin-bottom: 1rem;
