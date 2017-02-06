@@ -27,9 +27,7 @@
 	// On Contact Page, include sidebar with contact form.
 	if ( is_page( 'contact' ) ) : ?>
 
-		<div class="contact-container">
-			<?php dynamic_sidebar( 'contact-container'); ?>
-		</div>
+		<?php get_sidebar(); ?>
 
 	<?php endif;
 ?>

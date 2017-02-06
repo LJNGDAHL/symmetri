@@ -1,0 +1,38 @@
+// STYLING OF THE LIST THAT LOOPS OUT THE POSTS IN CURRENT ARCHIVE -------------
+.archive-list {
+  margin: 1rem 0 2rem;
+  $fontSizeIntro: 1.3rem;
+}
+
+// STYLING OF SELECT ELEMENT TO FILTER ARCHIVE ON MONTHS -----------------------
+.month-container {
+  border-top: 1px solid $primaryShade;
+  border-bottom: 1px solid $primaryShade;
+  padding: 1.5rem 0;
+
+  .page-sub-title {
+    margin-top: 0;
+  }
+}
+
+// STYLING OF CATEGORY CONTAINER FOR FILTERING ARCHIVE ON CATEGORIES -----------
+.category-container {
+  margin-bottom: 2rem;
+}
+
+.categories,
+.cat-item,
+.children,
+.categories > ul {
+  display: inline;
+  list-style: none;
+  padding: 0;
+} // TODO: Sort out your styling
+
+.archive-dropdown {
+  @extend .button; // TODO: Replace with accurate styling
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
