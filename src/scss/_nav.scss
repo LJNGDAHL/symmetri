@@ -33,7 +33,7 @@
   position: fixed;
   top: 0;
   transform: translateY(-100vh);
-  transition: 0.9s ease-in-out;
+  transition: 0.9s ease-in-out; // TODO: Add Event Listener to fix resizing issues.
   width: 100vw;
   z-index: 1;
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-sass ./src/scss/style.scss | postcss -u postcss-custom-media -u autoprefixer -o css/style.css",
+    "build": "node-sass ./src/scss/style.scss | postcss -u autoprefixer -u postcss-csso -o css/style.css",
     "watch": "nodemon -e .scss -x 'npm run build'"
   },
   "repository": {

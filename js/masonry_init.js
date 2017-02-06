@@ -25,14 +25,14 @@
       });
     });
   }
-
   /**
-   * Debounce toggleMsnry for 200ms on window resize
-   */
+  * Debounce toggleMsnry for 200ms on window resize
+  */
   window.addEventListener('resize', function() {
     clearTimeout(timeout);
     timeout = setTimeout(toggleMsnry, 200);
   });
+
 
   /**
    * Determine whether Msnry should be active or not.
