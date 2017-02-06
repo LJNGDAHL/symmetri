@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node-sass ./src/scss/style.scss | postcss -u autoprefixer -u postcss-csso -o css/style.css",
-    "watch": "nodemon -e .scss -x 'npm run build'"
+    "watch": "node-sass --watch --recursive --output css src/scss"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "devDependencies": {
     "autoprefixer": "^6.7.0",
     "node-sass": "^4.3.0",
-    "nodemon": "^1.11.0",
     "postcss-cli": "^2.6.0",
     "postcss-custom-media": "^5.0.1"
   }

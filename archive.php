@@ -10,7 +10,7 @@ get_header(); ?>
 <main class="page-main">
 
 	<?php
-		the_archive_title( '<h1 class="page-main-title uppercase center">', '</h1>');
+		the_archive_title( '<h1 class="archive-title uppercase center">', '</h1>');
 		the_archive_description( '<div class="archive-description">', '</div>' );
 	?>
 	<?php if ( have_posts()) : ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<div class="month-container">
-		<h3 class="center page-sub-title uppercase"><?php _e( 'Archives by Month', 'symmetri' ); ?></h3>
+		<h3 class="center page-sub-title uppercase"><?php _e( 'Show posts by month', 'symmetri' ); ?></h3>
 		<select class="archive-dropdown" name=\"archive-dropdown\" onChange='document.location.href=this.options[this.selectedIndex].value;'>
 			<option value=\"\">
 				<?php _e('Select Month', 'symmetri'); ?>

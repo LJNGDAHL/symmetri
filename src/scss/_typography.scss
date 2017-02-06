@@ -44,6 +44,11 @@ a {
   font-size: 1rem;
 }
 
+.archive-title {
+  @extend .page-main-title;
+  font-size: $mainTitleSize;
+}
+
 .page-sub-title {
   font-size: $fontSizeIntro;
   margin: 1.8em 0 1.2em;
