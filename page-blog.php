@@ -51,7 +51,8 @@
 					<?php endif; ?>
 
 					<p class="blog-post-date"><?php the_date(); ?></p>
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>"><?php _e( 'Read post', 'symmetri' ); ?></a>
 				</article>
 
 			<?php
