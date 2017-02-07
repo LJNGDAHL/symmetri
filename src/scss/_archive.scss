@@ -2,7 +2,8 @@
 .archive-list {
   margin: 1rem 0 2rem;
   line-height: 1.4em;
-  font-size: $fontSizeIntro;
+  font-size: $fontSizeNormal;
+
 }
 
 // STYLING OF SELECT ELEMENT TO FILTER ARCHIVE ON MONTHS -----------------------
@@ -16,24 +17,42 @@
   }
 }
 
-// STYLING OF CATEGORY CONTAINER FOR FILTERING ARCHIVE ON CATEGORIES -----------
-.category-container {
-  margin-bottom: 2rem;
-}
-
-.categories,
-.cat-item,
-.children,
-.categories > ul {
-  display: inline;
-  list-style: none;
-  padding: 0;
-} // TODO: Sort out your styling
-
 .archive-dropdown {
   @extend .button; // TODO: Replace with accurate styling
   -webkit-appearance: none;
   border-radius: 0;
   display: block;
   margin: 0 auto;
+}
+
+
+// STYLING OF CATEGORY CONTAINER FOR FILTERING ARCHIVE ON CATEGORIES -----------
+
+.category-list {
+  margin: 0;
+  padding: 0;
+
+  .cat-item,
+  .children {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cat-item a {
+    background: #eee;
+    border-radius: 1px;
+    float: left;
+    list-style: none;
+    list-style-type: none;
+    margin: 0 1rem 1rem 0;
+    padding: 5px 10px;
+    @include smooth-transition();
+
+      &:hover {
+        background: $primaryColor;
+        color: $secondaryColor;
+        text-decoration: none;
+      }
+    }
 }

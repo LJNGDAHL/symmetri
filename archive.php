@@ -44,7 +44,10 @@ get_header(); ?>
 	<div class="category-container">
 		<!--TODO: Remove repeating "Categories" -->
 		<h3 class="center page-sub-title uppercase"><?php _e( 'All categories', 'symmetri' ); ?></h3>
-		<?php wp_list_categories() ?>
+		<ul class="category-list">
+			<?php wp_list_categories('title_li=') ?>
+		</ul>
+		<div class="clear"></div>
 	</div>
 </main>
 <?php get_footer(); ?>

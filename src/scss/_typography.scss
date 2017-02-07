@@ -128,3 +128,15 @@ a {
 .nav-links {
   font-weight: $semiWeight;
 }
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR ARCHIVE
+------------------------------------------------------------------------------*/
+
+.archive-description {
+  font-weight: $semiWeight;
+  text-transform: uppercase;
+  p {
+    text-align: center;
+  }
+}
