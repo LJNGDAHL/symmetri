@@ -129,4 +129,26 @@
 ------------------------------------------------------------------------------*/
 
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
+
+
+/*------------------------------------------------------------------------------
+  CUSTOM FUNCTIONS
+------------------------------------------------------------------------------*/
+
+	/**
+	 * A function that retrieves current page
+	 * @return int Return current page as a variable ($paged)
+	 */
+	function getCurrentPage() {
+
+		if ( get_query_var('paged') ) {
+			$paged = get_query_var('paged');
+		} elseif ( get_query_var('page') ) {
+			$paged = get_query_var('page');
+		} else {
+			$paged = 1;
+		}
+
+		return $paged;
+	}
 ?>

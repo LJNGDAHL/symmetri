@@ -5,12 +5,25 @@
 * @package Symmetri
 */
 	echo 'page-blog.php';
-	get_header();
-?>
 
+	get_header();
+
+	// Get current page
+	$paged = getCurrentPage();
+
+	// Used in $the_query that loops out posts from 'Work in progress'
+	$args = array(
+		'post_status'		=> 'publish',
+		'category_name'		=> 'Work in progress',
+		'paged'				=> $paged
+	);
+
+/*------------------------------------------------------------------------------
+	GET PAGE TITLE AND PAGE MAIN CONTENT
+------------------------------------------------------------------------------*/
+?>
 <main class="page-main">
-	<?php
-		// This gets the title and content of the page.
+<?php
 		if ( have_posts() ) :
 
 			while ( have_posts() ) : the_post();
@@ -25,21 +38,13 @@
 
 		<?php endif;
 
-		// This is used for being able to loop out all the posts in the category
-		// 'Work in progress'
-		$the_query = new WP_Query( array(
-			'post_status'		=> 'publish',
-			'category_name'		=> 'Work in progress'
+/*------------------------------------------------------------------------------
+	START OF LOOP THAT PRINTS ALL POST IN THE CATEGORY 'WORK IN PROGRESS'
+------------------------------------------------------------------------------*/
 
-			)
-		);
+		$the_query = new WP_Query( $args );
 
-
-		// Start of loop
 		if ( $the_query -> have_posts() ) :
-			the_posts_navigation(); ?>
-
-			<?php
 
 			while ( $the_query -> have_posts() ) :
 
@@ -48,21 +53,41 @@
 				<article class="border-separator">
 					<h3 class="center page-sub-title uppercase" id="post-<?php the_ID(); ?>"><?php the_title(); ?></h3>
 
-					<?php if ( has_post_thumbnail() ) : ?>
-
-						<?php
+					<?php if ( has_post_thumbnail() ) :
 						the_post_thumbnail( 'album-cover', array( 'class' => 'blog-img' ) );
-						?>
-					<?php endif; ?>
+					endif; ?>
 
 					<p class="blog-post-date"><?php the_date(); ?></p>
 					<?php the_excerpt(); ?>
-					<a href="<?php the_permalink(); ?>"><?php _e( 'Read post', 'symmetri' ); ?></a>
+					<a href="<?php the_permalink(); ?>">
+						<?php _e( 'Read post', 'symmetri' ); ?>
+					</a>
 				</article>
-		<?php endwhile;
 
-	endif;
-	?>
+			<?php endwhile;
+
+/*------------------------------------------------------------------------------
+	START OF CUSTOM PAGINATION
+------------------------------------------------------------------------------*/
+
+			if ($the_query->max_num_pages > 1) :
+
+				$orig_query = $wp_query; // fix for pagination to work
+				$wp_query = $the_query; ?>
+
+				<nav class="pagination">
+					<?php
+						echo get_next_posts_link($the_query->max_num_pages);
+						echo get_previous_posts_link();
+					?>
+				</nav>
+
+				<?php $wp_query = $orig_query; // fix for pagination to work
+
+			endif;
+
+		endif; wp_reset_postdata(); ?>
+
 	<div class="search-container">
 		<?php get_search_form();  ?>
 	</div>
