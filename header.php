@@ -20,21 +20,28 @@
 			</script>
 		<?php endif; ?>
 	</head>
-
 	<body id="body" <?php body_class(); ?>>
 		<a class="menu-link" href="#navigation">Menu</a>
+
 		<nav class="main-navigation" id="navigation">
 			<a href="#body" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
 			</a>
 			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
-			<div class="logotype-container">
-				<a href="#body">
-					<?php get_template_part( 'img/logo' ); ?>
+			<div class="logo-navigation">
+				<a href="#body" class="logo-navigation-name">
+					<?php get_template_part( 'img/lens' ); ?>
+					<span class="photographer-name">
+						<?php echo get_bloginfo( 'name' ); ?>
+					</span>
+					<span class="photographer-title">
+						<?php echo get_bloginfo( 'description' ); ?>
+					</span>
 				</a>
 			</div>
 		</nav>
-		<div class="logo">
+
+		<div class="main-logo">
 			<div class="main-title">
 				<a href="<?php bloginfo( 'wpurl' );?>">
 					<?php get_template_part( 'img/lens' ); ?>
