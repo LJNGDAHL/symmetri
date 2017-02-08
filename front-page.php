@@ -7,48 +7,75 @@
 *
 * @package Symmetri
 */
-	get_header();
+get_header();
 
-	// This is used for being able to loop out gallery images.
-	$work = new WP_Query( array(
+$showMore = __( 'Show More', 'symmetri' ); // Used for pagination links
+$goBack = __( 'Go Back', 'symmetri' ); // Used for pagination links
 
-		'post_type' 		=> 'symmetri_cpt_gallery',
-		'post_status'		=> 'publish',
-		'order_by'			=> 'menu_order',
-		'order'				=> ASC
 
-		)
-	);
-?>
+// Check page number
+if ( get_query_var('paged') ) {
 
-<main class="grid">
-<?php
-	// Start of loop
-	if ( $work -> have_posts() ) :
+	$paged = get_query_var('paged');
 
-		while ( $work -> have_posts() ) :
+} elseif ( get_query_var('page') ) {
 
-			$work -> the_post();
+	$paged = get_query_var('page');
 
-			if ( has_post_thumbnail() ) :
+} else {
 
-				?>
+$paged = 1;
+}
 
-				<div class="grid-item">
-					<a class="img-link" href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
-					</a>
-				</div>
+// Arguments used for the query
+$args =  array(
 
+	'post_type' 		=> 'symmetri_cpt_gallery',
+	'post_status'		=> 'publish',
+	'order_by'			=> 'menu_order',
+	'paged'				=> $paged,
+	'order'				=> ASC
+);
+
+$the_query = new WP_Query( $args );
+
+	if ( $the_query -> have_posts() ) : ?>
+
+		<main class="grid">
+
+			<?php while ( $the_query -> have_posts() ) : $the_query -> the_post();
+
+				if ( has_post_thumbnail() ) : ?>
+
+					<div class="grid-item">
+						<a class="img-link" href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
+						</a>
+					</div>
+
+				<?php endif;
+
+			endwhile; ?>
+
+		</main>
+
+		<?php if ($the_query->max_num_pages > 1) : // Custom pagination
+			$orig_query = $wp_query; // fix for pagination to work
+			$wp_query = $the_query; ?>
+
+			<nav class="pagination">
 				<?php
-			endif;
+					echo get_next_posts_link( $showMore, $the_query->max_num_pages );
+					echo get_previous_posts_link( $goBack );
+				?>
+			</nav>
 
-		endwhile;
+		<?php $wp_query = $orig_query; // fix for pagination to work
+
+		endif;
 
 	endif;
-?>
-</main>
 
-<?php
-	get_footer();
-?>
+	wp_reset_postdata(); ?>
+
+<?php get_footer(); ?>

@@ -7,6 +7,7 @@
 	echo 'page-blog.php';
 	get_header();
 ?>
+
 <main class="page-main">
 	<?php
 		// This gets the title and content of the page.
@@ -33,8 +34,12 @@
 			)
 		);
 
+
 		// Start of loop
 		if ( $the_query -> have_posts() ) :
+			the_posts_navigation(); ?>
+
+			<?php
 
 			while ( $the_query -> have_posts() ) :
 
@@ -54,10 +59,9 @@
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>"><?php _e( 'Read post', 'symmetri' ); ?></a>
 				</article>
+		<?php endwhile;
 
-			<?php
-			endwhile;
-		endif;
+	endif;
 	?>
 	<div class="search-container">
 		<?php get_search_form();  ?>
