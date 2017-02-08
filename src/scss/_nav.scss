@@ -25,9 +25,7 @@
 .main-navigation {
   @include background-gradient();
   color: $secondaryColor;
-  font-size: 3rem;
   height: 100vh;
-  line-height: 1.4;
   left: 0;
   padding: 15vh 5vh;
   position: fixed;
@@ -52,7 +50,9 @@
     text-align: center;
   }
 
-  a {
+  .menu-item a {
+    font-size: 3rem;
+    line-height: 1.4;
     color: inherit;
     opacity: 0.1;
     text-transform: uppercase;
@@ -68,11 +68,16 @@
     opacity: 1;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   // Styling of exit icon starts here ------------------------------------------
 
   .exit-menu {
+    color: inherit;
     line-height: 0;
     width: 1.8rem;
     height: 1.8rem;
@@ -96,18 +101,41 @@
       100% {
         transform: rotate(360deg);
       }
-
     }
+
   }
 
   // Styling of bottom logotype starts here ------------------------------------
-  .logotype-container {
+  // TODO: Keep it DRY! This is kind of the same as in '_logo.scss'
+  .logo-navigation {
     bottom: 3rem; // Only for screens smaller than 600px.
-    height: 6.5rem;
+    color: $secondaryColor;
     left: 50%;
-    width: 6.5rem;
     position: absolute;
     transform: translateX(-50%);
+    text-align: center;
+
+    .lens-logo {
+      height: 2.3rem;
+      width: 2.3rem;
+    }
+
+    .logo-navigation-name {
+      color: inherit;
+      display: inline;
+      font-weight: 100;
+      line-height: 1.4;
+
+        .photographer-name {
+          font-weight: $normalWeight;
+
+          &::before,
+          &::after {
+            content:"\a";
+            white-space: pre;
+          }
+        }
+    }
 
     @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
       bottom: 2rem;
