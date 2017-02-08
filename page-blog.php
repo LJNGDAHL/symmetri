@@ -54,10 +54,8 @@
 					<h3 class="center page-sub-title uppercase" id="post-<?php the_ID(); ?>"><?php the_title(); ?></h3>
 
 					<?php if ( has_post_thumbnail() ) :
-						the_post_thumbnail( 'album-cover', array( 'class' => 'blog-img' ) );
+						the_post_thumbnail( 'blogpost-cover', array( 'class' => 'blog-img' ) );
 					endif; ?>
-
-					<p class="blog-post-date"><?php the_date(); ?></p>
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>">
 						<?php _e( 'Read post', 'symmetri' ); ?>
@@ -77,7 +75,7 @@
 
 				<nav class="pagination">
 					<?php
-						echo get_next_posts_link($the_query->max_num_pages);
+						echo get_next_posts_link();
 						echo get_previous_posts_link();
 					?>
 				</nav>

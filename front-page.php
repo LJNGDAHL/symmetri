@@ -58,7 +58,7 @@
 
 				<nav class="pagination">
 					<?php
-						echo get_next_posts_link( $the_query->max_num_pages );
+						echo get_next_posts_link();
 						echo get_previous_posts_link();
 					?>
 				</nav>

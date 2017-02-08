@@ -1,7 +1,8 @@
 .blog-img {
-  float: left;
+  display: block;
   margin: 0 2rem 1rem 0;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .center {

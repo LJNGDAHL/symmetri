@@ -59,7 +59,7 @@
 		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
 
 		// Since value 'true' is not added, this is set to soft crop mode
-		add_image_size( 'album-cover', 300, 9999 );
+		add_image_size( 'blogpost-cover', 500, 9999 );
 	}
 
 /*------------------------------------------------------------------------------
