@@ -1,0 +1,58 @@
+.mast-head {
+  background-color: $backgroundColor;
+  display: block;
+  width: 100%;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100; // .main-navigation has z-index 105
+  }
+
+  .menu-link {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      top: 73px;
+      right: 40px;
+    }
+  }
+
+/*------------------------------------------------------------------------------
+  LOGO CONTAINER
+------------------------------------------------------------------------------*/
+
+    .main-logo {
+    margin: 1.7em 0 3em;
+    text-align: center;
+
+    .lens-logo {
+      height: 3.8rem;
+      width: 3.8rem;
+      }
+
+    .photographer-container {
+      display: none;
+
+      @media #{$screenMedium}, #{$screenLarge} {
+        display: inline;
+        font-weight: $normalWeight;
+        font-size: 1.7rem;
+        margin-top: 0.2em;
+
+        .photographer-name {
+          font-weight: $semiWeight;
+
+          &::before,
+          &::after {
+            content:"\a";
+            white-space: pre;
+          }
+        }
+      }
+    }
+  }
+}

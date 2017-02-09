@@ -1,24 +1,4 @@
 /*------------------------------------------------------------------------------
-  MENU ICON THAT LEADS TO MAIN NAVIGATION
-------------------------------------------------------------------------------*/
-
-.menu-link {
-  font-size: 1.3rem;
-  position: absolute;
-  top: 50px;
-  right: 20px;
-
-  &:hover {
-    // TODO: Make this beautiful!
-  }
-
-  @media #{$screenMedium}, #{$screenLarge} {
-    top: 73px;
-    right: 40px;
-  }
-}
-
-/*------------------------------------------------------------------------------
   MAIN SITE NAVIGATION STYLING (DROPS DOWN ON TARGET)
 ------------------------------------------------------------------------------*/
 
@@ -31,9 +11,9 @@
   position: fixed;
   top: 0;
   transform: translateY(-100vh);
-  transition: transform 0.9s ease-in-out; // TODO: Add Event Listener to fix resizing issues.
+  transition: transform 0.9s ease-in-out;
   width: 100vw;
-  z-index: 1;
+  z-index: 105; // mast-head has z-index 100
 
   @media #{$screenLandscape} {
     padding: 5vh;
