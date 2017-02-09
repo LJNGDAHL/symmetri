@@ -28,10 +28,7 @@
   /**
   * Debounce toggleMsnry for 200ms on window resize
   */
-  window.addEventListener('resize', function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(toggleMsnry, 200);
-  });
+  window.addEventListener('resize', debounce(toggleMsnry));
 
 
   /**
@@ -47,6 +44,57 @@
     }
 
     isActive = shouldBeActive;
+  }
+
+  // TODO: Clean up and comment!
+
+  var isScrolling = false;
+  var menuIsSticky = false;
+  var logo = document.querySelector('.main-logo');
+  var threshold = logo.offsetTop + logo.offsetHeight;
+  var menuContainer = document.getElementById('menu');
+
+  window.addEventListener('scroll', onScroll);
+
+  setMenuState();
+
+  function setMenuState() {
+    var scroll = window.scrollY;
+
+    if (scroll > threshold) {
+      if (!menuIsSticky) {
+        menuIsSticky = true;
+        console.log('yay!');
+        menu.classList.add('sticky');
+      }
+    } else {
+      menuIsSticky = false;
+      menu.classList.remove('sticky');
+    }
+  }
+
+  function onScroll() {
+    if (!isScrolling) {
+      requestAnimationFrame(function () {
+        isScrolling = false;
+        setMenuState();
+      });
+    }
+
+    isScrolling = true;
+  }
+
+  function debounce(fn, time) {
+    var timeout;
+
+    return function () {
+      var args = Array.prototype.slice.call(arguments);
+
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        fn.apply(this, args);
+      }, time || 200);
+    };
   }
 
   /**

@@ -50,7 +50,7 @@
 		// Script used for layout
 		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
 
-		wp_enqueue_script( 'masonry_init', get_template_directory_uri() . '/js/masonry_init.js', array('masonry'), '', true );
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', '', '', true );
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );

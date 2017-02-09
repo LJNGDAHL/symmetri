@@ -21,7 +21,9 @@
 		<?php endif; ?>
 	</head>
 	<body id="body" <?php body_class(); ?>>
-		<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
+
+
+<!-- TODO: REMOVE COMMENT! MAIN NAVIGATION STARTS HERE ------------------------>
 
 		<nav class="main-navigation" id="navigation">
 			<a href="#body" class="exit-menu" aria-label="Exit icon">
@@ -30,7 +32,9 @@
 			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
 			<div class="logo-navigation">
 				<a href="#body" class="logo-navigation-name">
-					<?php get_template_part( 'img/lens' ); ?>
+					<svg class="lens-logo">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+					</svg>
 					<span class="photographer-name">
 						<?php echo get_bloginfo( 'name' ); ?>
 					</span>
@@ -41,10 +45,15 @@
 			</div>
 		</nav>
 
+<!-- TODO: REMOVE COMMENT! SCROLL NAVIGATION STARTS HERE ---------------------->
+
+		<a class="menu-link" id="menu" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
 		<div class="main-logo">
 			<div class="main-title">
 				<a href="<?php bloginfo( 'wpurl' );?>">
-					<?php get_template_part( 'img/lens' ); ?>
+					<svg class="lens-logo">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+					</svg>
 					<span class="photographer-container">
 						<span class="photographer-name">
 							<?php echo get_bloginfo( 'name' ); ?>
