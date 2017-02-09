@@ -52,7 +52,7 @@
   var menuIsSticky = false;
   var logo = document.querySelector('.main-logo');
   var threshold = logo.offsetTop + logo.offsetHeight;
-  var menuContainer = document.getElementById('menu');
+  var mastHead = document.getElementById('menu');
 
   window.addEventListener('scroll', onScroll);
 
@@ -65,11 +65,11 @@
       if (!menuIsSticky) {
         menuIsSticky = true;
         console.log('yay!');
-        menu.classList.add('sticky');
+        mastHead.classList.add('sticky');
       }
     } else {
       menuIsSticky = false;
-      menu.classList.remove('sticky');
+      mastHead.classList.remove('sticky');
     }
   }
 
