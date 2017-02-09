@@ -122,11 +122,22 @@ a {
 }
 
 /*------------------------------------------------------------------------------
-  TYPOGRAPHY FOR NAVIGATION LINKS
+  NAVIGATION LINKS (USED FOR NAVIGATING AMONG COMMENTS)
 ------------------------------------------------------------------------------*/
 
 .nav-links {
+  @include border-top-bottom();
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-weight: $semiWeight;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+
+  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -138,5 +149,23 @@ a {
   text-transform: uppercase;
   p {
     text-align: center;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR LINKS
+------------------------------------------------------------------------------*/
+
+.text-link {
+  border-bottom: 2px solid $primaryColor;
+  background-color: $backgroundColor;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3em 0.6em;
+  @include smooth-transition();
+
+  &:hover {
+    color: $backgroundColor;
+    background-color: $primaryColor;
   }
 }

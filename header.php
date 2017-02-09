@@ -21,7 +21,7 @@
 		<?php endif; ?>
 	</head>
 	<body id="body" <?php body_class(); ?>>
-		<a class="menu-link" href="#navigation">Menu</a>
+		<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
 
 		<nav class="main-navigation" id="navigation">
 			<a href="#body" class="exit-menu" aria-label="Exit icon">

@@ -45,7 +45,7 @@
 		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 
 		// Project fonts
-		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700,700i,900' );
+		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
 
 		// Script used for layout
 		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
@@ -59,7 +59,7 @@
 		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
 
 		// Since value 'true' is not added, this is set to soft crop mode
-		add_image_size( 'blogpost-cover', 500, 9999 );
+		add_image_size( 'blogpost-cover', 400, 9999 );
 	}
 
 /*------------------------------------------------------------------------------

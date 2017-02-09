@@ -4,8 +4,6 @@
 * Shows all posts of the type Blog.
 * @package Symmetri
 */
-	echo 'page-blog.php';
-
 	get_header();
 
 	// Get current page
@@ -57,7 +55,7 @@
 						the_post_thumbnail( 'blogpost-cover', array( 'class' => 'blog-img' ) );
 					endif; ?>
 					<?php the_excerpt(); ?>
-					<a href="<?php the_permalink(); ?>">
+					<a class="text-link" href="<?php the_permalink(); ?>">
 						<?php _e( 'Read post', 'symmetri' ); ?>
 					</a>
 				</article>

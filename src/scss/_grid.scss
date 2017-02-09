@@ -25,7 +25,7 @@
   }
 
   .grid-item-content {
-    @include background-gradient();
+    background: $backgroundGradient;
     color: $secondaryColor;
     padding: 4rem 3rem;
 

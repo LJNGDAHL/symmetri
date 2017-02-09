@@ -1,9 +1,10 @@
-@mixin background-gradient() {
-  background: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
+@mixin border-top-bottom() {
+  border-top: 1px solid $primaryShade;
+  border-bottom: 1px solid $primaryShade;
 }
 
 // Visually hides element, but keeps it readable for screen readers.
-@mixin hidden-visually {
+@mixin hidden-visually() {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -18,9 +19,4 @@
   transition-duration: 0.8s;
   transition-delay: 0.05s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.14, 0.99);
-}
-
-@mixin border-top-bottom() {
-  border-top: 1px solid $primaryShade;
-  border-bottom: 1px solid $primaryShade;
 }

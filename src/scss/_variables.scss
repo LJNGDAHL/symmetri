@@ -2,7 +2,7 @@
 // Typography and color --------------------------------------------------------
 
 $brandFont: 'Lato', sans-serif;
-$altFont:'Playfair Display', serif;
+$altFont: 'Playfair Display', serif;
 
 $fontSizeNormal: 1.1rem;
 $fontSizeIntro: 1.5rem;
@@ -19,6 +19,8 @@ $primaryDarkerShade: #A9A9AC;
 
 $secondaryColor: #f8f8f8;
 $backgroundColor: #FCFDFF;
+
+$backgroundGradient: linear-gradient(180deg, rgb(21, 20, 27), rgb(8, 8, 10));
 
 // Media queries ---------------------------------------------------------------
 

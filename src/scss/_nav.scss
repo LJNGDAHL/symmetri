@@ -23,7 +23,7 @@
 ------------------------------------------------------------------------------*/
 
 .main-navigation {
-  @include background-gradient();
+  background: $backgroundGradient;
   color: $secondaryColor;
   height: 100vh;
   left: 0;
@@ -31,7 +31,7 @@
   position: fixed;
   top: 0;
   transform: translateY(-100vh);
-  transition: 0.9s ease-in-out; // TODO: Add Event Listener to fix resizing issues.
+  transition: transform 0.9s ease-in-out; // TODO: Add Event Listener to fix resizing issues.
   width: 100vw;
   z-index: 1;
 
@@ -149,23 +149,5 @@
       opacity: 1;
     }
 
-  }
-}
-
-/*------------------------------------------------------------------------------
-  NAVIGATION LINKS (USED FOR NAVIGATING AMONG COMMENTS)
-------------------------------------------------------------------------------*/
-
-.nav-links {
-  @include border-top-bottom();
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 0.5rem;
-
-  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
-    flex-direction: row;
-    justify-content: space-around;
   }
 }
