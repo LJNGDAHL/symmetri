@@ -8,7 +8,7 @@
 	$gallery_images = CFS() -> get ( 'gallery_images' );
 ?>
 
-<main class="grid">
+<div class="grid">
 	<div class="grid-sizer"></div>
 
 	<?php
@@ -52,7 +52,6 @@
 									alt="<?php echo esc_attr( $alt );?>" />
 							</div>
 
-
 						<?php endfor; // Ends 'for gallery images'
 
 				endif; // Ends 'if gallery images'
@@ -61,4 +60,5 @@
 
 		endif; // Ends 'if have posts'
 	?>
-</main>
+
+</div>
