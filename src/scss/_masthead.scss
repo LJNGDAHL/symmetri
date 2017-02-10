@@ -2,6 +2,7 @@
 // FIXME: This is a temporary solution.
 .placeholder {
   height: 10rem;
+
 }
 
 .mast-head {
@@ -60,11 +61,16 @@
   RULES TO APPLY WHEN SCROLLING
 ------------------------------------------------------------------------------*/
 
-  // TODO: This needs some smooth animation.
-  &.sticky {
+  // TODO: This needs some smooth animation for when going back. Get it together.
+  &.animate {
+    top: -54px;
+    transition: top 750ms ease-in-out;
+  }
+  &.sticky.animate {
     position: fixed;
     top: 0;
     z-index: 100; // .main-navigation has z-index 105
+    box-shadow: $boxShadow;
 
     .menu-link {
       font-size: 1.3rem;
