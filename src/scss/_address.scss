@@ -1,6 +1,24 @@
-.contact-container {
-  border-top: 1px solid $primaryShade;
+// This is when used on front page and gallery pages
+.contact-front,
+.contact-gallery {
+  max-width: 1200px;
+  @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
+    margin: 0.5rem 2rem;
+    border-top: 1px solid $primaryShade;
+  }
+
+  .contact-container {
+    padding: 1rem 0 3rem;
+  }
+}
+
+// This is styling used on contact page
+.contact-page {
   border-bottom: 1px solid $primaryShade;
+  border-top: 1px solid $primaryShade;
+}
+
+.contact-container {
   margin-top: 2rem;
   padding: 1.5rem 0 2rem;
 

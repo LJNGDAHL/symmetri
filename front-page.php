@@ -70,5 +70,8 @@
 		endif;
 
 		wp_reset_postdata(); ?>
+		<div class="contact-front">
+			<?php get_sidebar();  ?>
+		</div>
 
 <?php get_footer(); ?>
