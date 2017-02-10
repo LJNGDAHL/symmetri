@@ -47,7 +47,7 @@
 
 <!-- TODO: REMOVE COMMENT! SCROLL NAVIGATION STARTS HERE ---------------------->
 
-		<div class="mast-head" id="menu">
+		<div class="mast-head animate" id="menu">
 			<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
 			<div class="main-logo">
 				<div class="main-title">

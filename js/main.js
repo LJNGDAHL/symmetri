@@ -5,6 +5,13 @@
   var MEDIAQUERY = '(min-width: 900px), (max-height: 500px) and (orientation: landscape)';
   var elem = document.querySelector('.grid');
   var images = document.querySelectorAll('.full-width-img');
+  var isScrolling = false;
+  var menuIsSticky = false;
+  var logo = document.querySelector('.main-logo');
+  var threshold = logo.offsetTop + logo.offsetHeight;
+  var mastHead = document.getElementById('menu');
+  var placeHolder = document.createElement('div');
+
 
   if (elem) {
 
@@ -46,14 +53,6 @@
     isActive = shouldBeActive;
   }
 
-  // TODO: Clean up and comment!
-
-  var isScrolling = false;
-  var menuIsSticky = false;
-  var logo = document.querySelector('.main-logo');
-  var threshold = logo.offsetTop + logo.offsetHeight;
-  var mastHead = document.getElementById('menu');
-
   window.addEventListener('scroll', onScroll);
 
   setMenuState();
@@ -64,12 +63,16 @@
     if (scroll > threshold) {
       if (!menuIsSticky) {
         menuIsSticky = true;
-        console.log('yay!');
         mastHead.classList.add('sticky');
+
+        document.body.insertBefore(placeHolder, mastHead);
+        placeHolder.classList.add('placeholder'); // FIXME: Remove when not scrolling
       }
+
     } else {
       menuIsSticky = false;
       mastHead.classList.remove('sticky');
+      placeHolder.classList.remove('placeholder'); // TODO: Remove all together
     }
   }
 
