@@ -3,12 +3,6 @@
   display: block;
   width: 100%;
 
-  &.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 100; // .main-navigation has z-index 105
-  }
-
   .menu-link {
     font-size: 1.3rem;
     position: absolute;
@@ -53,6 +47,35 @@
           }
         }
       }
+    }
+  }
+
+/*------------------------------------------------------------------------------
+  RULES TO APPLY WHEN SCROLLING
+------------------------------------------------------------------------------*/
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100; // .main-navigation has z-index 105
+
+    .menu-link {
+      font-size: 1.3rem;
+      position: absolute;
+      right: 20px;
+      top: 27px;
+
+      @media #{$screenMedium}, #{$screenLarge} {
+        right: 40px;
+      }
+    }
+
+    .main-logo {
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .photographer-container {
+      display: none;
     }
   }
 }
