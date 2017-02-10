@@ -26,7 +26,7 @@
 <!-- TODO: REMOVE COMMENT! MAIN NAVIGATION STARTS HERE ------------------------>
 
 		<nav class="main-navigation" id="navigation">
-			<a href="#body" class="exit-menu" aria-label="Exit icon">
+			<a href="#menu" class="exit-menu" aria-label="Exit icon">
 				<?php get_template_part( 'img/exit', 'icon' ); ?>
 			</a>
 			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
