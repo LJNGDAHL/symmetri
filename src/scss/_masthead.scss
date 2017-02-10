@@ -1,3 +1,9 @@
+// Only shown when scrolling
+// FIXME: This is a temporary solution.
+.placeholder {
+  height: 10rem;
+}
+
 .mast-head {
   background-color: $backgroundColor;
   display: block;
@@ -54,6 +60,7 @@
   RULES TO APPLY WHEN SCROLLING
 ------------------------------------------------------------------------------*/
 
+  // TODO: This needs some smooth animation.
   &.sticky {
     position: fixed;
     top: 0;

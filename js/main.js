@@ -12,6 +12,7 @@
   var mastHead = document.getElementById('menu');
   var placeHolder = document.createElement('div');
 
+
   if (elem) {
 
     msnry = createMsnry();
