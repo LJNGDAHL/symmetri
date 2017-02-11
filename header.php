@@ -23,7 +23,7 @@
 	<body id="body" <?php body_class(); ?>>
 
 
-<!-- TODO: REMOVE COMMENT! MAIN NAVIGATION STARTS HERE ------------------------>
+<!-- MAIN NAVIGATION STARTS HERE ---------------------------------------------->
 
 		<nav class="main-navigation" id="navigation">
 			<a href="#menu" class="exit-menu" aria-label="Exit icon">
@@ -45,9 +45,9 @@
 			</div>
 		</nav>
 
-<!-- TODO: REMOVE COMMENT! SCROLL NAVIGATION STARTS HERE ---------------------->
+<!-- MAST-HEAD STARTS HERE ---------------------------------------------------->
 
-		<div class="mast-head animate" id="menu">
+		<div class="mast-head js-mast-head">
 			<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
 			<div class="main-logo">
 				<div class="main-title">
@@ -63,6 +63,21 @@
 								<?php echo get_bloginfo( 'description' ); ?>
 							</span>
 						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<!-- FIXED-HEAD STARTS HERE --------------------------------------------------->
+
+		<div class="fixed-head js-menu" hidden id="menu">
+			<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
+			<div class="main-logo">
+				<div class="main-title">
+					<a href="<?php bloginfo( 'wpurl' );?>">
+						<svg class="lens-logo">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+						</svg>
 					</a>
 				</div>
 			</div>

@@ -7,10 +7,9 @@
   var images = document.querySelectorAll('.full-width-img');
   var isScrolling = false;
   var menuIsSticky = false;
-  var logo = document.querySelector('.main-logo');
-  var threshold = logo.offsetTop + logo.offsetHeight;
-  var mastHead = document.getElementById('menu');
-  var placeHolder = document.createElement('div');
+  var mastHead = document.querySelector('.js-mast-head');
+  var threshold = mastHead.offsetTop + mastHead.offsetHeight;
+  var stickyMenu = document.querySelector('.js-menu');
 
 
   if (elem) {
@@ -63,16 +62,14 @@
     if (scroll > threshold) {
       if (!menuIsSticky) {
         menuIsSticky = true;
-        mastHead.classList.add('sticky');
-
-        document.body.insertBefore(placeHolder, mastHead);
-        placeHolder.classList.add('placeholder'); // FIXME: Remove when not scrolling
+        stickyMenu.classList.add('visible');
+        stickyMenu.removeAttribute('hidden');
       }
 
     } else {
       menuIsSticky = false;
-      mastHead.classList.remove('sticky');
-      placeHolder.classList.remove('placeholder'); // TODO: Remove all together
+      stickyMenu.classList.remove('visible');
+      stickyMenu.setAttribute('hidden', true);
     }
   }
 

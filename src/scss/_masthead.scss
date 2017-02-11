@@ -1,93 +1,85 @@
-// Only shown when scrolling
-// FIXME: This is a temporary solution.
-.placeholder {
-  height: 10rem;
+// General styling for menu link
+.menu-link {
+  font-size: 1.3rem;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    right: 40px;
+  }
 }
 
+// Logo container
+.main-logo {
+  text-align: center;
+
+  .lens-logo {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  MAST HEAD (ON TOP OF SCREEN)
+------------------------------------------------------------------------------*/
+
 .mast-head {
-  background-color: $backgroundColor;
-  display: block;
-  width: 100%;
+  padding: 1.7rem 0 3rem;
 
-  .menu-link {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-
-    @media #{$screenMedium}, #{$screenLarge} {
+  // On larger screens, menu position needs to be moved down slightly
+  @media #{$screenMedium}, #{$screenLarge} {
+    .menu-link {
       top: 73px;
-      right: 40px;
     }
   }
 
-/*------------------------------------------------------------------------------
-  LOGO CONTAINER
-------------------------------------------------------------------------------*/
+  .photographer-container {
+    display: none;
 
-    .main-logo {
-    margin: 1.7em 0 3em;
-    text-align: center;
+    @media #{$screenMedium}, #{$screenLarge} {
+      display: inline;
+      font-weight: $normalWeight;
+      font-size: 1.7rem;
+      margin-top: 0.2em;
 
-    .lens-logo {
-      height: 3.8rem;
-      width: 3.8rem;
-      }
+      .photographer-name {
+        font-weight: $semiWeight;
 
-    .photographer-container {
-      display: none;
-
-      @media #{$screenMedium}, #{$screenLarge} {
-        display: inline;
-        font-weight: $normalWeight;
-        font-size: 1.7rem;
-        margin-top: 0.2em;
-
-        .photographer-name {
-          font-weight: $semiWeight;
-
-          &::before,
-          &::after {
-            content:"\a";
-            white-space: pre;
-          }
+        &::before,
+        &::after {
+          content:"\a";
+          white-space: pre;
         }
       }
     }
   }
 
+}
+
 /*------------------------------------------------------------------------------
-  RULES TO APPLY WHEN SCROLLING
+  FIXED HEAD (APPEARS WHEN SCROLLING)
 ------------------------------------------------------------------------------*/
 
-  // TODO: This needs some smooth animation for when going back. Get it together.
-  &.animate {
-    top: -54px;
-    transition: top 750ms ease-in-out;
+.fixed-head {
+  background-color: $backgroundColor;
+  display: block;
+  position: fixed;
+  top: -80px;
+  transition: top 250ms ease-in-out;
+  width: 100%;
+  z-index: 100; // .main-navigation has z-index 105
+
+  .menu-link {
+    top: 27px;
   }
-  &.sticky.animate {
-    position: fixed;
-    top: 0;
-    z-index: 100; // .main-navigation has z-index 105
+
+  .main-logo {
+    margin: 0.4rem 0 0.6rem;
+  }
+
+  &.visible {
     box-shadow: $boxShadow;
-
-    .menu-link {
-      font-size: 1.3rem;
-      position: absolute;
-      right: 20px;
-      top: 27px;
-
-      @media #{$screenMedium}, #{$screenLarge} {
-        right: 40px;
-      }
-    }
-
-    .main-logo {
-      margin: 0.4rem 0 0.6rem;
-    }
-
-    .photographer-container {
-      display: none;
-    }
+    top: 0px;
   }
 }
