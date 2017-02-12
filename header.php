@@ -1,3 +1,11 @@
+<?php
+/**
+* The template for displaying the header
+* Displays all of the <head> section and everything up until <body>
+*
+* @package Symmetri
+*/
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>

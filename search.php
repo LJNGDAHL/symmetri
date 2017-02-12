@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Search
- * The template for displaying Search Results pages.
+ * The template for displaying Search Results
  *
  * @package Symmetri
  */

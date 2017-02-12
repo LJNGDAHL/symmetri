@@ -1,7 +1,8 @@
 <?php
 /**
- * The template for displaying comments.
- * Used on single.php.
+ * The template for displaying comments
+ * Used on single.php
+ *
  * @package Symmetri
  */
 

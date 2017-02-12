@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying posts with excerpts.
- * Used in Search Results.
+ * The template for displaying posts with excerpts
+ * Used in Search Results
  *
  * @package Symmetri
  */

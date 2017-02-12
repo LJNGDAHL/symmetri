@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying search forms in the Wordpress theme 'Symmetri'
+ * Template for displaying search forms
  *
  * @package Symmetri
  */

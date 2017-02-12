@@ -1,6 +1,7 @@
 <?php
 /**
-* Plugin Name: Social Media Widget for the Wordpress Theme Symmetri.
+* Plugin Name: Social Media Widget for the Wordpress Theme Symmetri
+*
 * Theme URI: https://github.com/LJNGDAHL/symmetri
 * Author: Katarina Ljungdahl
 * Author URI: https://github.com/LJNGDAHL

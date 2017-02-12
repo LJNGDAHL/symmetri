@@ -1,6 +1,6 @@
 <?php
 /**
-* The page for setting up Google Analytics.
+* The page for setting up Google Analytics
 *
 * If the user has added a GA Tracking Id,
 * the script for using Google Analytics gets added in header.php

@@ -1,7 +1,8 @@
 <?php
 /**
 * Template Name: Blog
-* Shows all posts of the type Blog.
+* Shows all posts of the type Blog
+*
 * @package Symmetri
 */
 	get_header();

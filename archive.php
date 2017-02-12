@@ -1,6 +1,7 @@
 <?php
 /**
 * Template Name: Archive
+*
 * The template for displaying archive pages
 * @package Symmetri
 *

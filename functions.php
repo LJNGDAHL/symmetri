@@ -1,4 +1,9 @@
 <?php
+/**
+* Symmetri theme functions and definitions
+*
+* @package Symmetri
+*/
 
 	require "widget-social.php";
 	require "widget-address.php";

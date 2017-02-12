@@ -1,6 +1,7 @@
 <?php
 /**
-* The template for displaying all single posts
+* The template for displaying single posts
+*
 * @package Symmetri
 */
 get_header();

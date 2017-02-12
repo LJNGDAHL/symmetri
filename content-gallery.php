@@ -1,6 +1,7 @@
 <?php
 /**
-* The template used for displaying gallery images. Used on single.php.
+* The template used for displaying gallery images
+* Used on single.php
 *
 * @package Symmetri
 */

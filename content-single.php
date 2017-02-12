@@ -1,6 +1,7 @@
 <?php
 /**
-* Outputs the single post content. Displayed by single.php.
+* Outputs the single post content
+* Used on single.php
 *
 * @package Symmetri
 */
