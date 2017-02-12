@@ -21,9 +21,10 @@
 		<?php endif; ?>
 
 	</head>
+
 	<body id="body" <?php body_class(); ?>>
 		<?php
-			get_template_part('template-parts/main', 'navigation');
-			get_template_part('template-parts/mast', 'head');
-			get_template_part('template-parts/fixed', 'head');
+			get_template_part( 'template-parts/main', 'navigation' );
+			get_template_part( 'template-parts/mast', 'head' );
+			get_template_part( 'template-parts/fixed', 'head' );
 		?>
