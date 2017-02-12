@@ -9,6 +9,7 @@
   var isScrolling = false;
   var menuIsSticky = false;
   var mastHead = document.querySelector('.js-mast-head');
+  // TODO: Sort out offsetTop on admin pages
   var threshold = mastHead.offsetTop + mastHead.offsetHeight;
   var stickyMenu = document.querySelector('.js-menu');
 
@@ -20,13 +21,13 @@
     toggleMsnry();
 
     /**
-     * Listen for images to load.
+     * Listen for images to load
      */
     Array.prototype.forEach.call(images, function (img) {
       img.addEventListener('load', function () {
 
         if (isActive) {
-          // Let Masonry recalculate layout.
+          // Let Masonry recalculate layout
           msnry.layout();
         }
       });
@@ -39,7 +40,7 @@
 
 
   /**
-   * Determine whether Msnry should be active or not.
+   * Determine whether Msnry should be active or not
    */
   function toggleMsnry() {
     var shouldBeActive = window.matchMedia(MEDIAQUERY).matches;

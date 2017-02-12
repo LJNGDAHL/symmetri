@@ -5,6 +5,10 @@
   height: auto;
 }
 
+.border-top {
+  border-top: 1px solid $primaryShade;
+}
+
 .center {
   text-align: center;
 }

@@ -4,6 +4,7 @@
 .grid {
   margin: 0 auto;
   max-width: 1200px;
+
   @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
     margin: 0 2rem 0;
   }

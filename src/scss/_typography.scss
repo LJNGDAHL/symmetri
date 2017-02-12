@@ -31,7 +31,7 @@ a {
     font-family: $altFont;
     font-size: $mainTitleSize;
     font-weight: $boldWeight;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em;
     letter-spacing: 0.1em;
 
     @media #{$screenMedium}, #{$screenLarge} {

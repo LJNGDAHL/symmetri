@@ -4,7 +4,6 @@
  *
  * @package Symmetri
  */
-// TODO: Check that required field is filled.
 ?>
 
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
