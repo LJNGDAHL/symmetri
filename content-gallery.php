@@ -8,7 +8,7 @@
 	$gallery_images = CFS() -> get ( 'gallery_images' );
 ?>
 
-<div class="grid">
+<div class="grid js-grid">
 	<div class="grid-sizer"></div>
 
 	<?php
@@ -20,15 +20,15 @@
 				the_post();
 
 				if( '' !== get_post()->post_content ) : ?>
-					<div class="grid-item grid-item--3-col grid-item-content">
+					<div class="grid-item grid-item--3-col grid-item-content js-grid-item">
 						<h2 class="grid-item-title uppercase"><?php the_title(); ?></h2>
 						<?php the_content(); ?>
 					</div>
 				<?php endif;
 
 				if ( has_post_thumbnail() ) : ?>
-					<div class="grid-item grid-item--3-col">
-						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) ); ?>
+					<div class="grid-item grid-item--3-col js-grid-item">
+						<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img js-img' ) ); ?>
 					</div>
 				<?php endif;
 
@@ -45,8 +45,8 @@
 
 							?>
 
-							<div class="grid-item grid-item--3-col">
-								<img class="full-width-img" src="<?php echo esc_attr( $src[0] );?>"
+							<div class="grid-item grid-item--3-col js-grid-item">
+								<img class="full-width-img js-img" src="<?php echo esc_attr( $src[0] );?>"
 									srcset="<?php echo esc_attr( $srcset ); ?>"
 									sizes="<?php echo esc_attr( $sizes );?>"
 									alt="<?php echo esc_attr( $alt );?>" />

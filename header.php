@@ -22,7 +22,6 @@
 	</head>
 	<body id="body" <?php body_class(); ?>>
 
-
 <!-- MAIN NAVIGATION STARTS HERE ---------------------------------------------->
 
 		<nav class="main-navigation" id="navigation">

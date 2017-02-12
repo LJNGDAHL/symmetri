@@ -28,15 +28,15 @@
 
 		if ( $the_query -> have_posts() ) : ?>
 
-			<main class="grid">
+			<main class="grid js-grid">
 
 				<?php while ( $the_query -> have_posts() ) : $the_query -> the_post();
 
 					if ( has_post_thumbnail() ) : ?>
 
-						<div class="grid-item">
+						<div class="grid-item js-grid-item">
 							<a class="img-link" href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link' ) ); ?>
+								<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img full-width-img-link js-img' ) ); ?>
 							</a>
 						</div>
 

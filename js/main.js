@@ -1,10 +1,11 @@
 (function () {
   'use strict';
+  // TODO: Add comments
 
   var msnry, isActive, timeout;
   var MEDIAQUERY = '(min-width: 900px), (max-height: 500px) and (orientation: landscape)';
-  var elem = document.querySelector('.grid');
-  var images = document.querySelectorAll('.full-width-img');
+  var elem = document.querySelector('.js-grid');
+  var images = document.querySelectorAll('.js-img');
   var isScrolling = false;
   var menuIsSticky = false;
   var mastHead = document.querySelector('.js-mast-head');
@@ -103,7 +104,7 @@
    */
   function createMsnry() {
     return new Masonry(elem, {
-      itemSelector: '.grid-item',
+      itemSelector: '.js-grid-item',
       gutter: 40,
       transitionDuration: 0
     });
