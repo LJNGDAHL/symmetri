@@ -19,65 +19,11 @@
 				ga('send', 'pageview');
 			</script>
 		<?php endif; ?>
+
 	</head>
 	<body id="body" <?php body_class(); ?>>
-
-<!-- MAIN NAVIGATION STARTS HERE ---------------------------------------------->
-
-		<nav class="main-navigation" id="navigation">
-			<a href="#menu" class="exit-menu" aria-label="Exit icon">
-				<?php get_template_part( 'img/exit', 'icon' ); ?>
-			</a>
-			<?php wp_nav_menu( array ('theme_location' => 'mainmenu') ); ?>
-			<div class="logo-navigation">
-				<a href="#body" class="logo-navigation-name">
-					<svg class="lens-logo">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
-					</svg>
-					<span class="photographer-name">
-						<?php echo get_bloginfo( 'name' ); ?>
-					</span>
-					<span class="photographer-title">
-						<?php echo get_bloginfo( 'description' ); ?>
-					</span>
-				</a>
-			</div>
-		</nav>
-
-<!-- MAST-HEAD STARTS HERE ---------------------------------------------------->
-
-		<div class="mast-head js-mast-head">
-			<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
-			<div class="main-logo">
-				<div class="main-title">
-					<a href="<?php bloginfo( 'wpurl' );?>">
-						<svg class="lens-logo">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
-						</svg>
-						<span class="photographer-container">
-							<span class="photographer-name">
-								<?php echo get_bloginfo( 'name' ); ?>
-							</span>
-							<span class="photographer-title">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</span>
-						</span>
-					</a>
-				</div>
-			</div>
-		</div>
-
-<!-- FIXED-HEAD STARTS HERE --------------------------------------------------->
-
-		<div class="fixed-head js-menu" hidden id="menu">
-			<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
-			<div class="main-logo">
-				<div class="main-title">
-					<a href="<?php bloginfo( 'wpurl' );?>">
-						<svg class="lens-logo">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div>
+		<?php
+			get_template_part('template-parts/main', 'navigation');
+			get_template_part('template-parts/mast', 'head');
+			get_template_part('template-parts/fixed', 'head');
+		?>
