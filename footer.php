@@ -5,7 +5,14 @@
 * @package Symmetri
 */
 
-wp_footer(); ?>
-<?php get_template_part( 'img/lens' ); ?>
+
+if ( !isset( $_COOKIE['notification-dismissed'] ) ):
+	get_template_part( 'template-parts/cookie', 'notification' );
+endif;
+
+get_template_part( 'img/lens' );
+
+wp_footer();
+?>
 </body>
 </html>

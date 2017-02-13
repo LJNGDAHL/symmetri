@@ -5,9 +5,10 @@
 * @package Symmetri
 */
 
-	require "widget-social.php";
-	require "widget-address.php";
-	require "theme-settings.php";
+	require 'widget-social.php';
+	require 'widget-address.php';
+	require 'theme-settings.php';
+	require 'metabox-rating.php';
 
 /*------------------------------------------------------------------------------
   START WITH REMOVING UNNECCESSARY CODE
@@ -31,6 +32,16 @@
 		return $fields;
 	}
 
+	add_filter('tiny_mce_before_init', 'symmetri_remove_tiny_mce_formats' );
+
+	/*
+	 * Modify TinyMCE editor to remove unused text formats.
+	 */
+	function symmetri_remove_tiny_mce_formats($init) {
+		$init['block_formats'] = 'Heading 2=h2;Heading 3=h3;Paragraph=p;';
+		return $init;
+	}
+
 /*------------------------------------------------------------------------------
   GENERAL SETUP FOR THEME 'SYMMETRI'
 ------------------------------------------------------------------------------*/
@@ -43,19 +54,11 @@
 	 */
 	function symmetri_setup() {
 
-		// Project main CSS
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
-
 		// Project fonts
 		wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 
 		// Project fonts
 		wp_enqueue_style( 'playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
-
-		// Script used for layout
-		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
-
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', '', '', true );
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
@@ -65,6 +68,22 @@
 
 		// Since value 'true' is not added, this is set to soft crop mode
 		add_image_size( 'blogpost-cover', 400, 9999 );
+
+		// Custom TinyMCE editor stylesheets
+		add_editor_style('/css/editor-style.css');
+
+		if ( ! is_admin() ):
+
+			// Project main CSS
+			wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
+
+			// Handles grid layout
+			wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', '', '4.1.1', true  );
+
+			// Handles cookie notification, grid setup and fixed menu
+			wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', '', null, true );
+
+		endif;
 	}
 
 /*------------------------------------------------------------------------------
@@ -135,7 +154,6 @@
 
 	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
 
-
 /*------------------------------------------------------------------------------
   CUSTOM FUNCTIONS
 ------------------------------------------------------------------------------*/
@@ -156,4 +174,5 @@
 
 		return $paged;
 	}
+
 ?>

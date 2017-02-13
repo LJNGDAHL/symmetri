@@ -21,7 +21,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<li><a href="<?php the_permalink(); ?>"?><?php the_title(); ?></a></li>
-				<!-- FIXME: Right now, archive title is looped out. -->
 
 			<?php endwhile; ?>
 
