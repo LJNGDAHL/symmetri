@@ -47,10 +47,10 @@
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' );
 
 		// Project fonts
-		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
+		wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 
 		// Project fonts
-		wp_enqueue_style( 'PlayfairDisplay', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
+		wp_enqueue_style( 'playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
 
 		// Script used for layout
 		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
