@@ -50,7 +50,7 @@
 		wp_enqueue_style( 'Lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
 
 		// Project fonts
-		wp_enqueue_style( 'Playfair Display', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
+		wp_enqueue_style( 'PlayfairDisplay', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
 
 		// Script used for layout
 		wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
