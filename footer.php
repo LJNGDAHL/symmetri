@@ -10,11 +10,13 @@
 
 		get_template_part( 'template-parts/cookie', 'notification' );
 
-	endif;
+	endif; ?>
 
-	get_template_part( 'img/lens' );
+	<div class="hidden">
+		<?php get_template_part( 'img/lens' ); ?>
+	</div>
 
-	wp_footer();
+	<?php wp_footer();
 ?>
 </body>
 </html>
