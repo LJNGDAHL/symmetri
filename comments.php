@@ -14,7 +14,8 @@ endif;
 
 <section id="comments" class="comments-container">
 
-	<?php if ( have_comments() ) : ?>
+
+	<?php if ( have_comments() && get_comments_number() >= 1 ) : ?>
 		<h2 class="comment-title center">
 			<?php echo get_comments_number() . " ";
 				if (get_comments_number() == 1):

@@ -38,7 +38,9 @@
 
     if (elem) {
       // Setup Masonry on page load.
-      msnry = createMsnry();
+      if (window.matchMedia(MEDIAQUERY).matches) {
+        msnry = createMsnry();
+      }
 
       // Set initial state of Masonry.
       toggleMsnry();
@@ -54,39 +56,39 @@
           }
         });
       });
-    }
 
-    /**
-    * Toggle Masonry state on window resize
-    */
-    window.addEventListener('resize', debounce(toggleMsnry));
+      /**
+      * Toggle Masonry state on window resize
+      */
+      window.addEventListener('resize', debounce(toggleMsnry));
 
-    /**
-    * Determine whether Masonry should be active or not
-    */
-    function toggleMsnry() {
-      var shouldBeActive = window.matchMedia(MEDIAQUERY).matches;
+      /**
+      * Determine whether Masonry should be active or not
+      */
+      function toggleMsnry() {
+        var shouldBeActive = window.matchMedia(MEDIAQUERY).matches;
 
-      if (shouldBeActive && !isActive) {
-        msnry = createMsnry();
-      } else if (!shouldBeActive && isActive) {
-        msnry.destroy();
+        if (shouldBeActive && !isActive) {
+          msnry = createMsnry();
+        } else if (!shouldBeActive && isActive) {
+          msnry.destroy();
+        }
       }
 
-      // Set active state for next time
-      isActive = shouldBeActive;
-    }
+      /**
+      * Create a grid using Masonry
+      * @return {Masonry}
+      */
+      function createMsnry() {
+        // Set active state for later reference
+        isActive = true;
 
-    /**
-     * Create a grid using Masonry
-     * @return {Masonry}
-     */
-    function createMsnry() {
-      return new Masonry(elem, {
-        itemSelector: '.js-grid-item',
-        gutter: 40,
-        transitionDuration: 0
-      });
+        return new Masonry(elem, {
+          itemSelector: '.js-grid-item',
+          gutter: 40,
+          transitionDuration: 0
+        });
+      }
     }
   }
 
