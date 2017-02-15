@@ -11,7 +11,7 @@ if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
 
 		$defaultTitle = get_bloginfo( 'name' ) . ' ' . get_bloginfo( 'description');
-		$defaultDesc = __('A website for ') . get_bloginfo( 'name' );
+		$defaultDesc = __('The website of ') . get_bloginfo( 'name' ) . '.';
 		$ogTitle = get_post_meta( get_the_ID(), 'title', true );
 		$ogDesc = get_post_meta( get_the_ID(), 'desc', true );
 

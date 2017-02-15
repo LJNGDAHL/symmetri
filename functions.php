@@ -64,7 +64,7 @@
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
 
 		// Adds Featured Image Option
-		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery' ) );
+		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery', 'page' ) );
 
 		// Since value 'true' is not added, this is set to soft crop mode
 		add_image_size( 'blogpost-cover', 400, 9999 );
