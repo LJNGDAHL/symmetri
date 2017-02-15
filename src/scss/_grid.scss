@@ -16,7 +16,6 @@
 
   .grid-item--3-col {
     @media #{$screenMedium}, #{$screenLarge} {
-      //FIXME: Make sure this is working properly.
       width: calc(33% - 23px);
     }
   }
