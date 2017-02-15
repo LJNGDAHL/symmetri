@@ -8,7 +8,7 @@
 	require 'widget-social.php';
 	require 'widget-address.php';
 	require 'theme-settings.php';
-	require 'metabox-rating.php';
+	require 'metabox-opengraph.php';
 
 /*------------------------------------------------------------------------------
   START WITH REMOVING UNNECCESSARY CODE
