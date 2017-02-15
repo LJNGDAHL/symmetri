@@ -14,12 +14,15 @@ if ( have_posts() ) :
 		$defaultDesc = __('The website of ') . get_bloginfo( 'name' ) . '.';
 		$ogTitle = get_post_meta( get_the_ID(), 'title', true );
 		$ogDesc = get_post_meta( get_the_ID(), 'desc', true );
+		$url = get_home_url();
 
 		has_post_thumbnail() ? $ogImg = get_the_post_thumbnail_url() : $ogImg = '';
 		?>
 
 		<meta property="og:title" content="<?php echo $ogTitle ? $ogTitle : $defaultTitle; ?>"/>
 		<meta property="og:description" content="<?php echo $ogDesc ? $ogDesc : $defaultDesc; ?>"/>
+		<meta property="og:url" content="<?php echo $url; ?>" />
+
 		<?php if ($ogImg): ?>
 			<meta property="og:image" content="<?php echo $ogImg; ?>" />
 			<meta property="og:image:type" content="image/jpeg" />

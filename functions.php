@@ -55,10 +55,7 @@
 	function symmetri_setup() {
 
 		// Project fonts
-		wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato:100,300,400,700' );
-
-		// Project fonts
-		wp_enqueue_style( 'playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900' );
+		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700|Playfair+Display:400,700');
 
 		// Website main navigation
 		register_nav_menu( 'mainmenu', 'Website main navigation' );
