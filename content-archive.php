@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for looping out main content on archive pages.
- * Used on archive.php
+ * Used on archive.php and category.php
  *
  * @package Symmetri
  */
