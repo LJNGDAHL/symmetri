@@ -15,7 +15,7 @@ if ( have_posts() ) :
 		$ogTitle = get_post_meta( get_the_ID(), 'title', true );
 		$ogDesc = get_post_meta( get_the_ID(), 'desc', true );
 
-		has_post_thumbnail() ? $ogImg = get_the_permalink() : $ogImg = '';
+		has_post_thumbnail() ? $ogImg = get_the_post_thumbnail_url() : $ogImg = '';
 		?>
 
 		<meta property="og:title" content="<?php echo $ogTitle ? $ogTitle : $defaultTitle; ?>"/>
