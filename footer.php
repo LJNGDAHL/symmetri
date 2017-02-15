@@ -6,13 +6,15 @@
 */
 
 
-if ( !isset( $_COOKIE['notification-dismissed'] ) ):
-	get_template_part( 'template-parts/cookie', 'notification' );
-endif;
+	if ( !isset( $_COOKIE['notification-dismissed'] ) ):
 
-get_template_part( 'img/lens' );
+		get_template_part( 'template-parts/cookie', 'notification' );
 
-wp_footer();
+	endif;
+
+	get_template_part( 'img/lens' );
+
+	wp_footer();
 ?>
 </body>
 </html>

@@ -49,6 +49,9 @@
 
 	add_action( 'wp_enqueue_scripts', 'symmetri_init_scripts' );
 
+	/**
+	 * Handles queueing of scripts, stylesheet and fonts.
+	 */
 	function symmetri_init_scripts() {
 
 		// Project fonts
@@ -76,7 +79,7 @@
 	add_action( 'after_setup_theme', 'symmetri_setup' );
 
 	/**
-	 * Setup of theme 'Symmetri' with fonts, css, scripts,
+	 * Setup of theme 'Symmetri' with
 	 * custom menus and custom image sizes.
 	 */
 	function symmetri_setup() {
