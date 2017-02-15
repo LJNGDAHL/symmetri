@@ -17,7 +17,7 @@
       hideButton.addEventListener('click', function hideNotification() {
         var expire = new Date(Date.now() + (1000 * 60 * 60 * 24 * 365));
 
-        // Set cookie to not be shown again. // TODO: Sort out your comments, man.
+        // Set cookie once notification is dismissed
         document.cookie = 'notification-dismissed=true; expires=' + expire;
 
         // Hide cookie notification

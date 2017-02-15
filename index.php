@@ -15,7 +15,7 @@
 
 		get_header();
 
-		get_template_part( 'content', 'work' );
+		get_template_part( 'content', 'gallery' );
 
 		get_footer();
 

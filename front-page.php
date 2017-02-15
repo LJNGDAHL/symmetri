@@ -14,7 +14,7 @@
 		'post_status'		=> 'publish',
 		'order_by'			=> 'menu_order',
 		'paged'				=> $paged,
-		'order'				=> ASC
+		'order'				=> 'ASC'
 	);
 
 	$the_query = new WP_Query( $args );

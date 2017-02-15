@@ -42,32 +42,20 @@
 		return $init;
 	}
 
+
 /*------------------------------------------------------------------------------
-  GENERAL SETUP FOR THEME 'SYMMETRI'
+  SETUP OF SCRIPTS
 ------------------------------------------------------------------------------*/
 
-	add_action( 'after_setup_theme', 'symmetri_setup' );
+	add_action( 'wp_enqueue_scripts', 'symmetri_init_scripts' );
 
 	/**
-	 * Setup of theme 'Symmetri' with fonts, css, scripts,
-	 * custom menus and custom image sizes.
+	 * Handles queueing of scripts, stylesheet and fonts.
 	 */
-	function symmetri_setup() {
+	function symmetri_init_scripts() {
 
 		// Project fonts
 		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700|Playfair+Display:400,700');
-
-		// Website main navigation
-		register_nav_menu( 'mainmenu', 'Website main navigation' );
-
-		// Adds Featured Image Option
-		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery', 'page' ) );
-
-		// Since value 'true' is not added, this is set to soft crop mode
-		add_image_size( 'blogpost-cover', 400, 9999 );
-
-		// Custom TinyMCE editor stylesheets
-		add_editor_style('/css/editor-style.css');
 
 		if ( ! is_admin() ):
 
@@ -81,6 +69,33 @@
 			wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', '', null, true );
 
 		endif;
+
+	}
+
+/*------------------------------------------------------------------------------
+  GENERAL SETUP FOR THEME 'SYMMETRI'
+------------------------------------------------------------------------------*/
+
+	add_action( 'after_setup_theme', 'symmetri_setup' );
+
+	/**
+	 * Setup of theme 'Symmetri' with
+	 * custom menus and custom image sizes.
+	 */
+	function symmetri_setup() {
+
+		// Website main navigation
+		register_nav_menu( 'mainmenu', 'Website main navigation' );
+
+		// Adds Featured Image Option
+		add_theme_support( 'post-thumbnails', array( 'post', 'symmetri_cpt_gallery', 'page' ) );
+
+		// Since value 'true' is not added, this is set to soft crop mode
+		add_image_size( 'blogpost-cover', 400, 9999 );
+
+		// Custom TinyMCE editor stylesheets
+		add_editor_style('/css/editor-style.css');
+
 	}
 
 /*------------------------------------------------------------------------------
@@ -149,7 +164,7 @@
   PREPARE FOR LOCALIZATION
 ------------------------------------------------------------------------------*/
 
-	load_theme_textdomain( 'symmetri', templatepath.'/languages' );
+	load_theme_textdomain( 'symmetri', 'templatepath'.'/languages' );
 
 /*------------------------------------------------------------------------------
   CUSTOM FUNCTIONS

@@ -17,15 +17,6 @@
   }
 }
 
-.archive-dropdown {
-  @extend .button; // TODO: Replace with accurate styling
-  -webkit-appearance: none;
-  border-radius: 0;
-  display: block;
-  margin: 0 auto;
-}
-
-
 // STYLING OF CATEGORY CONTAINER FOR FILTERING ARCHIVE ON CATEGORIES -----------
 
 .category-list {

@@ -27,7 +27,7 @@
 }
 
 .hidden {
-  @include hidden-visually();
+  display: none;
 }
 
 .uppercase {

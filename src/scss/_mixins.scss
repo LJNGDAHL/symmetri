@@ -3,17 +3,6 @@
   border-bottom: 1px solid $primaryShade;
 }
 
-// Visually hides element, but keeps it readable for screen readers.
-@mixin hidden-visually() {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
 // Transition used on images and buttons
 @mixin smooth-transition() {
   transition-duration: 0.8s;
