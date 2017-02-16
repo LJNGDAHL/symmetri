@@ -3,11 +3,14 @@
 ------------------------------------------------------------------------------*/
 
 .main-navigation {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   background: $backgroundGradient;
   color: $secondaryColor;
   height: 100vh;
   left: 0;
-  padding: 15vh 5vh;
+  padding: 10vh 0 25vh;
   position: fixed;
   top: 0;
   transform: translateY(-100vh);
@@ -38,13 +41,13 @@
     font-size: 3rem;
     line-height: 1.4;
     color: inherit;
-    opacity: 0.1;
+    opacity: 0.3;
     text-transform: uppercase;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
 
     &:hover {
-        opacity: 0.2;
+        opacity: 0.5;
       }
   }
 
@@ -92,7 +95,7 @@
   // Styling of bottom logotype starts here ------------------------------------
   // TODO: Keep it DRY! This is kind of the same as in '_logo.scss'
   .logo-navigation {
-    bottom: 3rem; // Only for screens smaller than 600px.
+    bottom: 4rem; // Only for screens smaller than 600px.
     color: $secondaryColor;
     left: 50%;
     position: absolute;
