@@ -20,7 +20,7 @@ if ( is_singular( 'symmetri_cpt_gallery' ) ) : ?>
 			<?php get_sidebar();  ?>
 		</div>
 
-	<div class="delay-display">
+	</div>
 
 <?php else: ?>
 
