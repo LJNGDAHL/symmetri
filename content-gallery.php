@@ -33,12 +33,13 @@
 					</div>
 				<?php endif;
 
+
 					if ( $gallery_images ) :
 
 						// Loop through the images in the gallery.
-						for ( $i = 0; $i < $gallery_images[$i]; $i++ ) :
+						foreach ( $gallery_images as $img) :
 
-							$id = $gallery_images[$i]['image'];
+							$id = $img['image'];
 							$src = wp_get_attachment_image_src( $id, 'full' );
 							$srcset = wp_get_attachment_image_srcset( $id, 'full' );
 							$sizes = wp_get_attachment_image_sizes( $id, 'full' );
@@ -47,13 +48,13 @@
 							?>
 
 							<div class="grid-item grid-item--3-col js-grid-item">
-								<img class="full-width-img js-img" src="<?php echo esc_attr( $src[0] );?>"
+								<img class="full-width-img js-img" src="<?php echo esc_attr( $src[0] ); ?>"
 									srcset="<?php echo esc_attr( $srcset ); ?>"
 									sizes="<?php echo esc_attr( $sizes );?>"
 									alt="<?php echo esc_attr( $alt );?>" />
 							</div>
 
-						<?php endfor;
+						<?php endforeach;
 
 				endif;
 
