@@ -20,9 +20,8 @@
         // Set cookie once notification is dismissed
         document.cookie = 'notification-dismissed=true; expires=' + expire;
 
-        // Hide cookie notification
-        cookieNotification.classList.add('hidden');
-        cookieNotification.setAttribute('hidden', true);
+        // Remove cookie notification
+        cookieNotification.parentElement.removeChild(cookieNotification);
       });
     }
   }
@@ -72,6 +71,7 @@
           msnry = createMsnry();
         } else if (!shouldBeActive && isActive) {
           msnry.destroy();
+          isActive = false;
         }
       }
 
