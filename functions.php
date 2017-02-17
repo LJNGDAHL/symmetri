@@ -21,7 +21,6 @@
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 	remove_action( 'wp_head', 'feed_links', 2 );
 
-
 	add_filter('comment_form_default_fields','remove_comment_url');
 
 	/**
@@ -140,7 +139,6 @@
 
 			<li><a href="edit.php?post_type=page"><?php _e( 'Edit pages (i.e. About, Contact)', 'symmetri' ); ?></a></li>
 
-
 		</ul>
 
 		<?php
@@ -151,7 +149,6 @@
 ------------------------------------------------------------------------------*/
 
 	register_sidebar( array(
-
 		'name' 			=> __( 'Contact Information', 'contact-container' ),
 		'id'	 		=> 'contact-container',
 		'description' 	=> __( 'A container for contact information', 'contact-container' ),
@@ -164,7 +161,7 @@
   PREPARE FOR LOCALIZATION
 ------------------------------------------------------------------------------*/
 
-	load_theme_textdomain( 'symmetri', 'templatepath'.'/languages' );
+	load_theme_textdomain( 'symmetri', '/languages' );
 
 /*------------------------------------------------------------------------------
   CUSTOM FUNCTIONS

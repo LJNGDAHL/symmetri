@@ -37,7 +37,6 @@ endif;
 
 	<?php
 	// Add comment navigation if needed.
-	// TODO: This needs styling.
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav class="comment-navigation">
 		<div class="nav-links">

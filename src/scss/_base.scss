@@ -28,12 +28,7 @@ textarea:focus {
 ------------------------------------------------------------------------------*/
 
 .delay-display {
-  background-color: #FCFDFF;
-  height: 100vh;
-  opacity: 1;
-  position: absolute;
-  width: 100vw;
-  z-index: 100;
+  opacity: 0;
   animation: delayDisplay 750ms 1;
   animation-delay: 500ms;
   animation-fill-mode: forwards;
@@ -41,12 +36,10 @@ textarea:focus {
 
   @keyframes delayDisplay {
     0% {
-      opacity: 1;
-      z-index: 100;
+      opacity: 0;
     }
     100% {
-      opacity: 0;
-      z-index: 0;
+      opacity: 1;
     }
   }
 }

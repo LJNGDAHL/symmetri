@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<?php else: ?>
 
-				<p><?php _e( 'Oops! This archive is empty.', 'symmetri' ); ?></p>
+			<p><?php _e( 'Oops! This archive is empty.', 'symmetri' ); ?></p>
 
 		<?php endif; ?>
 

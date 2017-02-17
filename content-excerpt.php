@@ -14,7 +14,7 @@
 
 	<?php if ( '' !== get_post()->post_content ) : ?>
 
-			<?php the_excerpt(); ?>
+		<?php the_excerpt(); ?>
 
 	<?php else: ?>
 

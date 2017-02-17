@@ -94,18 +94,18 @@ a {
 
 // Styles the comment author name
 .comment-body .fn {
-    font-style: normal;
-    font-family: $altFont;
-    font-weight: $boldWeight;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+  font-style: normal;
+  font-family: $altFont;
+  font-weight: $boldWeight;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
 // Styles the link with date and time
 .comment-meta a {
-    color: $primaryDarkerShade;
-    font-weight: $semiWeight;
-    font-size: 0.7rem;
+  color: $primaryDarkerShade;
+  font-weight: $semiWeight;
+  font-size: 0.7rem;
 }
 
 .comment-reply-link {

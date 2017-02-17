@@ -17,17 +17,18 @@
 		'order'				=> 'ASC'
 	);
 
-	$the_query = new WP_Query( $args );
+	$the_query = new WP_Query( $args ); ?>
 
+	<div class="delay-display">
+
+<?php
 /*------------------------------------------------------------------------------
 	START OF LOOP THAT PRINTS OUT ALL POSTS FROM SYMMETRI_CPT_GALLERY
 ------------------------------------------------------------------------------*/
 
 		if ( $the_query -> have_posts() ) : ?>
 
-			<main class="grid js-grid">
-
-				<div class="delay-display"></div>
+				<main class="grid js-grid">
 
 				<?php while ( $the_query -> have_posts() ) : $the_query -> the_post();
 
@@ -43,7 +44,8 @@
 
 				endwhile; ?>
 
-			</main>
+				</main>
+			</div>
 
 			<?php
 
@@ -72,5 +74,6 @@
 		<div class="contact-front">
 			<?php get_sidebar();  ?>
 		</div>
+</div>
 
 <?php get_footer(); ?>

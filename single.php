@@ -12,13 +12,15 @@ get_header();
 */
 if ( is_singular( 'symmetri_cpt_gallery' ) ) : ?>
 
-	<div class="delay-display"></div>
+	<div class="delay-display">
 
-	<?php get_template_part ( 'content', 'gallery' ); ?>
+		<?php get_template_part ( 'content', 'gallery' ); ?>
 
-	<div class="contact-gallery">
-		<?php get_sidebar();  ?>
-	</div>
+		<div class="contact-gallery">
+			<?php get_sidebar();  ?>
+		</div>
+
+	<div class="delay-display">
 
 <?php else: ?>
 

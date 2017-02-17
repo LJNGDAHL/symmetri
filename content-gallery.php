@@ -53,13 +53,13 @@
 									alt="<?php echo esc_attr( $alt );?>" />
 							</div>
 
-						<?php endfor; // Ends 'for gallery images'
+						<?php endfor;
 
-				endif; // Ends 'if gallery images'
+				endif;
 
-			endwhile; // Ends 'while have posts '
+			endwhile;
 
-		endif; // Ends 'if have posts'
+		endif;
 	?>
 
 </div>
