@@ -15,15 +15,16 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title><?php echo get_bloginfo( 'name' ); echo ' '; echo get_bloginfo( 'description'); ?></title>
 
-		<?php
+		<?php if ( ! is_admin() ):
 			get_template_part( 'template-parts/opengraph', 'meta' );
 			get_template_part( 'template-parts/google', 'analytics' );
  			wp_head();
-		?>
+		endif; ?>
 
 	</head>
 
 	<body id="body" <?php body_class(); ?>>
+
 		<?php
 			get_template_part( 'template-parts/fixed', 'head' );
 			get_template_part( 'template-parts/main', 'navigation' );

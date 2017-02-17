@@ -6,7 +6,7 @@
   initMenu();
 
   /** --------------------------------------------------------------------------
-   * Handle cookie notification warning.
+   * HANDLE COOKIE NOTIFICATION WARNING
    ---------------------------------------------------------------------------*/
   function initCookie() {
     var cookieReg = /notification-dismissed/;
@@ -28,7 +28,7 @@
   }
 
   /** --------------------------------------------------------------------------
-   * Handle grid with Masonry
+   * HANDLE GRID WITH MASONRY
    -------------------------------------------------------------------------- */
   function initGrid() {
     var msnry, isActive;
@@ -93,7 +93,7 @@
   }
 
   /** --------------------------------------------------------------------------
-   * Handle whether or not menu is fixed
+   * HANDLE WHETHER OR NOT MENU IS FIXED
    -------------------------------------------------------------------------- */
   function initMenu() {
     var isQueued = false;

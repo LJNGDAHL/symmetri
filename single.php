@@ -12,6 +12,8 @@ get_header();
 */
 if ( is_singular( 'symmetri_cpt_gallery' ) ) : ?>
 
+	<div class="delay-display"></div>
+
 	<?php get_template_part ( 'content', 'gallery' ); ?>
 
 	<div class="contact-gallery">
