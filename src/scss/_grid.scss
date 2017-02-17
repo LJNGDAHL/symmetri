@@ -10,13 +10,13 @@
     @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
       float: left;
       margin-bottom: 17px;
-      width: 49.3%;
+      width: 49%;
     }
   }
 
   .grid-item--3-col {
     @media #{$screenMedium}, #{$screenLarge} {
-      width: 32.4%;
+      width: 32%;
     }
   }
 
