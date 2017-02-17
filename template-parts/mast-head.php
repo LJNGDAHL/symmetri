@@ -9,6 +9,7 @@
 <div class="mast-head js-mast-head">
 	<a class="menu-link" href="#navigation"><?php _e( 'Menu', 'symmetri' ); ?></a>
 	<div class="main-logo">
+
 		<?php if ( is_front_page() || is_singular( 'symmetri_cpt_gallery' ) ) : ?>
 		<h1 class="main-title">
 			<a href="<?php bloginfo( 'wpurl' );?>">
@@ -25,7 +26,9 @@
 				</span>
 			</a>
 		</h1>
+
 		<?php else: ?>
+
 		<div class="main-title">
 			<a href="<?php bloginfo( 'wpurl' );?>">
 				<svg class="lens-logo">
@@ -41,6 +44,8 @@
 				</span>
 			</a>
 		</div>
+
 		<?php endif; ?>
+
 	</div>
 </div>
