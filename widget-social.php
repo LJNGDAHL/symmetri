@@ -30,35 +30,18 @@
 			$twitterTitle = $instance['twitter'];
 			$twitterId = esc_attr($this->get_field_id('twitter'));
 			$twitterName = $this->get_field_name('twitter');
-
 			?>
 			<p>
-				<label for="<?php echo $instagramId; ?>">
-					<?php _e( 'Instagram', 'symmetri') ?>:
-				</label><br>
-				<input type="text"
-				id="<?php echo $instagramId; ?>"
-				name="<?php echo $instagramName; ?>"
-				value="<?php echo $instagramTitle; ?>">
-				<br>
+				<label for="<?php echo $instagramId; ?>"><?php _e( 'Instagram', 'symmetri' ) ?>:</label><br>
+				<input type="text" id="<?php echo $instagramId; ?>" name="<?php echo $instagramName; ?>" value="<?php echo $instagramTitle; ?>"><br>
 
-				<label for="<?php echo $facebookId; ?>">
-					<?php _e( 'Facebook', 'symmetri') ?>:
+				<label for="<?php echo $facebookId; ?>"><?php _e( 'Facebook', 'symmetri' ) ?>:
 				</label><br>
-				<input type="text"
-				id="<?php echo $facebookId; ?>"
-				name="<?php echo $facebookName; ?>"
-				value="<?php echo $facebookTitle; ?>">
-				<br>
+				<input type="text" id="<?php echo $facebookId; ?>" name="<?php echo $facebookName; ?>" value="<?php echo $facebookTitle; ?>"><br>
 
-				<label for="<?php echo $twitterId; ?>">
-					<?php _e( 'Twitter', 'symmetri') ?>:
+				<label for="<?php echo $twitterId; ?>"><?php _e( 'Twitter', 'symmetri' ) ?>:
 				</label><br>
-				<input type="text"
-				id="<?php echo $twitterId; ?>"
-				name="<?php echo $twitterName; ?>"
-				value="<?php echo $twitterTitle; ?>">
-				<br>
+				<input type="text" id="<?php echo $twitterId; ?>" name="<?php echo $twitterName; ?>" value="<?php echo $twitterTitle; ?>"><br>
 			</p>
 
 			<?php

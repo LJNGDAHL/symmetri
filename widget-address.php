@@ -33,32 +33,18 @@
 
 			?>
 			<p>
-				<label for="<?php echo $photographerId; ?>">
-					<?php _e( 'Name', 'symmetri' )?>:
+				<label for="<?php echo $photographerId; ?>"><?php _e( 'Name', 'symmetri' )?>:
 				</label><br>
-				<input type="text"
-				id="<?php echo $photographerId; ?>"
-				name="<?php echo $photographerName; ?>"
-				value="<?php echo $photographerTitle; ?>">
-				<br>
+				<input type="text" id="<?php echo $photographerId; ?>" name="<?php echo $photographerName; ?>" value="<?php echo $photographerTitle; ?>"><br>
 
-				<label for="<?php echo $phoneId; ?>">
-					<?php _e( 'Phone Number', 'symmetri' )?>:
+				<label for="<?php echo $phoneId; ?>"><?php _e( 'Phone Number', 'symmetri' )?>:
 				</label><br>
-				<input type="tel"
-				id="<?php echo $phoneId; ?>"
-				name="<?php echo $phoneName; ?>"
-				value="<?php echo $phoneTitle; ?>">
-				<br>
+				<input type="tel" id="<?php echo $phoneId; ?>" name="<?php echo $phoneName; ?>"
+				value="<?php echo $phoneTitle; ?>"><br>
 
-				<label for="<?php echo $emailId; ?>">
-					<?php _e( 'Email address', 'symmetri' )?>:
+				<label for="<?php echo $emailId; ?>"><?php _e( 'Email address', 'symmetri' )?>:
 				</label><br>
-				<input type="email"
-				id="<?php echo $emailId; ?>"
-				name="<?php echo $emailName; ?>"
-				value="<?php echo $emailTitle; ?>">
-				<br>
+				<input type="email" id="<?php echo $emailId; ?>" name="<?php echo $emailName; ?>" value="<?php echo $emailTitle; ?>"><br>
 			</p>
 
 			<?php
