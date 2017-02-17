@@ -9,7 +9,7 @@
   .grid-sizer {
     @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
       float: left;
-      margin-bottom: 40px;
+      margin-bottom: 17px;
       width: calc(50% - 20px);
     }
   }

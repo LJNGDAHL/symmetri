@@ -85,7 +85,7 @@
 
         return new Masonry(elem, {
           itemSelector: '.js-grid-item',
-          gutter: 40,
+          gutter: 17,
           transitionDuration: 0
         });
       }
