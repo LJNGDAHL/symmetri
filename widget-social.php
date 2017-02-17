@@ -69,8 +69,6 @@
 		// Setup to show widget in frontend.
 		public function widget($args, $instance) {
 
-			// TODO: Replace text with svg icons.
-
 			if ( ! empty ( $instance['instagram'] ) ) : ?>
 				<a class="social-link" href="<?php echo $instance['instagram']; ?>">Instagram</a>
 			<?php endif;

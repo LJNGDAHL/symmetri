@@ -9,3 +9,12 @@
   transition-delay: 0.05s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.14, 0.99);
 }
+
+// Used in main logo
+@mixin add-spaces() {
+  &::before,
+  &::after {
+    content:"\a";
+    white-space: pre;
+  }
+}

@@ -44,12 +44,7 @@
 
       .photographer-name {
         font-weight: $semiWeight;
-
-        &::before,
-        &::after {
-          content:"\a";
-          white-space: pre;
-        }
+        @include add-spaces();
       }
     }
   }
