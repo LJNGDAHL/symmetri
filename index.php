@@ -1,5 +1,23 @@
-<?php get_header(); ?>
+<?php
+/**
+* The main template file, only used as a fallback.
+*
+* @package Symmetri
+*/
+	// If Index.php is not front page, redirect to $home.
+	if ( ! is_front_page() ) :
 
-<h1>Website Coming Soon</h1>
+		$home = get_home_url();
+		wp_redirect( $home );
+		exit;
 
-<?php get_footer(); ?>
+	else:
+
+		get_header();
+
+		get_template_part( 'content', 'gallery' );
+
+		get_footer();
+
+	endif;
+?>

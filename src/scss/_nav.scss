@@ -1,0 +1,134 @@
+/*------------------------------------------------------------------------------
+  MAIN SITE NAVIGATION STYLING (DROPS DOWN ON TARGET)
+------------------------------------------------------------------------------*/
+
+.main-navigation {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: $backgroundGradient;
+  color: $secondaryColor;
+  height: 100vh;
+  left: 0;
+  padding: 10vh 0 25vh;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100vh);
+  width: 100vw;
+  z-index: 105; // mast-head has z-index 100
+
+  @media #{$screenLandscape} {
+    padding: 5vh;
+  }
+
+  &:target {
+    transform: translateY(0);
+    transition: transform 900ms ease-in-out;
+  }
+
+  .fixed-head:target ~ & {
+    transition: transform 900ms ease-in-out;
+  }
+
+  .menu {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .menu-item a {
+    font-size: 3rem;
+    line-height: 1.4;
+    color: inherit;
+    opacity: 0.3;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+        opacity: 0.5;
+      }
+  }
+
+  .current-menu-item a {
+    opacity: 1;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Styling of exit icon starts here ------------------------------------------
+
+  .exit-menu {
+    color: inherit;
+    line-height: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    opacity: 1;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+
+    // On hover, the exit icon rotates 360deg
+    &:hover {
+      animation: roll 1s 1;
+      animation-timing-function: ease-in-out;
+      opacity: 1;
+    }
+
+    // Animation for spinning the exit icon
+    @keyframes roll {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  }
+
+  // Styling of bottom logotype starts here ------------------------------------
+  .logo-navigation {
+    bottom: 4rem; // Only for screens smaller than 600px.
+    color: $secondaryColor;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+
+    .lens-logo {
+      height: 2.3rem;
+      width: 2.3rem;
+    }
+
+    .logo-navigation-name {
+      color: inherit;
+      display: inline;
+      font-weight: $normalWeight;
+      line-height: 1.4;
+
+        .photographer-name {
+          @include add-spaces();
+        }
+    }
+
+    @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+      bottom: 2rem;
+    }
+
+    @media #{$screenLandscape} {
+      display: none;
+    }
+
+    a {
+      opacity: 1;
+    }
+
+  }
+
+}

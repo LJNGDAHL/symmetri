@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------------------
+  GENERAL STYLING RULES
+------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $backgroundColor;
+}
+
+input,
+button,
+select {
+  border: none;
+  font-family: $brandFont;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/*------------------------------------------------------------------------------
+  DELAY DISPLAY OF IMAGES WHEN LOADING
+------------------------------------------------------------------------------*/
+
+.delay-display {
+  opacity: 0;
+  animation: delayDisplay 750ms 1;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+
+  @keyframes delayDisplay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// Start of styling of class 'page-main' ---------------------------------------
+.page-main {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  max-width: 500px;
+  width: 85vw;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    width: 70vw;
+  }
+}
+
+// Styling of the class 'border-separator' -------------------------------------
+.border-separator {
+  border-bottom: 1px solid $primaryShade;
+  margin-bottom: 0.5em;
+  padding-bottom: 1.5em;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

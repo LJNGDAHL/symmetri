@@ -1,0 +1,54 @@
+// Styling of comment section starts here --------------------------------------
+.comments-container {
+  @include border-top-bottom();
+  margin: 2rem 0;
+  padding: 2rem 0;
+
+  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+    padding: 2rem;
+  }
+
+  .comment-list,
+  .comment {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  // Styling of comment starts here --------------------------------------------
+  .comment-body {
+    padding: 1rem 0;
+
+    p {
+      margin-top: 0.5em;
+    }
+  }
+
+  // Styling of comment form starts here ---------------------------------------
+  .comment-form textarea {
+    background: none;
+    border: 1px solid $primaryDarkerShade;
+    border-radius: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    -webkit-appearence: none;
+  }
+
+  .comment-form input {
+    background: none;
+    border-bottom: 1px solid $primaryDarkerShade;
+    border-radius: 0;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .comment-form-author input,
+  .comment-form-email input {
+    -webkit-appearance: none;
+  }
+
+  .comment-form .submit {
+    // Styling comes from _button.scss
+    @extend .button;
+  }
+
+}

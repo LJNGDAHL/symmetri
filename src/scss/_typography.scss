@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------------------
+  MAIN RULES FOR TYPOGRAPHY
+------------------------------------------------------------------------------*/
+
+body,
+html {
+  font-family: $brandFont;
+  font-weight: $normalWeight;
+}
+
+p {
+  font-size: $fontSizeNormal;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.intro-text {
+  font-size: $fontSizeIntro;
+}
+
+a {
+  color: $primaryColor;
+  text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR TITLES
+------------------------------------------------------------------------------*/
+
+.page-main-title {
+    font-family: $altFont;
+    font-size: $mainTitleSize;
+    font-weight: $boldWeight;
+    margin: 0 0 0.5em;
+    letter-spacing: 0.1em;
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      font-size: $mainTitleSizeLarge;
+    }
+}
+
+.pre-page-main-title {
+  @extend .page-main-title;
+  font-size: 1rem;
+}
+
+.archive-title {
+  @extend .page-main-title;
+  font-size: $mainTitleSize;
+}
+
+.page-sub-title {
+  font-size: $fontSizeIntro;
+  margin: 1.8em 0 1.2em;
+}
+
+.grid-item-title {
+  font-size: $fontSizeIntro;
+  font-weight: $normalWeight;
+  margin-bottom: 0.2em;
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR CONTACT INFORMATION, FOUND ON CONTACT PAGE
+------------------------------------------------------------------------------*/
+
+.address-information,
+.social-link {
+  font-style: normal;
+  line-height: 1.35;
+  margin: 0;
+
+  &.photographer-name {
+    font-family: $altFont;
+    font-size: $fontSizeIntro;
+    font-weight: $boldWeight;
+    margin-bottom: 0.2em;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR COMMENTS
+------------------------------------------------------------------------------*/
+// Styles main title on comment section
+.comment-title {
+  font-family: $altFont;
+  font-size: $fontSizeIntro;
+}
+
+.comment-reply-title {
+  @extend .comment-title;
+  font-size: $fontSizeIntro;
+}
+
+// Styles the comment author name
+.comment-body .fn {
+  font-style: normal;
+  font-family: $altFont;
+  font-weight: $boldWeight;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+// Styles the link with date and time
+.comment-meta a {
+  color: $primaryDarkerShade;
+  font-weight: $semiWeight;
+  font-size: 0.7rem;
+}
+
+.comment-reply-link {
+  font-family: $altFont;
+  font-weight: $boldWeight;
+}
+
+.logged-in-as a {
+  font-style: italic;
+}
+
+.comment-form textarea {
+  font-family: $brandFont;
+}
+
+/*------------------------------------------------------------------------------
+  NAVIGATION LINKS (USED FOR NAVIGATING AMONG COMMENTS)
+------------------------------------------------------------------------------*/
+
+.nav-links {
+  @include border-top-bottom();
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: $semiWeight;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+
+  @media #{$screenSmall}, #{$screenMedium}, #{$screenLarge} {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR ARCHIVE
+------------------------------------------------------------------------------*/
+
+.archive-description {
+  font-weight: $semiWeight;
+  text-transform: uppercase;
+  p {
+    text-align: center;
+  }
+}
+
+/*------------------------------------------------------------------------------
+  TYPOGRAPHY FOR LINKS
+------------------------------------------------------------------------------*/
+
+.text-link {
+  border-bottom: 2px solid $primaryColor;
+  background-color: $backgroundColor;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3em 0.6em;
+  @include smooth-transition();
+
+  &:hover {
+    color: $backgroundColor;
+    background-color: $primaryColor;
+  }
+}

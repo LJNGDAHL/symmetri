@@ -1,0 +1,20 @@
+@mixin border-top-bottom() {
+  border-top: 1px solid $primaryShade;
+  border-bottom: 1px solid $primaryShade;
+}
+
+// Transition used on images and buttons
+@mixin smooth-transition() {
+  transition-duration: 0.8s;
+  transition-delay: 0.05s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.14, 0.99);
+}
+
+// Used in main logo
+@mixin add-spaces() {
+  &::before,
+  &::after {
+    content:"\a";
+    white-space: pre;
+  }
+}

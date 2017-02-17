@@ -1,0 +1,79 @@
+// General styling for menu link
+.menu-link {
+  font-size: 1.3rem;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    right: 40px;
+  }
+}
+
+// Logo container
+.main-logo {
+  text-align: center;
+
+  .lens-logo {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
+/*------------------------------------------------------------------------------
+  MAST HEAD (ON TOP OF SCREEN)
+------------------------------------------------------------------------------*/
+
+.mast-head {
+  padding: 1.7rem 0 3rem;
+
+  // On larger screens, menu position needs to be moved down slightly
+  @media #{$screenMedium}, #{$screenLarge} {
+    .menu-link {
+      top: 73px;
+    }
+  }
+
+  .photographer-container {
+    display: none;
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      display: inline;
+      font-weight: $normalWeight;
+      font-size: 1.7rem;
+      margin-top: 0.2em;
+
+      .photographer-name {
+        font-weight: $semiWeight;
+        @include add-spaces();
+      }
+    }
+  }
+
+}
+
+/*------------------------------------------------------------------------------
+  FIXED HEAD (APPEARS WHEN SCROLLING)
+------------------------------------------------------------------------------*/
+
+.fixed-head {
+  background-color: $backgroundColor;
+  display: block;
+  position: fixed;
+  top: -80px;
+  transition: top 250ms ease-in-out;
+  width: 100%;
+  z-index: 100; // .main-navigation has z-index 105
+
+  .menu-link {
+    top: 27px;
+  }
+
+  .main-logo {
+    margin: 0.4rem 0 0.6rem;
+  }
+
+  &.visible {
+    box-shadow: $boxShadow;
+    top: 0px;
+  }
+}

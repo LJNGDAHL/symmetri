@@ -1,0 +1,40 @@
+.search-container {
+  border-top: 1px solid $primaryShade;
+  border-bottom: 1px solid $primaryShade;
+  padding-bottom: 1.5rem;
+
+  @media #{$screenMedium}, #{$screenLarge} {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .search-field {
+    background: none;
+    border-bottom: 2px solid $primaryColor;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: $normalWeight;
+    margin-bottom: 1rem;
+    max-width: 250px;
+    width: 100%;
+    padding-top: 1.5rem;
+    -webkit-appearance: none;
+  }
+
+  // Displays 'search-field' and 'search-button' in flex mode ------------------
+  .flex-container {
+      @media #{$screenMedium}, #{$screenLarge} {
+        display: flex;
+        justify-content: center;
+      }
+
+        .flex-item {
+          display: block;
+          margin: 1em auto;
+
+          @media #{$screenMedium}, #{$screenLarge} {
+            display: flex;
+            margin: 0.5em;
+          }
+        }
+    }
+}

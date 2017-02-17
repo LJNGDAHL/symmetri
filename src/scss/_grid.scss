@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  THE GRID IS USING THE JAVASCRIPT PLUGIN 'MASONRY'
+------------------------------------------------------------------------------*/
+.grid {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  .grid-item,
+  .grid-sizer {
+    @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
+      float: left;
+      margin-bottom: 17px;
+      width: 49%;
+    }
+  }
+
+  .grid-item--3-col {
+    @media #{$screenMedium}, #{$screenLarge} {
+      width: 32%;
+    }
+  }
+
+  .grid-item-content {
+    background: $backgroundGradient;
+    color: $secondaryColor;
+    padding: 4rem 3rem;
+
+    @media #{$screenMedium}, #{$screenLarge} {
+      padding: 2rem 3rem;
+    }
+  }
+}

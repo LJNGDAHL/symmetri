@@ -1,0 +1,42 @@
+// This is used on front page and gallery pages
+.contact-front,
+.contact-gallery {
+  max-width: 1200px;
+
+  @media #{$screenMedium}, #{$screenLarge}, #{$screenLandscape} {
+    margin: 0.5rem auto;
+    border-top: 1px solid $primaryShade;
+    animation: slowShow 400ms 1;
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+
+    @keyframes slowShow {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  .contact-container {
+    padding: 3rem 0 3rem;
+  }
+}
+
+// This is styling used on contact page
+.contact-page {
+  border-bottom: 1px solid $primaryShade;
+  border-top: 1px solid $primaryShade;
+}
+
+.contact-container {
+  padding: 1.5rem 0 2rem;
+
+  .address-information {
+    text-align: center;
+  }
+}

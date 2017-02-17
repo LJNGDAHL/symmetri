@@ -1,0 +1,25 @@
+{
+  "name": "symetri",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node-sass ./src/scss/style.scss | postcss -u autoprefixer -u postcss-csso -o css/style.css",
+    "watch": "node-sass --watch --recursive --output css src/scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LJNGDAHL/symmetri.git"
+  },
+  "author": "Katarina Ljungdahl <jag@katarinaljungdahl.se>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/LJNGDAHL/symmetri/issues"
+  },
+  "homepage": "https://github.com/LJNGDAHL/symmetri#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "node-sass": "^4.3.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-media": "^5.0.1"
+  }
+}

@@ -1,0 +1,23 @@
+body#tinymce.wp-editor h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+body#tinymce.wp-editor h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  margin: 1.8em 0 1.2em;
+}
+
+body#tinymce.wp-editor p,
+ul,
+li {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
