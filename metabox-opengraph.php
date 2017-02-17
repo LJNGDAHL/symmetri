@@ -36,8 +36,14 @@ function symmetri_render_metabox() {
 add_action( 'save_post', 'symmetri_save_metabox' );
 
 function symmetri_save_metabox() {
+
 	global $post;
 
-	update_post_meta( $post->ID, 'title', $_POST['title'] );
-	update_post_meta( $post->ID, 'desc', $_POST['desc'] );
+	if ( ! empty ( $_POST['title'] ) && ! empty ( $_POST['desc'] ) ) {
+
+		update_post_meta( $post->ID, 'title', $_POST['title'] );
+		update_post_meta( $post->ID, 'desc', $_POST['desc'] );
+
+	}
+
 }
