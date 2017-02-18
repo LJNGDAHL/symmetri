@@ -6,7 +6,7 @@
 */
 get_header(); ?>
 
-<main class="page-main">
+<main class="page-main" id="main-content">
 	<h1 class="center page-main-title uppercase"><?php _e( 'Oops!', 'symmetri' ); ?></h1>
 	<p class="intro-text center"><?php _e( 'The page you are looking for is not found. Would you like to search for something else instead?', 'symmetri' ); ?></p>
 	<div class="search-container">

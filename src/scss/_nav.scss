@@ -1,4 +1,21 @@
 /*------------------------------------------------------------------------------
+  MAIN CONTENT LINK (DROPS DOWN ON FOCUS, FOR TABBING PURPOSES)
+------------------------------------------------------------------------------*/
+
+.main-content-link {
+  @extend .button;
+  position: absolute;
+  margin: 0 auto;
+  top: -4rem;
+  padding: 1rem;
+  transition: top 500ms ease-in-out;
+
+  &:focus {
+    top: 2rem;
+  }
+}
+
+/*------------------------------------------------------------------------------
   MAIN SITE NAVIGATION STYLING (DROPS DOWN ON TARGET)
 ------------------------------------------------------------------------------*/
 
