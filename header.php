@@ -25,6 +25,8 @@
 
 	<body id="body" <?php body_class(); ?>>
 
+		<a class="main-content-link" href="#main-content"><?php _e( 'Skip to main content', 'symmetri' ); ?></a>
+
 		<?php
 			get_template_part( 'template-parts/fixed', 'head' );
 			get_template_part( 'template-parts/main', 'navigation' );

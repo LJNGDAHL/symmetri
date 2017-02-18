@@ -19,7 +19,7 @@
 
 	$the_query = new WP_Query( $args ); ?>
 
-	<div class="delay-display">
+	<div class="delay-display" id="main-content">
 
 <?php
 /*------------------------------------------------------------------------------

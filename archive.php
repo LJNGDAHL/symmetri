@@ -8,7 +8,7 @@
 */
 get_header(); ?>
 
-<main class="page-main">
+<main class="page-main" id="main-content">
 
 	<?php get_template_part( 'content', 'archive' ); ?>
 
