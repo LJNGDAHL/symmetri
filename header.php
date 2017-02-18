@@ -18,8 +18,9 @@
 		<?php if ( ! is_admin() ):
 			get_template_part( 'template-parts/opengraph', 'meta' );
 			get_template_part( 'template-parts/google', 'analytics' );
- 			wp_head();
 		endif; ?>
+
+		wp_head();
 
 	</head>
 
