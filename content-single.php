@@ -6,7 +6,7 @@
 * @package Symmetri
 */
 ?>
-<main class="page-main">
+<main class="page-main" id="main-content">
 	<p class="pre-page-main-title center"><?php the_date(); ?></p>
 	<h1 class="center page-main-title uppercase"><?php the_title(); ?></h1>
 

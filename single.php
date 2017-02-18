@@ -12,7 +12,7 @@ get_header();
 */
 if ( is_singular( 'symmetri_cpt_gallery' ) ) : ?>
 
-	<div class="delay-display">
+	<div class="delay-display" id="main-content">
 
 		<?php get_template_part ( 'content', 'gallery' ); ?>
 

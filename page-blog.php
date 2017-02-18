@@ -21,7 +21,7 @@
 	GET PAGE TITLE AND PAGE MAIN CONTENT
 ------------------------------------------------------------------------------*/
 ?>
-<main class="page-main">
+<main class="page-main" id="main-content">
 <?php
 		if ( have_posts() ) :
 
