@@ -36,13 +36,16 @@
     var images = document.querySelectorAll('.js-img');
 
     if (elem) {
-      // Setup Masonry on page load.
-      if (window.matchMedia(MEDIAQUERY).matches) {
-        msnry = createMsnry();
-      }
 
       // Set initial state of Masonry.
       toggleMsnry();
+
+      // Recalculate to handle brake issues
+      setTimeout(function() {
+        if (isActive) {
+          msnry.layout()
+        }
+      }, 1500);
 
       /**
       * Listen for images to load
