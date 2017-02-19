@@ -3,7 +3,7 @@
   font-size: 1.3rem;
   position: absolute;
   right: 20px;
-  top: 50px;
+  top: 41px;
 
   @media #{$screenMedium}, #{$screenLarge} {
     right: 40px;
@@ -24,12 +24,14 @@
 ------------------------------------------------------------------------------*/
 
 .mast-head {
-  padding: 1.7rem 0 3rem;
+  padding: 0;
 
   // On larger screens, menu position needs to be moved down slightly
   @media #{$screenMedium}, #{$screenLarge} {
+    padding: 1.7rem 0 2.5rem;
+
     .menu-link {
-      top: 73px;
+      top: 89px;
     }
   }
 
