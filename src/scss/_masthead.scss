@@ -3,11 +3,15 @@
   font-size: 1.3rem;
   position: absolute;
   right: 20px;
-  top: 41px;
+  top: 37px;
 
   @media #{$screenMedium}, #{$screenLarge} {
     right: 40px;
   }
+}
+
+.main-logo > .main-title {
+  margin: 0;
 }
 
 // Logo container
@@ -24,14 +28,14 @@
 ------------------------------------------------------------------------------*/
 
 .mast-head {
-  padding: 0;
+  padding: 1rem 0;
 
   // On larger screens, menu position needs to be moved down slightly
   @media #{$screenMedium}, #{$screenLarge} {
-    padding: 1.7rem 0 2.5rem;
+    padding: 1.7rem 0 2rem;
 
     .menu-link {
-      top: 89px;
+      top: 85px;
     }
   }
 
