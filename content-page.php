@@ -7,5 +7,8 @@
 ?>
 <article class="article">
 	<h1 class="center page-main-title uppercase"><?php the_title(); ?></h1>
-	<?php the_content(); ?>
+	<?php if ( has_post_thumbnail() && is_page( 'about' ) ) :
+		the_post_thumbnail( 'post-thumbnail', array( 'class' => 'full-width-img' ) );
+	endif;
+	the_content(); ?>
 </article>
