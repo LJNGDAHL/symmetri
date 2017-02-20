@@ -3,7 +3,7 @@
   font-size: 1.3rem;
   position: absolute;
   right: 20px;
-  top: 37px;
+  top: 35px;
 
   @media #{$screenMedium}, #{$screenLarge} {
     right: 40px;
@@ -12,6 +12,7 @@
 
 .main-logo > .main-title {
   margin: 0;
+  line-height: 1.1;
 }
 
 // Logo container
