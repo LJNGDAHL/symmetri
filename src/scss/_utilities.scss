@@ -21,8 +21,10 @@
   @include smooth-transition();
 }
 
-.full-width-img-link:hover {
-  filter: opacity(0.3);
+@media #{$screenMedium}, #{$screenLarge} {
+  .full-width-img-link:hover {
+    filter: opacity(0.3);
+  }
 }
 
 .hidden {
