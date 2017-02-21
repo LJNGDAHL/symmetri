@@ -1,10 +1,10 @@
 # symmetri
-A clean and symmetrical Wordpress Theme developed for photographers. This is a work in progress.
+A clean and symmetrical Wordpress Theme developed for photographers.
 
 ![Screenshot of website that is using Symmetri Wordpress Theme](https://github.com/LJNGDAHL/symmetri/blob/develop/img/screenshot-symmetri.png "Screenshot of front page")
 
 ## Usage
-Once finished, this theme can be used as is directly on any Wordpress site. Download the entire folder and place it in your Wordpress site's themes folder (found in _wordpress/wp-content/_).
+This theme can be used as is directly on any Wordpress site. Download the entire folder and place it in your Wordpress site's themes folder (found in _wordpress/wp-content/_).
 
 ## Dependencies
 This theme uses [Masonry v4](http://masonry.desandro.com/). It also needs the following Wordpress plugins:
@@ -14,10 +14,10 @@ This theme uses [Masonry v4](http://masonry.desandro.com/). It also needs the fo
 ## Development
 
 ### Installation
-When working with this theme, first run NPM init. When working with the theme, use "npm run watch".
+When working with this theme, first run NPM init. When working with the theme, use _npm run watch_.
 
 ### Build
-Before deploying, use "npm run build" to compile style.css.
+Before deploying, use _npm run build_ to compile style.css.
 
 ## License
 MIT
